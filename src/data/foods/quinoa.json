@@ -1,0 +1,48 @@
+{
+  "fdcId": 168917,
+  "slug": "quinoa",
+  "name": "Quinoa",
+  "category": "Grains",
+  "categorySlug": "grains",
+  "calories": 120,
+  "protein": 4.4,
+  "totalFat": 1.9,
+  "saturatedFat": 0.2,
+  "carbs": 21.3,
+  "fiber": 2.8,
+  "sugar": 0.9,
+  "sodium": 7,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Manganese",
+      "amount": 0.6,
+      "unit": "mg"
+    },
+    {
+      "name": "Magnesium",
+      "amount": 64,
+      "unit": "mg"
+    },
+    {
+      "name": "Phosphorus",
+      "amount": 152,
+      "unit": "mg"
+    },
+    {
+      "name": "Folate",
+      "amount": 42,
+      "unit": "mcg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 cup cooked",
+      "grams": 185
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "fdcId": 175139,
+  "slug": "sardine",
+  "name": "Sardine",
+  "category": "Seafood",
+  "categorySlug": "seafood",
+  "calories": 208,
+  "protein": 24.6,
+  "totalFat": 11.5,
+  "saturatedFat": 1.5,
+  "carbs": 0,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 505,
+  "cholesterol": 142,
+  "nutrients": [
+    {
+      "name": "Calcium",
+      "amount": 382,
+      "unit": "mg"
+    },
+    {
+      "name": "Vitamin D",
+      "amount": 4.8,
+      "unit": "mcg"
+    },
+    {
+      "name": "Vitamin B12",
+      "amount": 8.9,
+      "unit": "mcg"
+    },
+    {
+      "name": "Selenium",
+      "amount": 52.7,
+      "unit": "mcg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 can",
+      "grams": 92
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+---
+import FoodCard from '../shared/FoodCard.astro';
+
+interface RelatedFood {
+  name: string;
+  slug: string;
+  calories: number;
+}
+
+interface Props {
+  foods: RelatedFood[];
+}
+
+const { foods } = Astro.props;
+---
+
+{foods.length > 0 && (
+  <div class="rounded-2xl bg-white p-6 shadow-sm">
+    <h2 class="mb-4 text-xl font-bold text-text-main">Related Foods</h2>
+
+    <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+      {foods.map((food) => (
+        <FoodCard name={food.name} slug={food.slug} calories={food.calories} />
+      ))}
+    </div>
+  </div>
+)}

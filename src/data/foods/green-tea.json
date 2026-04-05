@@ -1,0 +1,38 @@
+{
+  "fdcId": 171917,
+  "slug": "green-tea",
+  "name": "Green Tea",
+  "category": "Beverages",
+  "categorySlug": "beverages",
+  "calories": 1,
+  "protein": 0,
+  "totalFat": 0,
+  "saturatedFat": 0,
+  "carbs": 0,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 1,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Potassium",
+      "amount": 8,
+      "unit": "mg"
+    },
+    {
+      "name": "Manganese",
+      "amount": 0.2,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 cup",
+      "grams": 245
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

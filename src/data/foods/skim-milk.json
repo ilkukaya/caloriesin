@@ -1,0 +1,43 @@
+{
+  "fdcId": 171274,
+  "slug": "skim-milk",
+  "name": "Skim Milk",
+  "category": "Dairy",
+  "categorySlug": "dairy",
+  "calories": 34,
+  "protein": 3.4,
+  "totalFat": 0.1,
+  "saturatedFat": 0.1,
+  "carbs": 5,
+  "fiber": 0,
+  "sugar": 5.1,
+  "sodium": 42,
+  "cholesterol": 2,
+  "nutrients": [
+    {
+      "name": "Calcium",
+      "amount": 122,
+      "unit": "mg"
+    },
+    {
+      "name": "Vitamin D",
+      "amount": 2.1,
+      "unit": "mcg"
+    },
+    {
+      "name": "Vitamin B12",
+      "amount": 0.5,
+      "unit": "mcg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 cup",
+      "grams": 245
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

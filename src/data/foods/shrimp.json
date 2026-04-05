@@ -1,0 +1,43 @@
+{
+  "fdcId": 175177,
+  "slug": "shrimp",
+  "name": "Shrimp",
+  "category": "Seafood",
+  "categorySlug": "seafood",
+  "calories": 99,
+  "protein": 24,
+  "totalFat": 0.3,
+  "saturatedFat": 0.1,
+  "carbs": 0.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 111,
+  "cholesterol": 189,
+  "nutrients": [
+    {
+      "name": "Selenium",
+      "amount": 38,
+      "unit": "mcg"
+    },
+    {
+      "name": "Vitamin B12",
+      "amount": 1.1,
+      "unit": "mcg"
+    },
+    {
+      "name": "Phosphorus",
+      "amount": 201,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "3 oz",
+      "grams": 85
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

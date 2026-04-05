@@ -1,0 +1,43 @@
+{
+  "fdcId": 169738,
+  "slug": "pasta",
+  "name": "Pasta",
+  "category": "Grains",
+  "categorySlug": "grains",
+  "calories": 131,
+  "protein": 5,
+  "totalFat": 1.1,
+  "saturatedFat": 0.2,
+  "carbs": 25.4,
+  "fiber": 1.8,
+  "sugar": 0.6,
+  "sodium": 1,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Folate",
+      "amount": 7,
+      "unit": "mcg"
+    },
+    {
+      "name": "Iron",
+      "amount": 0.5,
+      "unit": "mg"
+    },
+    {
+      "name": "Manganese",
+      "amount": 0.3,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 cup cooked",
+      "grams": 140
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

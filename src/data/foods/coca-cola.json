@@ -1,0 +1,33 @@
+{
+  "fdcId": 174851,
+  "slug": "coca-cola",
+  "name": "Coca-Cola",
+  "category": "Beverages",
+  "categorySlug": "beverages",
+  "calories": 42,
+  "protein": 0,
+  "totalFat": 0,
+  "saturatedFat": 0,
+  "carbs": 10.6,
+  "fiber": 0,
+  "sugar": 10.6,
+  "sodium": 4,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Sodium",
+      "amount": 4,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 can (12 oz)",
+      "grams": 355
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

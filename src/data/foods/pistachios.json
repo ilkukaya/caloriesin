@@ -1,0 +1,48 @@
+{
+  "fdcId": 170184,
+  "slug": "pistachios",
+  "name": "Pistachios",
+  "category": "Nuts & Seeds",
+  "categorySlug": "nuts-and-seeds",
+  "calories": 560,
+  "protein": 20.2,
+  "totalFat": 45.3,
+  "saturatedFat": 5.6,
+  "carbs": 27.2,
+  "fiber": 10.6,
+  "sugar": 7.7,
+  "sodium": 1,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Vitamin B6",
+      "amount": 1.7,
+      "unit": "mg"
+    },
+    {
+      "name": "Copper",
+      "amount": 1.3,
+      "unit": "mg"
+    },
+    {
+      "name": "Manganese",
+      "amount": 1.2,
+      "unit": "mg"
+    },
+    {
+      "name": "Phosphorus",
+      "amount": 490,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 oz (49 kernels)",
+      "grams": 28
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

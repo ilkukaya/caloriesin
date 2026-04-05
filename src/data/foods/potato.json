@@ -1,0 +1,43 @@
+{
+  "fdcId": 170026,
+  "slug": "potato",
+  "name": "Potato",
+  "category": "Vegetables",
+  "categorySlug": "vegetables",
+  "calories": 77,
+  "protein": 2,
+  "totalFat": 0.1,
+  "saturatedFat": 0,
+  "carbs": 17.5,
+  "fiber": 2.1,
+  "sugar": 0.8,
+  "sodium": 6,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Vitamin C",
+      "amount": 19.7,
+      "unit": "mg"
+    },
+    {
+      "name": "Potassium",
+      "amount": 425,
+      "unit": "mg"
+    },
+    {
+      "name": "Vitamin B6",
+      "amount": 0.3,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 medium",
+      "grams": 213
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

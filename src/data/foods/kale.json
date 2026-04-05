@@ -1,0 +1,48 @@
+{
+  "fdcId": 168421,
+  "slug": "kale",
+  "name": "Kale",
+  "category": "Vegetables",
+  "categorySlug": "vegetables",
+  "calories": 49,
+  "protein": 4.3,
+  "totalFat": 0.9,
+  "saturatedFat": 0.1,
+  "carbs": 8.8,
+  "fiber": 3.6,
+  "sugar": 2.3,
+  "sodium": 38,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Vitamin K",
+      "amount": 704.8,
+      "unit": "mcg"
+    },
+    {
+      "name": "Vitamin A",
+      "amount": 500,
+      "unit": "mcg"
+    },
+    {
+      "name": "Vitamin C",
+      "amount": 120,
+      "unit": "mg"
+    },
+    {
+      "name": "Calcium",
+      "amount": 150,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 cup chopped",
+      "grams": 67
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

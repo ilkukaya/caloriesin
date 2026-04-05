@@ -1,0 +1,44 @@
+---
+interface Props {
+  calories: number;
+}
+
+const { calories } = Astro.props;
+
+const activities = [
+  { name: 'Walking', emoji: '🚶', met: 3.5 },
+  { name: 'Running', emoji: '🏃', met: 9.8 },
+  { name: 'Cycling', emoji: '🚴', met: 7.5 },
+  { name: 'Swimming', emoji: '🏊', met: 5.8 },
+];
+
+// Formula: minutes = (calories * 60) / (MET * 3.5 * weight_kg / 200)
+const weightKg = 70;
+function calcMinutes(met: number): number {
+  return Math.round((calories * 60) / (met * 3.5 * weightKg / 200));
+}
+---
+
+<div class="rounded-2xl bg-white p-6 shadow-sm">
+  <h2 class="mb-4 text-xl font-bold text-text-main">
+    To burn {calories} calories, you would need to:
+  </h2>
+
+  <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+    {activities.map((activity) => {
+      const minutes = calcMinutes(activity.met);
+      return (
+        <div class="flex flex-col items-center rounded-xl border border-border-main p-4 text-center">
+          <span class="mb-2 text-3xl">{activity.emoji}</span>
+          <span class="text-sm font-semibold text-text-main">{activity.name}</span>
+          <span class="mt-1 text-2xl font-bold text-primary">{minutes}</span>
+          <span class="text-xs text-text-muted">minutes</span>
+        </div>
+      );
+    })}
+  </div>
+
+  <p class="mt-4 text-xs text-text-muted">
+    * Estimates based on a 70kg (154 lbs) person. Actual calories burned may vary based on individual factors.
+  </p>
+</div>

@@ -1,0 +1,32 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  ctaText: string;
+  ctaUrl: string;
+  logo?: string;
+}
+
+const { name, description, ctaText, ctaUrl, logo } = Astro.props;
+---
+
+<div class="rounded-lg border border-border-main bg-white p-5">
+  <div class="flex items-start gap-4">
+    {logo && (
+      <span class="shrink-0 text-3xl" aria-hidden="true">{logo}</span>
+    )}
+    <div class="min-w-0 flex-1">
+      <h4 class="font-semibold text-text-main">{name}</h4>
+      <p class="mt-1 text-sm text-text-muted">{description}</p>
+      <a
+        href={ctaUrl}
+        target="_blank"
+        rel="nofollow sponsored"
+        class="mt-3 inline-block rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-orange-600"
+      >
+        {ctaText}
+      </a>
+    </div>
+  </div>
+  <p class="mt-3 text-xs text-text-muted">Affiliate link</p>
+</div>

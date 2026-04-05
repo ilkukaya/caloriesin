@@ -1,0 +1,43 @@
+{
+  "fdcId": 169118,
+  "slug": "pear",
+  "name": "Pear",
+  "category": "Fruits",
+  "categorySlug": "fruits",
+  "calories": 57,
+  "protein": 0.4,
+  "totalFat": 0.1,
+  "saturatedFat": 0,
+  "carbs": 15.2,
+  "fiber": 3.1,
+  "sugar": 9.8,
+  "sodium": 1,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Vitamin C",
+      "amount": 4.3,
+      "unit": "mg"
+    },
+    {
+      "name": "Potassium",
+      "amount": 116,
+      "unit": "mg"
+    },
+    {
+      "name": "Copper",
+      "amount": 0.1,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 medium",
+      "grams": 178
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "fdcId": 171970,
+  "slug": "lobster",
+  "name": "Lobster",
+  "category": "Seafood",
+  "categorySlug": "seafood",
+  "calories": 89,
+  "protein": 19,
+  "totalFat": 0.9,
+  "saturatedFat": 0.2,
+  "carbs": 0.5,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 486,
+  "cholesterol": 146,
+  "nutrients": [
+    {
+      "name": "Selenium",
+      "amount": 41.4,
+      "unit": "mcg"
+    },
+    {
+      "name": "Zinc",
+      "amount": 3.5,
+      "unit": "mg"
+    },
+    {
+      "name": "Copper",
+      "amount": 1.9,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "3 oz",
+      "grams": 85
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

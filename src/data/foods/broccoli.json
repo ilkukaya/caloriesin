@@ -1,0 +1,48 @@
+{
+  "fdcId": 170379,
+  "slug": "broccoli",
+  "name": "Broccoli",
+  "category": "Vegetables",
+  "categorySlug": "vegetables",
+  "calories": 34,
+  "protein": 2.8,
+  "totalFat": 0.4,
+  "saturatedFat": 0.1,
+  "carbs": 6.6,
+  "fiber": 2.6,
+  "sugar": 1.7,
+  "sodium": 33,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Vitamin C",
+      "amount": 89.2,
+      "unit": "mg"
+    },
+    {
+      "name": "Vitamin K",
+      "amount": 101.6,
+      "unit": "mcg"
+    },
+    {
+      "name": "Folate",
+      "amount": 63,
+      "unit": "mcg"
+    },
+    {
+      "name": "Potassium",
+      "amount": 316,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 cup chopped",
+      "grams": 91
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

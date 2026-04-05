@@ -1,0 +1,273 @@
+---
+import Layout from '../../components/layout/Layout.astro';
+import Breadcrumb from '../../components/layout/Breadcrumb.astro';
+import AdSlot from '../../components/monetization/AdSlot.astro';
+import AffiliateBanner from '../../components/monetization/AffiliateBanner.astro';
+
+const title = 'Macro Calculator — Calculate Your Daily Macros | CaloriesIn';
+const description = 'Use our free macro calculator to find your ideal daily intake of protein, carbs, and fat based on your calorie goal and diet preference.';
+const canonical = '/tools/macro-calculator';
+---
+
+<Layout title={title} description={description} canonical={canonical}>
+  <div class="mx-auto max-w-4xl px-4 py-6">
+    <Breadcrumb items={[
+      { label: 'Tools', href: '/tools' },
+      { label: 'Macro Calculator' },
+    ]} />
+
+    <h1 class="mt-4 text-3xl font-bold text-text-main md:text-4xl">Macro Calculator</h1>
+    <p class="mt-2 text-text-muted">Calculate your ideal daily macronutrient breakdown — protein, carbs, and fat — based on your calorie target and diet preference.</p>
+
+    <!-- Calculator Card -->
+    <div class="mt-8 rounded-xl border border-border-main bg-white p-6 shadow-sm md:p-8">
+      <form id="macro-form" class="space-y-6" onsubmit="return false;">
+
+        <!-- Daily Calories -->
+        <div>
+          <label for="macro-calories" class="mb-1 block text-sm font-semibold text-text-main">Daily Calories</label>
+          <div class="flex items-center gap-2">
+            <input type="number" id="macro-calories" min="500" max="10000" step="1" placeholder="2000" required
+              class="w-36 rounded-lg border border-border-main px-3 py-2.5 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+            <span class="text-sm text-text-muted">cal/day</span>
+          </div>
+          <p class="mt-1 text-xs text-text-muted">
+            Don't know your target? <a href="/tools/calorie-calculator" class="font-medium text-primary hover:underline">Calculate from TDEE &rarr;</a>
+          </p>
+        </div>
+
+        <!-- Goal Preset -->
+        <fieldset>
+          <legend class="mb-2 text-sm font-semibold text-text-main">Diet Preset</legend>
+          <div class="grid gap-3 sm:grid-cols-2">
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-border-main p-3 transition-colors has-[:checked]:border-primary has-[:checked]:bg-primary-light">
+              <input type="radio" name="macro-preset" value="balanced" checked class="mt-0.5 accent-primary" />
+              <div>
+                <span class="text-sm font-medium text-text-main">Balanced</span>
+                <span class="block text-xs text-text-muted">30% protein &middot; 40% carbs &middot; 30% fat</span>
+              </div>
+            </label>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-border-main p-3 transition-colors has-[:checked]:border-primary has-[:checked]:bg-primary-light">
+              <input type="radio" name="macro-preset" value="lowcarb" class="mt-0.5 accent-primary" />
+              <div>
+                <span class="text-sm font-medium text-text-main">Low Carb</span>
+                <span class="block text-xs text-text-muted">40% protein &middot; 20% carbs &middot; 40% fat</span>
+              </div>
+            </label>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-border-main p-3 transition-colors has-[:checked]:border-primary has-[:checked]:bg-primary-light">
+              <input type="radio" name="macro-preset" value="highprotein" class="mt-0.5 accent-primary" />
+              <div>
+                <span class="text-sm font-medium text-text-main">High Protein</span>
+                <span class="block text-xs text-text-muted">40% protein &middot; 35% carbs &middot; 25% fat</span>
+              </div>
+            </label>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-border-main p-3 transition-colors has-[:checked]:border-primary has-[:checked]:bg-primary-light">
+              <input type="radio" name="macro-preset" value="keto" class="mt-0.5 accent-primary" />
+              <div>
+                <span class="text-sm font-medium text-text-main">Keto</span>
+                <span class="block text-xs text-text-muted">25% protein &middot; 5% carbs &middot; 70% fat</span>
+              </div>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Calculate Button -->
+        <button type="button" id="macro-calculate-btn" onclick="calculateMacros()"
+          class="w-full rounded-lg bg-accent px-6 py-3.5 text-base font-bold text-white shadow-sm transition-colors hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 md:w-auto md:px-10">
+          Calculate Macros
+        </button>
+      </form>
+    </div>
+
+    <!-- Results Section -->
+    <div id="macro-results" class="mt-8 hidden">
+      <h2 class="text-xl font-bold text-text-main">Your Daily Macros</h2>
+
+      <!-- Macro Cards -->
+      <div class="mt-4 grid gap-4 sm:grid-cols-3">
+        <!-- Protein -->
+        <div class="rounded-lg border-2 border-blue-400 bg-blue-50 p-5 text-center">
+          <p class="text-sm font-semibold text-blue-800">Protein</p>
+          <p class="mt-1 text-3xl font-bold text-blue-800"><span id="result-protein-g">0</span>g</p>
+          <p class="mt-1 text-xs text-blue-700/70"><span id="result-protein-cal">0</span> calories &middot; <span id="result-protein-pct">0</span>%</p>
+        </div>
+
+        <!-- Carbs -->
+        <div class="rounded-lg border-2 border-primary bg-primary-light p-5 text-center">
+          <p class="text-sm font-semibold text-primary-dark">Carbs</p>
+          <p class="mt-1 text-3xl font-bold text-primary-dark"><span id="result-carbs-g">0</span>g</p>
+          <p class="mt-1 text-xs text-primary-dark/70"><span id="result-carbs-cal">0</span> calories &middot; <span id="result-carbs-pct">0</span>%</p>
+        </div>
+
+        <!-- Fat -->
+        <div class="rounded-lg border-2 border-accent bg-accent-light p-5 text-center">
+          <p class="text-sm font-semibold text-orange-800">Fat</p>
+          <p class="mt-1 text-3xl font-bold text-orange-800"><span id="result-fat-g">0</span>g</p>
+          <p class="mt-1 text-xs text-orange-700/70"><span id="result-fat-cal">0</span> calories &middot; <span id="result-fat-pct">0</span>%</p>
+        </div>
+      </div>
+
+      <!-- Visual Bar Chart -->
+      <div class="mt-6 rounded-lg border border-border-main bg-white p-6 shadow-sm">
+        <p class="mb-3 text-sm font-semibold text-text-main">Macro Breakdown</p>
+        <!-- Stacked bar -->
+        <div class="flex h-8 w-full overflow-hidden rounded-full">
+          <div id="bar-protein" class="flex items-center justify-center bg-blue-500 text-xs font-semibold text-white transition-all duration-500" style="width: 30%;">
+            Protein
+          </div>
+          <div id="bar-carbs" class="flex items-center justify-center bg-primary text-xs font-semibold text-white transition-all duration-500" style="width: 40%;">
+            Carbs
+          </div>
+          <div id="bar-fat" class="flex items-center justify-center bg-accent text-xs font-semibold text-white transition-all duration-500" style="width: 30%;">
+            Fat
+          </div>
+        </div>
+        <!-- Legend -->
+        <div class="mt-3 flex flex-wrap gap-4 text-xs text-text-muted">
+          <div class="flex items-center gap-1.5"><span class="inline-block h-3 w-3 rounded-sm bg-blue-500"></span> Protein: <span id="legend-protein">30%</span></div>
+          <div class="flex items-center gap-1.5"><span class="inline-block h-3 w-3 rounded-sm bg-primary"></span> Carbs: <span id="legend-carbs">40%</span></div>
+          <div class="flex items-center gap-1.5"><span class="inline-block h-3 w-3 rounded-sm bg-accent"></span> Fat: <span id="legend-fat">30%</span></div>
+        </div>
+
+        <!-- Individual bars -->
+        <div class="mt-5 space-y-3">
+          <div>
+            <div class="flex justify-between text-xs text-text-muted mb-1">
+              <span>Protein</span>
+              <span id="detail-protein">0g &middot; 0 cal</span>
+            </div>
+            <div class="h-3 w-full rounded-full bg-gray-100 overflow-hidden">
+              <div id="detail-bar-protein" class="h-full rounded-full bg-blue-500 transition-all duration-500" style="width: 0%;"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs text-text-muted mb-1">
+              <span>Carbs</span>
+              <span id="detail-carbs">0g &middot; 0 cal</span>
+            </div>
+            <div class="h-3 w-full rounded-full bg-gray-100 overflow-hidden">
+              <div id="detail-bar-carbs" class="h-full rounded-full bg-primary transition-all duration-500" style="width: 0%;"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs text-text-muted mb-1">
+              <span>Fat</span>
+              <span id="detail-fat">0g &middot; 0 cal</span>
+            </div>
+            <div class="h-3 w-full rounded-full bg-gray-100 overflow-hidden">
+              <div id="detail-bar-fat" class="h-full rounded-full bg-accent transition-all duration-500" style="width: 0%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Explanation -->
+    <div class="mt-10 rounded-xl border border-border-main bg-white p-6 md:p-8">
+      <h2 class="text-xl font-bold text-text-main">Understanding Macronutrients</h2>
+      <div class="mt-3 space-y-3 text-sm leading-relaxed text-text-muted">
+        <p>
+          <strong class="text-text-main">Macronutrients</strong> ("macros") are the three main nutrients your body needs in large amounts: protein, carbohydrates, and fat. Each plays a different role and provides a different amount of energy per gram:
+        </p>
+        <ul class="ml-4 list-disc space-y-1">
+          <li><strong class="text-text-main">Protein:</strong> 4 calories per gram — builds and repairs muscle, supports immune function</li>
+          <li><strong class="text-text-main">Carbohydrates:</strong> 4 calories per gram — your body's primary energy source</li>
+          <li><strong class="text-text-main">Fat:</strong> 9 calories per gram — supports hormone production, nutrient absorption, and cell health</li>
+        </ul>
+        <p>
+          The ideal macro ratio depends on your goals. A <strong class="text-text-main">balanced</strong> split works well for general health, while <strong class="text-text-main">high protein</strong> supports muscle building, and <strong class="text-text-main">low carb / keto</strong> approaches may help with fat loss for some individuals.
+        </p>
+        <p>
+          These are starting points — adjust based on how your body responds, your training demands, and guidance from a nutrition professional.
+        </p>
+      </div>
+    </div>
+
+    <!-- Affiliate Banner -->
+    <div class="mt-8">
+      <AffiliateBanner
+        name="MyFitnessPal"
+        description="Track your daily calories and macros effortlessly. The most popular calorie-counting app with a database of over 14 million foods."
+        ctaText="Track Your Calories"
+        ctaUrl="#"
+        logo="📱"
+      />
+    </div>
+
+    <!-- Ad Slot -->
+    <AdSlot slot="macro-calculator-bottom" />
+  </div>
+</Layout>
+
+<script is:inline>
+  var macroPresets = {
+    balanced:    { protein: 0.30, carbs: 0.40, fat: 0.30 },
+    lowcarb:     { protein: 0.40, carbs: 0.20, fat: 0.40 },
+    highprotein: { protein: 0.40, carbs: 0.35, fat: 0.25 },
+    keto:        { protein: 0.25, carbs: 0.05, fat: 0.70 }
+  };
+
+  function calculateMacros() {
+    var calories = parseFloat(document.getElementById('macro-calories').value);
+
+    if (!calories || calories < 1) {
+      alert('Please enter your daily calorie target.');
+      return;
+    }
+
+    var preset = document.querySelector('input[name="macro-preset"]:checked').value;
+    var ratios = macroPresets[preset];
+
+    var proteinCal = Math.round(calories * ratios.protein);
+    var carbsCal = Math.round(calories * ratios.carbs);
+    var fatCal = Math.round(calories * ratios.fat);
+
+    var proteinG = Math.round(proteinCal / 4);
+    var carbsG = Math.round(carbsCal / 4);
+    var fatG = Math.round(fatCal / 9);
+
+    var proteinPct = Math.round(ratios.protein * 100);
+    var carbsPct = Math.round(ratios.carbs * 100);
+    var fatPct = Math.round(ratios.fat * 100);
+
+    // Update macro cards
+    document.getElementById('result-protein-g').textContent = proteinG;
+    document.getElementById('result-protein-cal').textContent = proteinCal;
+    document.getElementById('result-protein-pct').textContent = proteinPct;
+
+    document.getElementById('result-carbs-g').textContent = carbsG;
+    document.getElementById('result-carbs-cal').textContent = carbsCal;
+    document.getElementById('result-carbs-pct').textContent = carbsPct;
+
+    document.getElementById('result-fat-g').textContent = fatG;
+    document.getElementById('result-fat-cal').textContent = fatCal;
+    document.getElementById('result-fat-pct').textContent = fatPct;
+
+    // Update stacked bar
+    document.getElementById('bar-protein').style.width = proteinPct + '%';
+    document.getElementById('bar-protein').textContent = proteinPct >= 10 ? 'Protein' : '';
+    document.getElementById('bar-carbs').style.width = carbsPct + '%';
+    document.getElementById('bar-carbs').textContent = carbsPct >= 10 ? 'Carbs' : '';
+    document.getElementById('bar-fat').style.width = fatPct + '%';
+    document.getElementById('bar-fat').textContent = fatPct >= 10 ? 'Fat' : '';
+
+    // Update legend
+    document.getElementById('legend-protein').textContent = proteinPct + '%';
+    document.getElementById('legend-carbs').textContent = carbsPct + '%';
+    document.getElementById('legend-fat').textContent = fatPct + '%';
+
+    // Update detail bars (max grams for bar scale: use the largest gram value)
+    var maxG = Math.max(proteinG, carbsG, fatG);
+    document.getElementById('detail-protein').textContent = proteinG + 'g \u00B7 ' + proteinCal + ' cal';
+    document.getElementById('detail-bar-protein').style.width = (proteinG / maxG * 100) + '%';
+
+    document.getElementById('detail-carbs').textContent = carbsG + 'g \u00B7 ' + carbsCal + ' cal';
+    document.getElementById('detail-bar-carbs').style.width = (carbsG / maxG * 100) + '%';
+
+    document.getElementById('detail-fat').textContent = fatG + 'g \u00B7 ' + fatCal + ' cal';
+    document.getElementById('detail-bar-fat').style.width = (fatG / maxG * 100) + '%';
+
+    document.getElementById('macro-results').classList.remove('hidden');
+    document.getElementById('macro-results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+</script>

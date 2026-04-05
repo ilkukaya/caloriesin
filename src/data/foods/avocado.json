@@ -1,0 +1,57 @@
+{
+  "fdcId": 171705,
+  "slug": "avocado",
+  "name": "Avocado",
+  "category": "Fruits",
+  "categorySlug": "fruits",
+  "calories": 160,
+  "protein": 2,
+  "totalFat": 14.7,
+  "saturatedFat": 2.1,
+  "carbs": 8.5,
+  "fiber": 6.7,
+  "sugar": 0.7,
+  "sodium": 7,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Potassium",
+      "amount": 485,
+      "unit": "mg"
+    },
+    {
+      "name": "Vitamin K",
+      "amount": 21,
+      "unit": "mcg"
+    },
+    {
+      "name": "Folate",
+      "amount": 81,
+      "unit": "mcg"
+    },
+    {
+      "name": "Vitamin E",
+      "amount": 2.1,
+      "unit": "mg"
+    },
+    {
+      "name": "Vitamin C",
+      "amount": 10,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 medium",
+      "grams": 150
+    },
+    {
+      "label": "1/2 avocado",
+      "grams": 75
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

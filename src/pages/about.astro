@@ -1,0 +1,76 @@
+---
+import Layout from '../components/layout/Layout.astro';
+
+const title = 'About CaloriesIn — Free Calorie & Nutrition Database';
+const description = 'Learn about CaloriesIn, our mission to make calorie and nutrition information freely accessible, and how we source our data from USDA FoodData Central.';
+const canonical = 'https://caloriesin.netlify.app/about';
+---
+
+<Layout title={title} description={description} canonical={canonical}>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">About CaloriesIn</h1>
+
+    <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
+      <section>
+        <h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">What is CaloriesIn?</h2>
+        <p>
+          CaloriesIn is a free, open-access calorie and nutrition database designed to help you
+          quickly find accurate nutritional information for thousands of foods. Whether you are
+          tracking your daily intake, planning meals, or simply curious about what is in your food,
+          CaloriesIn gives you the data you need in a clean, easy-to-read format.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Our Mission</h2>
+        <p>
+          We believe that calorie and nutrition information should be freely accessible to everyone.
+          Too many nutrition websites bury useful data behind paywalls, intrusive ads, or confusing
+          interfaces. Our mission is to present reliable nutrition facts in a straightforward way so
+          you can make informed decisions about what you eat — without the clutter.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Where Does Our Data Come From?</h2>
+        <p>
+          All nutrition data on CaloriesIn is sourced from the
+          <a href="https://fdc.nal.usda.gov/" target="_blank" rel="noopener noreferrer" class="text-[#2D8C3C] underline hover:text-green-800">USDA FoodData Central</a>,
+          the United States Department of Agriculture's comprehensive food composition database. The
+          USDA FoodData Central is widely regarded as one of the most reliable and authoritative
+          sources of nutrition data in the world.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">How Often Is the Data Updated?</h2>
+        <p>
+          We refresh our database on a weekly basis to ensure that CaloriesIn reflects the latest
+          information available from the USDA. Automated processes pull new and updated records every
+          Monday, so you can trust that the numbers you see are current.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Disclaimer</h2>
+        <p>
+          The information provided on CaloriesIn is for general informational and educational purposes
+          only. It is <strong>not intended as medical advice</strong> and should not be used as a
+          substitute for professional medical guidance, diagnosis, or treatment. Always consult a
+          qualified healthcare provider or registered dietitian before making significant changes to
+          your diet, especially if you have a medical condition or specific dietary needs.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Contact Us</h2>
+        <p>
+          Have questions, feedback, or suggestions? We would love to hear from you. Reach out to us
+          at <a href="mailto:contact@caloriesin.net" class="text-[#2D8C3C] underline hover:text-green-800">contact@caloriesin.net</a>
+          or visit our <a href="/contact" class="text-[#2D8C3C] underline hover:text-green-800">contact page</a>
+          for more details.
+        </p>
+      </section>
+    </div>
+  </div>
+</Layout>

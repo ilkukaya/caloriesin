@@ -1,0 +1,43 @@
+{
+  "fdcId": 169414,
+  "slug": "flaxseed",
+  "name": "Flaxseed",
+  "category": "Nuts & Seeds",
+  "categorySlug": "nuts-and-seeds",
+  "calories": 534,
+  "protein": 18.3,
+  "totalFat": 42.2,
+  "saturatedFat": 3.7,
+  "carbs": 28.9,
+  "fiber": 27.3,
+  "sugar": 1.6,
+  "sodium": 30,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Manganese",
+      "amount": 2.5,
+      "unit": "mg"
+    },
+    {
+      "name": "Thiamin",
+      "amount": 1.6,
+      "unit": "mg"
+    },
+    {
+      "name": "Magnesium",
+      "amount": 392,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 tbsp",
+      "grams": 10
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

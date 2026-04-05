@@ -1,0 +1,43 @@
+{
+  "fdcId": 169247,
+  "slug": "lettuce",
+  "name": "Lettuce",
+  "category": "Vegetables",
+  "categorySlug": "vegetables",
+  "calories": 15,
+  "protein": 1.4,
+  "totalFat": 0.2,
+  "saturatedFat": 0,
+  "carbs": 2.9,
+  "fiber": 1.3,
+  "sugar": 0.8,
+  "sodium": 28,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Vitamin A",
+      "amount": 370,
+      "unit": "mcg"
+    },
+    {
+      "name": "Vitamin K",
+      "amount": 126.3,
+      "unit": "mcg"
+    },
+    {
+      "name": "Folate",
+      "amount": 38,
+      "unit": "mcg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 cup shredded",
+      "grams": 36
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}
