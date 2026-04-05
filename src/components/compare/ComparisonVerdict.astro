@@ -1,0 +1,132 @@
+---
+import type { Food } from '../../utils/nutrition';
+
+interface Props {
+  food1: Food;
+  food2: Food;
+}
+
+const { food1, food2 } = Astro.props;
+
+// Helper: calculate percentage difference
+function pctDiff(a: number, b: number): number {
+  if (b === 0) return a === 0 ? 0 : 100;
+  return Math.round(Math.abs(a - b) / b * 100);
+}
+
+// Build verdict points
+const points: string[] = [];
+
+// Calories comparison
+const calDiff = pctDiff(food1.calories, food2.calories);
+if (food1.calories !== food2.calories) {
+  const lower = food1.calories < food2.calories ? food1.name : food2.name;
+  const higher = food1.calories < food2.calories ? food2.name : food1.name;
+  const pct = food1.calories < food2.calories
+    ? pctDiff(food1.calories, food2.calories)
+    : pctDiff(food2.calories, food1.calories);
+  points.push(`${lower} has ${pct}% fewer calories than ${higher} (${Math.min(food1.calories, food2.calories)} vs ${Math.max(food1.calories, food2.calories)} kcal per 100g).`);
+}
+
+// Protein comparison
+if (food1.protein !== food2.protein) {
+  const more = food1.protein > food2.protein ? food1.name : food2.name;
+  const less = food1.protein > food2.protein ? food2.name : food1.name;
+  const diff = Math.abs(food1.protein - food2.protein);
+  points.push(`${more} provides ${diff.toFixed(1)}g more protein per 100g than ${less}.`);
+}
+
+// Fat comparison
+if (food1.totalFat !== food2.totalFat) {
+  const leaner = food1.totalFat < food2.totalFat ? food1.name : food2.name;
+  const fattier = food1.totalFat < food2.totalFat ? food2.name : food1.name;
+  const pct = food1.totalFat < food2.totalFat
+    ? pctDiff(food1.totalFat, food2.totalFat)
+    : pctDiff(food2.totalFat, food1.totalFat);
+  points.push(`${leaner} is leaner with ${pct}% less fat than ${fattier}.`);
+}
+
+// Fiber comparison
+if (food1.fiber !== food2.fiber) {
+  const more = food1.fiber > food2.fiber ? food1.name : food2.name;
+  const diff = Math.abs(food1.fiber - food2.fiber);
+  if (diff >= 0.5) {
+    points.push(`${more} has ${diff.toFixed(1)}g more fiber per 100g, supporting better digestion.`);
+  }
+}
+
+// Sugar comparison
+if (food1.sugar !== food2.sugar) {
+  const lower = food1.sugar < food2.sugar ? food1.name : food2.name;
+  const diff = Math.abs(food1.sugar - food2.sugar);
+  if (diff >= 1) {
+    points.push(`${lower} contains ${diff.toFixed(1)}g less sugar per 100g.`);
+  }
+}
+
+// Recommendations
+const recommendations: string[] = [];
+
+// Weight loss recommendation
+const lowerCalFood = food1.calories <= food2.calories ? food1 : food2;
+const higherProtFood = food1.protein >= food2.protein ? food1 : food2;
+
+recommendations.push(`Choose ${lowerCalFood.name} if your goal is weight loss or calorie control.`);
+
+if (higherProtFood.slug !== lowerCalFood.slug) {
+  recommendations.push(`Choose ${higherProtFood.name} if you need more protein for muscle building or recovery.`);
+} else {
+  recommendations.push(`${higherProtFood.name} is also the better choice for protein, making it nutritionally favorable overall.`);
+}
+
+// Fiber recommendation
+const higherFiberFood = food1.fiber >= food2.fiber ? food1 : food2;
+if (higherFiberFood.fiber > 2) {
+  recommendations.push(`For digestive health and satiety, ${higherFiberFood.name} offers more dietary fiber.`);
+}
+---
+
+<div class="rounded-lg border border-border-main bg-white overflow-hidden">
+  <div class="border-b border-border-main bg-accent-light px-6 py-4">
+    <h2 class="text-lg font-bold text-text-main">
+      <svg class="inline-block w-5 h-5 mr-1 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      Verdict: {food1.name} vs {food2.name}
+    </h2>
+  </div>
+
+  <div class="px-6 py-5 space-y-5">
+    {/* Key differences */}
+    <div>
+      <h3 class="text-sm font-semibold uppercase tracking-wider text-text-muted mb-3">Key Differences</h3>
+      <ul class="space-y-2">
+        {points.map(point => (
+          <li class="flex items-start gap-2 text-sm text-text-main">
+            <span class="mt-0.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-primary" aria-hidden="true"></span>
+            <span>{point}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {/* Recommendations */}
+    <div class="border-t border-border-main pt-5">
+      <h3 class="text-sm font-semibold uppercase tracking-wider text-text-muted mb-3">Our Recommendations</h3>
+      <ul class="space-y-2">
+        {recommendations.map(rec => (
+          <li class="flex items-start gap-2 text-sm text-text-main">
+            <span class="mt-0.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent" aria-hidden="true"></span>
+            <span>{rec}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {/* Disclaimer */}
+    <p class="text-xs text-text-muted border-t border-border-main pt-4">
+      This comparison is based on general nutritional values per 100g. Individual dietary needs vary.
+      Always consult a healthcare professional for personalized nutrition advice.
+    </p>
+  </div>
+</div>

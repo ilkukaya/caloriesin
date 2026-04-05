@@ -1,0 +1,43 @@
+{
+  "fdcId": 169928,
+  "slug": "peach",
+  "name": "Peach",
+  "category": "Fruits",
+  "categorySlug": "fruits",
+  "calories": 39,
+  "protein": 0.9,
+  "totalFat": 0.3,
+  "saturatedFat": 0,
+  "carbs": 9.5,
+  "fiber": 1.5,
+  "sugar": 8.4,
+  "sodium": 0,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Vitamin C",
+      "amount": 6.6,
+      "unit": "mg"
+    },
+    {
+      "name": "Vitamin A",
+      "amount": 16,
+      "unit": "mcg"
+    },
+    {
+      "name": "Potassium",
+      "amount": 190,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 medium",
+      "grams": 150
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

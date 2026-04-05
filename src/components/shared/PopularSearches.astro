@@ -1,0 +1,24 @@
+---
+import Pill from './Pill.astro';
+
+const popularFoods = [
+  { label: 'Banana', href: '/banana' },
+  { label: 'Rice', href: '/rice' },
+  { label: 'Chicken Breast', href: '/chicken-breast' },
+  { label: 'Egg', href: '/egg' },
+  { label: 'Apple', href: '/apple' },
+  { label: 'Pizza', href: '/pizza' },
+  { label: 'Avocado', href: '/avocado' },
+  { label: 'Pasta', href: '/pasta' },
+  { label: 'Bread', href: '/bread' },
+  { label: 'Salmon', href: '/salmon' },
+  { label: 'Oatmeal', href: '/oatmeal' },
+  { label: 'Sweet Potato', href: '/sweet-potato' },
+];
+---
+
+<div class="flex flex-wrap gap-2">
+  {popularFoods.map((food) => (
+    <Pill label={food.label} href={food.href} />
+  ))}
+</div>

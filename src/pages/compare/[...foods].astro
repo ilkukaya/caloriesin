@@ -1,0 +1,336 @@
+---
+import type { Food } from '../../utils/nutrition';
+import Layout from '../../components/layout/Layout.astro';
+import Breadcrumb from '../../components/layout/Breadcrumb.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import FAQSchema from '../../components/schema/FAQSchema.astro';
+import ComparisonTable from '../../components/compare/ComparisonTable.astro';
+import ComparisonVerdict from '../../components/compare/ComparisonVerdict.astro';
+import AdSlot from '../../components/monetization/AdSlot.astro';
+
+const popularComparisons: [string, string][] = [
+  ["banana", "apple"], ["banana", "orange"], ["apple", "orange"],
+  ["mango", "pineapple"], ["strawberry", "blueberry"],
+  ["chicken-breast", "salmon"], ["chicken-breast", "turkey-breast"],
+  ["beef-steak", "chicken-breast"], ["salmon", "tuna"], ["egg", "tofu"],
+  ["white-rice", "brown-rice"], ["white-rice", "quinoa"],
+  ["white-bread", "whole-wheat-bread"], ["pasta", "white-rice"],
+  ["potato", "sweet-potato"], ["oatmeal", "granola-bar"],
+  ["whole-milk", "skim-milk"], ["butter", "olive-oil"],
+  ["cheddar-cheese", "mozzarella"], ["greek-yogurt", "yogurt"],
+  ["avocado", "butter"], ["honey", "maple-syrup"],
+  ["almonds", "walnuts"], ["almonds", "cashews"],
+  ["black-beans", "lentils"], ["chickpeas", "black-beans"],
+  ["coca-cola", "orange-juice"], ["coffee-black", "green-tea"],
+  ["big-mac", "pizza-pepperoni"], ["french-fries", "potato-chips"],
+  ["chocolate-dark", "chocolate-milk"], ["ice-cream", "greek-yogurt"],
+  ["peanuts", "almonds"], ["shrimp", "salmon"],
+  ["bacon", "ham"], ["ground-beef", "turkey-breast"],
+  ["broccoli", "spinach"], ["carrot", "sweet-potato"],
+  ["kale", "spinach"], ["corn", "green-peas"],
+  ["lobster", "shrimp"], ["cod", "tilapia"],
+  ["pistachios", "cashews"], ["chia-seeds", "flaxseed"],
+  ["beer", "red-wine"], ["popcorn", "potato-chips"],
+  ["ketchup", "mustard"], ["mayonnaise", "mustard"],
+  ["lentils", "quinoa"], ["tofu", "chicken-breast"],
+  ["cottage-cheese", "greek-yogurt"], ["cream-cheese", "butter"],
+];
+
+async function loadFoods(): Promise<Food[]> {
+  try {
+    return (await import('../../data/foods.json')).default ?? [];
+  } catch {
+    return [];
+  }
+}
+
+export async function getStaticPaths() {
+  const allComparisons: [string, string][] = [
+    ["banana", "apple"], ["banana", "orange"], ["apple", "orange"],
+    ["mango", "pineapple"], ["strawberry", "blueberry"],
+    ["chicken-breast", "salmon"], ["chicken-breast", "turkey-breast"],
+    ["beef-steak", "chicken-breast"], ["salmon", "tuna"], ["egg", "tofu"],
+    ["white-rice", "brown-rice"], ["white-rice", "quinoa"],
+    ["white-bread", "whole-wheat-bread"], ["pasta", "white-rice"],
+    ["potato", "sweet-potato"], ["oatmeal", "granola-bar"],
+    ["whole-milk", "skim-milk"], ["butter", "olive-oil"],
+    ["cheddar-cheese", "mozzarella"], ["greek-yogurt", "yogurt"],
+    ["avocado", "butter"], ["honey", "maple-syrup"],
+    ["almonds", "walnuts"], ["almonds", "cashews"],
+    ["black-beans", "lentils"], ["chickpeas", "black-beans"],
+    ["coca-cola", "orange-juice"], ["coffee-black", "green-tea"],
+    ["big-mac", "pizza-pepperoni"], ["french-fries", "potato-chips"],
+    ["chocolate-dark", "chocolate-milk"], ["ice-cream", "greek-yogurt"],
+    ["peanuts", "almonds"], ["shrimp", "salmon"],
+    ["bacon", "ham"], ["ground-beef", "turkey-breast"],
+    ["broccoli", "spinach"], ["carrot", "sweet-potato"],
+    ["kale", "spinach"], ["corn", "green-peas"],
+    ["lobster", "shrimp"], ["cod", "tilapia"],
+    ["pistachios", "cashews"], ["chia-seeds", "flaxseed"],
+    ["beer", "red-wine"], ["popcorn", "potato-chips"],
+    ["ketchup", "mustard"], ["mayonnaise", "mustard"],
+    ["lentils", "quinoa"], ["tofu", "chicken-breast"],
+    ["cottage-cheese", "greek-yogurt"], ["cream-cheese", "butter"],
+  ];
+
+  let foods: Food[] = [];
+  try {
+    foods = (await import('../../data/foods.json')).default ?? [];
+  } catch {
+    foods = [];
+  }
+
+  const foodMap = new Map(foods.map((f: Food) => [f.slug, f]));
+  const paths: { params: { foods: string }; props: { food1: Food; food2: Food; isReverse: boolean } }[] = [];
+  const seen = new Set<string>();
+
+  for (const [slug1, slug2] of allComparisons) {
+    const f1 = foodMap.get(slug1);
+    const f2 = foodMap.get(slug2);
+    if (!f1 || !f2) continue;
+
+    const forwardKey = `${slug1}-vs-${slug2}`;
+    const reverseKey = `${slug2}-vs-${slug1}`;
+
+    if (!seen.has(forwardKey)) {
+      seen.add(forwardKey);
+      paths.push({
+        params: { foods: forwardKey },
+        props: { food1: f1, food2: f2, isReverse: false },
+      });
+    }
+
+    if (!seen.has(reverseKey)) {
+      seen.add(reverseKey);
+      paths.push({
+        params: { foods: reverseKey },
+        props: { food1: f2, food2: f1, isReverse: true },
+      });
+    }
+  }
+
+  return paths;
+}
+
+const { food1, food2, isReverse } = Astro.props;
+
+const siteUrl = 'https://caloriesin.netlify.app';
+const canonicalSlug = isReverse
+  ? `${food2.slug}-vs-${food1.slug}`
+  : `${food1.slug}-vs-${food2.slug}`;
+const canonical = `${siteUrl}/compare/${canonicalSlug}`;
+
+const title = `${food1.name} vs ${food2.name}: Calorie & Nutrition Comparison | CaloriesIn`;
+const description = `Compare ${food1.name} and ${food2.name} side by side. See which has fewer calories, more protein, and better nutrition per 100g.`;
+
+// Build FAQ data
+const faqs = [
+  {
+    question: `Which has more calories, ${food1.name} or ${food2.name}?`,
+    answer: food1.calories === food2.calories
+      ? `${food1.name} and ${food2.name} have the same number of calories at ${food1.calories} kcal per 100g.`
+      : food1.calories > food2.calories
+        ? `${food1.name} has more calories with ${food1.calories} kcal per 100g, compared to ${food2.calories} kcal for ${food2.name}.`
+        : `${food2.name} has more calories with ${food2.calories} kcal per 100g, compared to ${food1.calories} kcal for ${food1.name}.`,
+  },
+  {
+    question: `Which has more protein, ${food1.name} or ${food2.name}?`,
+    answer: food1.protein === food2.protein
+      ? `Both have the same protein content at ${food1.protein}g per 100g.`
+      : food1.protein > food2.protein
+        ? `${food1.name} has more protein with ${food1.protein}g per 100g, compared to ${food2.protein}g for ${food2.name}.`
+        : `${food2.name} has more protein with ${food2.protein}g per 100g, compared to ${food1.protein}g for ${food1.name}.`,
+  },
+  {
+    question: `Is ${food1.name} or ${food2.name} better for weight loss?`,
+    answer: food1.calories <= food2.calories
+      ? `${food1.name} is generally better for weight loss as it has fewer calories (${food1.calories} vs ${food2.calories} kcal per 100g). However, total diet composition and individual needs matter more than any single food.`
+      : `${food2.name} is generally better for weight loss as it has fewer calories (${food2.calories} vs ${food1.calories} kcal per 100g). However, total diet composition and individual needs matter more than any single food.`,
+  },
+  {
+    question: `What is the nutritional difference between ${food1.name} and ${food2.name}?`,
+    answer: `Per 100g, ${food1.name} has ${food1.calories} calories, ${food1.protein}g protein, ${food1.carbs}g carbs, and ${food1.totalFat}g fat. ${food2.name} has ${food2.calories} calories, ${food2.protein}g protein, ${food2.carbs}g carbs, and ${food2.totalFat}g fat.`,
+  },
+];
+
+// Build other comparisons list (exclude current pair)
+const allFoods = await loadFoods();
+const foodMap = new Map(allFoods.map((f: Food) => [f.slug, f]));
+const otherComparisons = popularComparisons
+  .filter(([a, b]) => {
+    const isCurrent =
+      (a === food1.slug && b === food2.slug) ||
+      (a === food2.slug && b === food1.slug);
+    return !isCurrent && foodMap.has(a) && foodMap.has(b);
+  })
+  .slice(0, 12);
+
+// Calorie diff for hero summary
+const calDiffPct = food2.calories === 0
+  ? 0
+  : Math.round(Math.abs(food1.calories - food2.calories) / Math.max(food1.calories, food2.calories) * 100);
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonical={canonical}
+>
+  <BreadcrumbSchema
+    siteUrl={siteUrl}
+    items={[
+      { label: 'Home', href: '/' },
+      { label: 'Compare', href: '/compare' },
+      { label: `${food1.name} vs ${food2.name}` },
+    ]}
+  />
+  <FAQSchema faqs={faqs} />
+
+  {isReverse && (
+    <link rel="canonical" href={canonical} />
+  )}
+
+  <div class="mx-auto max-w-5xl px-4 py-6">
+    <Breadcrumb
+      items={[
+        { label: 'Compare', href: '/compare' },
+        { label: `${food1.name} vs ${food2.name}` },
+      ]}
+    />
+
+    <!-- Hero / Title -->
+    <h1 class="mb-2 text-3xl font-bold text-text-main md:text-4xl">
+      {food1.name} vs {food2.name}
+    </h1>
+    <p class="mb-8 text-text-muted">
+      Calorie and nutrition comparison per 100 grams
+    </p>
+
+    <!-- Two-Column Summary Cards -->
+    <div class="mb-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+      <!-- Food 1 Card -->
+      <div class="rounded-xl border-2 border-primary bg-primary-light p-6 text-center">
+        <h2 class="mb-1 text-xl font-bold text-text-main">{food1.name}</h2>
+        <p class="mb-3 text-sm text-text-muted">{food1.category}</p>
+        <div class="mb-4">
+          <span class="text-4xl font-extrabold text-primary">{food1.calories}</span>
+          <span class="ml-1 text-sm text-text-muted">kcal / 100g</span>
+        </div>
+        <div class="flex justify-center gap-4 text-sm">
+          <div>
+            <span class="block font-bold text-text-main">{food1.protein}g</span>
+            <span class="text-text-muted">Protein</span>
+          </div>
+          <div>
+            <span class="block font-bold text-text-main">{food1.carbs}g</span>
+            <span class="text-text-muted">Carbs</span>
+          </div>
+          <div>
+            <span class="block font-bold text-text-main">{food1.totalFat}g</span>
+            <span class="text-text-muted">Fat</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Food 2 Card -->
+      <div class="rounded-xl border-2 border-accent bg-accent-light p-6 text-center">
+        <h2 class="mb-1 text-xl font-bold text-text-main">{food2.name}</h2>
+        <p class="mb-3 text-sm text-text-muted">{food2.category}</p>
+        <div class="mb-4">
+          <span class="text-4xl font-extrabold text-accent">{food2.calories}</span>
+          <span class="ml-1 text-sm text-text-muted">kcal / 100g</span>
+        </div>
+        <div class="flex justify-center gap-4 text-sm">
+          <div>
+            <span class="block font-bold text-text-main">{food2.protein}g</span>
+            <span class="text-text-muted">Protein</span>
+          </div>
+          <div>
+            <span class="block font-bold text-text-main">{food2.carbs}g</span>
+            <span class="text-text-muted">Carbs</span>
+          </div>
+          <div>
+            <span class="block font-bold text-text-main">{food2.totalFat}g</span>
+            <span class="text-text-muted">Fat</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Summary -->
+    {food1.calories !== food2.calories && (
+      <div class="mb-8 rounded-lg bg-bg-alt p-4 text-center text-sm text-text-main">
+        <strong>{food1.calories < food2.calories ? food1.name : food2.name}</strong> has
+        <strong class="text-primary">{calDiffPct}% fewer calories</strong> than
+        <strong>{food1.calories < food2.calories ? food2.name : food1.name}</strong>
+        ({Math.min(food1.calories, food2.calories)} vs {Math.max(food1.calories, food2.calories)} kcal per 100g)
+      </div>
+    )}
+
+    <!-- Comparison Table -->
+    <div class="mb-8">
+      <ComparisonTable food1={food1} food2={food2} />
+    </div>
+
+    <!-- Verdict -->
+    <div class="mb-8">
+      <ComparisonVerdict food1={food1} food2={food2} />
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mb-8">
+      <h2 class="mb-4 text-xl font-bold text-text-main">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-4">
+        {faqs.map((faq) => (
+          <details class="group rounded-lg border border-border-main bg-white">
+            <summary class="cursor-pointer px-5 py-4 font-medium text-text-main transition-colors hover:text-primary">
+              {faq.question}
+            </summary>
+            <div class="border-t border-border-main px-5 py-4 text-sm text-text-muted">
+              {faq.answer}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+
+    <AdSlot slot="compare-bottom" />
+
+    <!-- Other Popular Comparisons -->
+    {otherComparisons.length > 0 && (
+      <div class="mt-12">
+        <h2 class="mb-4 text-xl font-bold text-text-main">
+          Other Popular Comparisons
+        </h2>
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {otherComparisons.map(([slug1, slug2]) => {
+            const f1 = foodMap.get(slug1);
+            const f2 = foodMap.get(slug2);
+            if (!f1 || !f2) return null;
+            return (
+              <a
+                href={`/compare/${slug1}-vs-${slug2}`}
+                class="group flex items-center justify-between rounded-lg border border-border-main bg-white px-4 py-3 transition-all hover:border-primary hover:shadow-md"
+              >
+                <span class="text-sm font-medium text-text-main group-hover:text-primary">
+                  {f1.name} vs {f2.name}
+                </span>
+                <svg
+                  class="h-4 w-4 flex-shrink-0 text-text-muted group-hover:text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    )}
+  </div>
+</Layout>

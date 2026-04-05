@@ -1,0 +1,48 @@
+{
+  "fdcId": 174032,
+  "slug": "beef-steak",
+  "name": "Beef Steak",
+  "category": "Meats",
+  "categorySlug": "meats",
+  "calories": 271,
+  "protein": 26,
+  "totalFat": 18,
+  "saturatedFat": 7.3,
+  "carbs": 0,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 57,
+  "cholesterol": 90,
+  "nutrients": [
+    {
+      "name": "Iron",
+      "amount": 2.6,
+      "unit": "mg"
+    },
+    {
+      "name": "Zinc",
+      "amount": 5.5,
+      "unit": "mg"
+    },
+    {
+      "name": "Vitamin B12",
+      "amount": 2.1,
+      "unit": "mcg"
+    },
+    {
+      "name": "Selenium",
+      "amount": 28.5,
+      "unit": "mcg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 steak (6 oz)",
+      "grams": 170
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

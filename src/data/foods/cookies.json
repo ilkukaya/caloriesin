@@ -1,0 +1,38 @@
+{
+  "fdcId": 167534,
+  "slug": "cookies",
+  "name": "Cookies",
+  "category": "Snacks",
+  "categorySlug": "snacks",
+  "calories": 488,
+  "protein": 5.4,
+  "totalFat": 23.5,
+  "saturatedFat": 7.6,
+  "carbs": 65,
+  "fiber": 2.4,
+  "sugar": 32,
+  "sodium": 348,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Iron",
+      "amount": 3.9,
+      "unit": "mg"
+    },
+    {
+      "name": "Calcium",
+      "amount": 23,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 cookie",
+      "grams": 30
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

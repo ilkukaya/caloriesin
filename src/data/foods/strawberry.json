@@ -1,0 +1,43 @@
+{
+  "fdcId": 167762,
+  "slug": "strawberry",
+  "name": "Strawberry",
+  "category": "Fruits",
+  "categorySlug": "fruits",
+  "calories": 32,
+  "protein": 0.7,
+  "totalFat": 0.3,
+  "saturatedFat": 0,
+  "carbs": 7.7,
+  "fiber": 2,
+  "sugar": 4.9,
+  "sodium": 1,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Vitamin C",
+      "amount": 58.8,
+      "unit": "mg"
+    },
+    {
+      "name": "Potassium",
+      "amount": 153,
+      "unit": "mg"
+    },
+    {
+      "name": "Manganese",
+      "amount": 0.4,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 cup",
+      "grams": 152
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

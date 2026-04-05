@@ -1,0 +1,237 @@
+---
+import Layout from '../components/layout/Layout.astro';
+import Breadcrumb from '../components/layout/Breadcrumb.astro';
+import type { Food } from '../utils/nutrition';
+
+let foods: Food[] = [];
+try {
+  foods = (await import('../data/foods.json')).default ?? [];
+} catch {
+  foods = [];
+}
+
+// Build a lightweight search index and write it as inline JSON for the client
+const searchIndex = foods.map((f) => ({
+  s: f.slug,
+  n: f.name,
+  c: f.calories,
+  cat: f.category,
+}));
+
+const siteUrl = 'https://caloriesin.netlify.app';
+const title = 'Search Foods — CaloriesIn';
+const description = 'Search our database of thousands of foods to find calorie counts, macros, and nutritional information.';
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonical={`${siteUrl}/search`}
+>
+  <div class="mx-auto max-w-3xl px-4 py-6">
+    <Breadcrumb items={[{ label: 'Search' }]} />
+
+    <h1 class="mb-6 text-3xl font-bold text-text-main md:text-4xl">
+      Search Foods
+    </h1>
+
+    <!-- Search Input -->
+    <div class="mb-8">
+      <div class="relative">
+        <svg
+          class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-text-muted"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <input
+          id="search-input"
+          type="text"
+          placeholder="Search for a food... (e.g., banana, chicken breast)"
+          autocomplete="off"
+          class="w-full rounded-xl border border-border-main bg-white py-4 pl-12 pr-4 text-base text-text-main shadow-sm placeholder:text-text-muted/60 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+        />
+      </div>
+      <p id="search-status" class="mt-2 text-sm text-text-muted"></p>
+    </div>
+
+    <!-- Results Container -->
+    <div id="search-results" class="space-y-0"></div>
+
+    <!-- No Results State -->
+    <div id="no-results" class="hidden py-12 text-center">
+      <div class="mb-4 text-4xl">🔍</div>
+      <h2 class="mb-2 text-lg font-semibold text-text-main">No results found</h2>
+      <p class="text-text-muted">
+        Try a different search term or browse our
+        <a href="/" class="font-medium text-primary hover:underline">categories</a>.
+      </p>
+    </div>
+
+    <!-- Initial State -->
+    <div id="initial-state" class="py-12 text-center">
+      <div class="mb-4 text-4xl">🍽️</div>
+      <h2 class="mb-2 text-lg font-semibold text-text-main">Start typing to search</h2>
+      <p class="text-text-muted">
+        Search across thousands of foods to find calorie and nutrition information.
+      </p>
+    </div>
+  </div>
+
+  <!-- Inline search index data -->
+  <script id="search-data" type="application/json" set:html={JSON.stringify(searchIndex)} />
+
+  <script>
+    const dataEl = document.getElementById('search-data');
+    const searchInput = document.getElementById('search-input') as HTMLInputElement | null;
+    const resultsContainer = document.getElementById('search-results');
+    const noResults = document.getElementById('no-results');
+    const initialState = document.getElementById('initial-state');
+    const searchStatus = document.getElementById('search-status');
+
+    interface SearchItem {
+      s: string;  // slug
+      n: string;  // name
+      c: number;  // calories
+      cat: string; // category
+    }
+
+    let index: SearchItem[] = [];
+
+    if (dataEl) {
+      try {
+        index = JSON.parse(dataEl.textContent || '[]');
+      } catch {
+        index = [];
+      }
+    }
+
+    function search(query: string): SearchItem[] {
+      if (!query || query.length < 2) return [];
+
+      const q = query.toLowerCase().trim();
+      const terms = q.split(/\s+/);
+
+      // Score each item
+      const scored: { item: SearchItem; score: number }[] = [];
+
+      for (const item of index) {
+        const name = item.n.toLowerCase();
+
+        // Check if all terms match
+        const allMatch = terms.every(
+          (term) => name.includes(term) || item.cat.toLowerCase().includes(term)
+        );
+        if (!allMatch) continue;
+
+        // Calculate relevance score (lower = better)
+        let score = 0;
+        if (name === q) {
+          score = 0; // Exact match
+        } else if (name.startsWith(q)) {
+          score = 1; // Starts with full query
+        } else if (terms.some((t) => name.startsWith(t))) {
+          score = 2; // Starts with a term
+        } else {
+          score = 3; // Contains
+        }
+
+        // Shorter names rank higher for tie-breaking
+        score += name.length * 0.001;
+
+        scored.push({ item, score });
+      }
+
+      scored.sort((a, b) => a.score - b.score);
+      return scored.slice(0, 30).map((s) => s.item);
+    }
+
+    function renderResults(items: SearchItem[], query: string) {
+      if (!resultsContainer || !noResults || !initialState || !searchStatus) return;
+
+      if (!query || query.length < 2) {
+        resultsContainer.innerHTML = '';
+        noResults.classList.add('hidden');
+        initialState.classList.remove('hidden');
+        searchStatus.textContent = '';
+        return;
+      }
+
+      initialState.classList.add('hidden');
+
+      if (items.length === 0) {
+        resultsContainer.innerHTML = '';
+        noResults.classList.remove('hidden');
+        searchStatus.textContent = `No results for "${query}"`;
+        return;
+      }
+
+      noResults.classList.add('hidden');
+      searchStatus.textContent = `${items.length} result${items.length === 1 ? '' : 's'} for "${query}"`;
+
+      resultsContainer.innerHTML = items
+        .map(
+          (item) => `
+          <a href="/${item.s}" class="group flex items-center justify-between border-b border-border-main px-2 py-3 transition-colors hover:bg-primary-light first:rounded-t-lg last:rounded-b-lg last:border-b-0">
+            <div class="min-w-0">
+              <h3 class="truncate text-base font-semibold text-text-main group-hover:text-primary">${escapeHtml(item.n)}</h3>
+              <span class="text-xs text-text-muted">${escapeHtml(item.cat)}</span>
+            </div>
+            <div class="ml-4 shrink-0 text-right">
+              <span class="text-lg font-bold text-primary">${item.c}</span>
+              <span class="block text-xs text-text-muted">cal/100g</span>
+            </div>
+          </a>
+        `
+        )
+        .join('');
+    }
+
+    function escapeHtml(text: string): string {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    // Debounce helper
+    let timer: ReturnType<typeof setTimeout>;
+    function debounce(fn: () => void, ms: number) {
+      clearTimeout(timer);
+      timer = setTimeout(fn, ms);
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        debounce(() => {
+          const q = searchInput.value;
+          const results = search(q);
+          renderResults(results, q);
+
+          // Update URL without reload
+          const url = new URL(window.location.href);
+          if (q) {
+            url.searchParams.set('q', q);
+          } else {
+            url.searchParams.delete('q');
+          }
+          history.replaceState(null, '', url.toString());
+        }, 200);
+      });
+
+      // On page load, read ?q= param
+      const params = new URLSearchParams(window.location.search);
+      const initialQuery = params.get('q');
+      if (initialQuery) {
+        searchInput.value = initialQuery;
+        const results = search(initialQuery);
+        renderResults(results, initialQuery);
+      }
+
+      // Focus input on load
+      searchInput.focus();
+    }
+  </script>
+</Layout>

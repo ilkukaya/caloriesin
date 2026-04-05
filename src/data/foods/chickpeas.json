@@ -1,0 +1,48 @@
+{
+  "fdcId": 173757,
+  "slug": "chickpeas",
+  "name": "Chickpeas",
+  "category": "Legumes",
+  "categorySlug": "legumes",
+  "calories": 164,
+  "protein": 8.9,
+  "totalFat": 2.6,
+  "saturatedFat": 0.3,
+  "carbs": 27.4,
+  "fiber": 7.6,
+  "sugar": 4.8,
+  "sodium": 7,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Folate",
+      "amount": 172,
+      "unit": "mcg"
+    },
+    {
+      "name": "Iron",
+      "amount": 2.9,
+      "unit": "mg"
+    },
+    {
+      "name": "Manganese",
+      "amount": 1,
+      "unit": "mg"
+    },
+    {
+      "name": "Phosphorus",
+      "amount": 168,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 cup cooked",
+      "grams": 164
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

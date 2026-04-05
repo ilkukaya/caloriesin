@@ -1,0 +1,31 @@
+---
+interface Comparison {
+  slug: string;
+  name: string;
+}
+
+interface Props {
+  currentSlug: string;
+  currentName: string;
+  comparisons: Comparison[];
+}
+
+const { currentSlug, currentName, comparisons } = Astro.props;
+---
+
+{comparisons.length > 0 && (
+  <div class="rounded-2xl bg-white p-6 shadow-sm">
+    <h2 class="mb-4 text-xl font-bold text-text-main">Compare {currentName} With...</h2>
+
+    <div class="flex flex-wrap gap-2">
+      {comparisons.map((comp) => (
+        <a
+          href={`/compare/${currentSlug}-vs-${comp.slug}`}
+          class="inline-block rounded-full border border-border-main px-3 py-1 text-sm text-text-main transition-colors hover:border-primary hover:bg-primary-light hover:text-primary"
+        >
+          {currentName} vs {comp.name}
+        </a>
+      ))}
+    </div>
+  </div>
+)}

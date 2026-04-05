@@ -1,0 +1,30 @@
+---
+interface Props {
+  name: string;
+  slug: string;
+  calories: number;
+  category?: string;
+}
+
+const { name, slug, calories, category } = Astro.props;
+---
+
+<a
+  href={`/${slug}`}
+  class="group block rounded-lg border border-border-main bg-white p-4 transition-all hover:border-primary hover:shadow-md"
+>
+  <div class="flex items-center justify-between gap-3">
+    <div class="min-w-0">
+      <h3 class="truncate text-base font-semibold text-text-main group-hover:text-primary">
+        {name}
+      </h3>
+      {category && (
+        <span class="mt-1 inline-block text-xs text-text-muted">{category}</span>
+      )}
+    </div>
+    <div class="shrink-0 text-right">
+      <span class="text-lg font-bold text-primary">{calories}</span>
+      <span class="block text-xs text-text-muted">cal/100g</span>
+    </div>
+  </div>
+</a>

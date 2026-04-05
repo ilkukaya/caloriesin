@@ -1,0 +1,133 @@
+---
+interface Nutrient {
+  name: string;
+  amount: number;
+  unit: string;
+}
+
+interface Props {
+  food: {
+    calories: number;
+    protein: number;
+    totalFat: number;
+    saturatedFat: number;
+    carbs: number;
+    fiber: number;
+    sugar: number;
+    sodium: number;
+    cholesterol: number;
+    nutrients?: Nutrient[];
+  };
+}
+
+const { food } = Astro.props;
+
+const dailyValues: Record<string, { value: number; unit: string }> = {
+  'Total Fat': { value: 78, unit: 'g' },
+  'Saturated Fat': { value: 20, unit: 'g' },
+  'Cholesterol': { value: 300, unit: 'mg' },
+  'Sodium': { value: 2300, unit: 'mg' },
+  'Total Carbohydrate': { value: 275, unit: 'g' },
+  'Dietary Fiber': { value: 28, unit: 'g' },
+  'Protein': { value: 50, unit: 'g' },
+  'Vitamin A': { value: 900, unit: 'mcg' },
+  'Vitamin C': { value: 90, unit: 'mg' },
+  'Calcium': { value: 1300, unit: 'mg' },
+  'Iron': { value: 18, unit: 'mg' },
+  'Potassium': { value: 4700, unit: 'mg' },
+};
+
+function calcDV(name: string, amount: number): string | null {
+  const dv = dailyValues[name];
+  if (!dv) return null;
+  return `${Math.round((amount / dv.value) * 100)}%`;
+}
+---
+
+<div class="overflow-hidden rounded-lg border border-border-main bg-white">
+  <div class="border-b-8 border-text-main px-4 py-3">
+    <h2 class="text-2xl font-extrabold text-text-main">Nutrition Facts</h2>
+    <p class="text-sm text-text-muted">Per 100g serving</p>
+  </div>
+
+  <div class="px-4">
+    {/* Calories */}
+    <div class="flex items-baseline justify-between border-b-8 border-text-main py-2">
+      <span class="text-lg font-extrabold text-text-main">Calories</span>
+      <span class="text-3xl font-extrabold text-text-main">{food.calories}</span>
+    </div>
+
+    {/* %DV header */}
+    <div class="border-b border-border-main py-1 text-right text-xs font-semibold text-text-muted">
+      % Daily Value*
+    </div>
+
+    {/* Total Fat */}
+    <div class="flex justify-between border-b border-border-main py-1">
+      <span><span class="font-bold">Total Fat</span> {food.totalFat}g</span>
+      <span class="font-bold">{calcDV('Total Fat', food.totalFat)}</span>
+    </div>
+
+    {/* Saturated Fat (indented) */}
+    <div class="flex justify-between border-b border-border-main py-1 pl-6">
+      <span>Saturated Fat {food.saturatedFat}g</span>
+      <span class="font-bold">{calcDV('Saturated Fat', food.saturatedFat)}</span>
+    </div>
+
+    {/* Cholesterol */}
+    <div class="flex justify-between border-b border-border-main py-1">
+      <span><span class="font-bold">Cholesterol</span> {food.cholesterol}mg</span>
+      <span class="font-bold">{calcDV('Cholesterol', food.cholesterol)}</span>
+    </div>
+
+    {/* Sodium */}
+    <div class="flex justify-between border-b border-border-main py-1">
+      <span><span class="font-bold">Sodium</span> {food.sodium}mg</span>
+      <span class="font-bold">{calcDV('Sodium', food.sodium)}</span>
+    </div>
+
+    {/* Total Carbohydrate */}
+    <div class="flex justify-between border-b border-border-main py-1">
+      <span><span class="font-bold">Total Carbohydrate</span> {food.carbs}g</span>
+      <span class="font-bold">{calcDV('Total Carbohydrate', food.carbs)}</span>
+    </div>
+
+    {/* Dietary Fiber (indented) */}
+    <div class="flex justify-between border-b border-border-main py-1 pl-6">
+      <span>Dietary Fiber {food.fiber}g</span>
+      <span class="font-bold">{calcDV('Dietary Fiber', food.fiber)}</span>
+    </div>
+
+    {/* Sugars (indented) */}
+    <div class="flex justify-between border-b border-border-main py-1 pl-6">
+      <span>Sugars {food.sugar}g</span>
+      <span>&nbsp;</span>
+    </div>
+
+    {/* Protein */}
+    <div class="flex justify-between border-b-8 border-text-main py-1">
+      <span><span class="font-bold">Protein</span> {food.protein}g</span>
+      <span class="font-bold">{calcDV('Protein', food.protein)}</span>
+    </div>
+
+    {/* Vitamins / Minerals */}
+    {food.nutrients && food.nutrients.length > 0 && (
+      <div>
+        {food.nutrients.map((nutrient, i) => (
+          <div class:list={[
+            'flex justify-between py-1',
+            i < food.nutrients!.length - 1 ? 'border-b border-border-main' : '',
+          ]}>
+            <span>{nutrient.name} {nutrient.amount}{nutrient.unit}</span>
+            <span class="font-bold">{calcDV(nutrient.name, nutrient.amount) ?? ''}</span>
+          </div>
+        ))}
+      </div>
+    )}
+
+    {/* Footnote */}
+    <div class="border-t border-border-main py-3 text-xs text-text-muted">
+      * Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs.
+    </div>
+  </div>
+</div>

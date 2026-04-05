@@ -1,0 +1,43 @@
+{
+  "fdcId": 167820,
+  "slug": "pork-chop",
+  "name": "Pork Chop",
+  "category": "Meats",
+  "categorySlug": "meats",
+  "calories": 231,
+  "protein": 25.7,
+  "totalFat": 13.9,
+  "saturatedFat": 5,
+  "carbs": 0,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 62,
+  "cholesterol": 82,
+  "nutrients": [
+    {
+      "name": "Thiamin",
+      "amount": 0.9,
+      "unit": "mg"
+    },
+    {
+      "name": "Selenium",
+      "amount": 33.5,
+      "unit": "mcg"
+    },
+    {
+      "name": "Zinc",
+      "amount": 2.4,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 chop",
+      "grams": 137
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

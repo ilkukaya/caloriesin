@@ -1,0 +1,47 @@
+{
+  "fdcId": 167600,
+  "slug": "ice-cream",
+  "name": "Ice Cream",
+  "category": "Snacks",
+  "categorySlug": "snacks",
+  "calories": 207,
+  "protein": 3.5,
+  "totalFat": 11,
+  "saturatedFat": 6.8,
+  "carbs": 24,
+  "fiber": 0.7,
+  "sugar": 21,
+  "sodium": 80,
+  "cholesterol": 44,
+  "nutrients": [
+    {
+      "name": "Calcium",
+      "amount": 128,
+      "unit": "mg"
+    },
+    {
+      "name": "Phosphorus",
+      "amount": 105,
+      "unit": "mg"
+    },
+    {
+      "name": "Vitamin A",
+      "amount": 92,
+      "unit": "mcg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1/2 cup",
+      "grams": 66
+    },
+    {
+      "label": "1 cup",
+      "grams": 132
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "fdcId": 169699,
+  "slug": "couscous",
+  "name": "Couscous",
+  "category": "Grains",
+  "categorySlug": "grains",
+  "calories": 112,
+  "protein": 3.8,
+  "totalFat": 0.2,
+  "saturatedFat": 0,
+  "carbs": 23.2,
+  "fiber": 1.4,
+  "sugar": 0.1,
+  "sodium": 5,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Selenium",
+      "amount": 27.5,
+      "unit": "mcg"
+    },
+    {
+      "name": "Folate",
+      "amount": 15,
+      "unit": "mcg"
+    },
+    {
+      "name": "Iron",
+      "amount": 0.4,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 cup cooked",
+      "grams": 157
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

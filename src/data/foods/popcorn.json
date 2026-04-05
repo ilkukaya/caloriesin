@@ -1,0 +1,43 @@
+{
+  "fdcId": 167958,
+  "slug": "popcorn",
+  "name": "Popcorn",
+  "category": "Snacks",
+  "categorySlug": "snacks",
+  "calories": 387,
+  "protein": 13,
+  "totalFat": 4.5,
+  "saturatedFat": 0.6,
+  "carbs": 78,
+  "fiber": 15,
+  "sugar": 0.9,
+  "sodium": 8,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Manganese",
+      "amount": 1.1,
+      "unit": "mg"
+    },
+    {
+      "name": "Magnesium",
+      "amount": 144,
+      "unit": "mg"
+    },
+    {
+      "name": "Phosphorus",
+      "amount": 300,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 cup air-popped",
+      "grams": 8
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

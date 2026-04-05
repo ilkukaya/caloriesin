@@ -1,0 +1,175 @@
+---
+import foods from '../data/foods.json';
+import Layout from '../components/layout/Layout.astro';
+import Breadcrumb from '../components/layout/Breadcrumb.astro';
+import CalorieHero from '../components/food/CalorieHero.astro';
+import NutritionTable from '../components/food/NutritionTable.astro';
+import MacroChart from '../components/food/MacroChart.astro';
+import CalorieBurn from '../components/food/CalorieBurn.astro';
+import HealthNotes from '../components/food/HealthNotes.astro';
+import FoodFAQ from '../components/food/FoodFAQ.astro';
+import RelatedFoods from '../components/food/RelatedFoods.astro';
+import CompareLinks from '../components/food/CompareLinks.astro';
+import AdSlot from '../components/monetization/AdSlot.astro';
+import AffiliateBanner from '../components/monetization/AffiliateBanner.astro';
+import NutritionSchema from '../components/schema/NutritionSchema.astro';
+import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import { getCalorieBadge, generateHealthNotes, generateFAQ } from '../utils/nutrition';
+import type { Food } from '../utils/nutrition';
+
+export function getStaticPaths() {
+  return (foods as Food[]).map((food) => ({
+    params: { slug: food.slug },
+    props: { food },
+  }));
+}
+
+const { food } = Astro.props as { food: Food };
+const badge = getCalorieBadge(food.calories);
+const healthNotes = generateHealthNotes(food);
+const faqs = generateFAQ(food);
+
+// Get related foods from same category
+const relatedFoods = (foods as Food[])
+  .filter((f) => f.categorySlug === food.categorySlug && f.slug !== food.slug)
+  .slice(0, 8)
+  .map((f) => ({ name: f.name, slug: f.slug, calories: f.calories }));
+
+// Get comparison targets (same category + popular cross-category)
+const comparisons = (foods as Food[])
+  .filter((f) => f.categorySlug === food.categorySlug && f.slug !== food.slug)
+  .slice(0, 6)
+  .map((f) => ({ slug: f.slug, name: f.name }));
+
+const serving = food.servings?.[0];
+const servingCalories = serving ? Math.round((food.calories * serving.grams) / 100) : food.calories;
+
+const title = `Calories in ${food.name} — Nutrition Facts & Health Info | CaloriesIn`;
+const description = `${food.name} has ${food.calories} calories per 100g.${serving ? ` A ${serving.label} (${serving.grams}g) has ${servingCalories} calories.` : ''} ${food.protein}g protein, ${food.carbs}g carbs, ${food.totalFat}g fat. Full nutrition facts.`;
+
+const breadcrumbItems = [
+  { label: 'Home', href: '/' },
+  { label: food.category, href: `/category/${food.categorySlug}` },
+  { label: food.name },
+];
+---
+
+<Layout title={title} description={description} canonical={`https://caloriesin.netlify.app/${food.slug}`}>
+  <BreadcrumbSchema items={breadcrumbItems} siteUrl="https://caloriesin.netlify.app" />
+  <NutritionSchema food={food} />
+
+  <div class="max-w-4xl mx-auto px-4 py-6">
+    <Breadcrumb items={breadcrumbItems} />
+
+    <CalorieHero
+      name={food.name}
+      calories={food.calories}
+      servingLabel={serving?.label}
+      servingGrams={serving?.grams}
+      badgeLabel={badge.label}
+      badgeColor={badge.color}
+    />
+
+    <!-- Serving Size Selector -->
+    <div class="mt-6 bg-white rounded-xl border border-border-main p-4" id="serving-section">
+      <h2 class="text-lg font-semibold text-text-main mb-3">Serving Size</h2>
+      <div class="flex flex-wrap gap-2" id="serving-buttons">
+        {food.servings.map((s, i) => (
+          <button
+            class:list={[
+              'serving-btn px-4 py-2 rounded-lg border text-sm font-medium transition-colors',
+              i === 0 ? 'bg-primary text-white border-primary' : 'bg-white text-text-main border-border-main hover:border-primary',
+            ]}
+            data-grams={s.grams}
+            data-label={s.label}
+          >
+            {s.label} ({s.grams}g)
+          </button>
+        ))}
+      </div>
+      <p class="mt-2 text-sm text-text-muted" id="serving-info">
+        Showing values for: {serving?.label || '100g'} ({serving?.grams || 100}g)
+      </p>
+    </div>
+
+    <div class="mt-8">
+      <MacroChart protein={food.protein} carbs={food.carbs} fat={food.totalFat} />
+    </div>
+
+    <AdSlot slot="mid-content-1" />
+
+    <div class="mt-8">
+      <NutritionTable food={food} />
+    </div>
+
+    <div class="mt-8">
+      <CalorieBurn calories={food.calories} />
+    </div>
+
+    <AdSlot slot="mid-content-2" />
+
+    <div class="mt-8">
+      <HealthNotes notes={healthNotes} />
+    </div>
+
+    <div class="mt-8">
+      <AffiliateBanner
+        name="MyFitnessPal"
+        description="Track your daily calories and nutrition with the #1 calorie counting app."
+        ctaText="Start Tracking Free"
+        ctaUrl="#"
+        logo="📱"
+      />
+    </div>
+
+    {comparisons.length > 0 && (
+      <div class="mt-8">
+        <CompareLinks currentSlug={food.slug} currentName={food.name} comparisons={comparisons} />
+      </div>
+    )}
+
+    {relatedFoods.length > 0 && (
+      <div class="mt-8">
+        <RelatedFoods foods={relatedFoods} />
+      </div>
+    )}
+
+    <div class="mt-8">
+      <FoodFAQ faqs={faqs} />
+    </div>
+
+    <AdSlot slot="bottom" />
+
+    <p class="mt-8 text-xs text-text-muted text-center">
+      Nutrition data source: USDA FoodData Central. Values are per 100g unless otherwise noted.
+      This information is for general reference only and should not replace professional medical advice.
+    </p>
+  </div>
+
+  <script is:inline>
+    // Serving size selector
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.serving-btn');
+      const info = document.getElementById('serving-info');
+      const baseCal = parseFloat(document.querySelector('[data-base-calories]')?.dataset.baseCalories || '0');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Update button styles
+          buttons.forEach(b => {
+            b.classList.remove('bg-primary', 'text-white', 'border-primary');
+            b.classList.add('bg-white', 'text-text-main', 'border-border-main');
+          });
+          btn.classList.add('bg-primary', 'text-white', 'border-primary');
+          btn.classList.remove('bg-white', 'text-text-main', 'border-border-main');
+
+          const grams = parseFloat(btn.dataset.grams);
+          const label = btn.dataset.label;
+          if (info) {
+            info.textContent = `Showing values for: ${label} (${grams}g)`;
+          }
+        });
+      });
+    });
+  </script>
+</Layout>

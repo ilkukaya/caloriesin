@@ -1,0 +1,47 @@
+{
+  "fdcId": 167765,
+  "slug": "watermelon",
+  "name": "Watermelon",
+  "category": "Fruits",
+  "categorySlug": "fruits",
+  "calories": 30,
+  "protein": 0.6,
+  "totalFat": 0.2,
+  "saturatedFat": 0,
+  "carbs": 7.6,
+  "fiber": 0.4,
+  "sugar": 6.2,
+  "sodium": 1,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Vitamin C",
+      "amount": 8.1,
+      "unit": "mg"
+    },
+    {
+      "name": "Vitamin A",
+      "amount": 28,
+      "unit": "mcg"
+    },
+    {
+      "name": "Potassium",
+      "amount": 112,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 cup diced",
+      "grams": 152
+    },
+    {
+      "label": "1 wedge",
+      "grams": 286
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

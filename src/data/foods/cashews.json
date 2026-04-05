@@ -1,0 +1,48 @@
+{
+  "fdcId": 170162,
+  "slug": "cashews",
+  "name": "Cashews",
+  "category": "Nuts & Seeds",
+  "categorySlug": "nuts-and-seeds",
+  "calories": 553,
+  "protein": 18.2,
+  "totalFat": 43.9,
+  "saturatedFat": 7.8,
+  "carbs": 30.2,
+  "fiber": 3.3,
+  "sugar": 5.9,
+  "sodium": 12,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Copper",
+      "amount": 2.2,
+      "unit": "mg"
+    },
+    {
+      "name": "Magnesium",
+      "amount": 292,
+      "unit": "mg"
+    },
+    {
+      "name": "Manganese",
+      "amount": 1.7,
+      "unit": "mg"
+    },
+    {
+      "name": "Zinc",
+      "amount": 5.8,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 oz",
+      "grams": 28
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

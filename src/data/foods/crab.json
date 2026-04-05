@@ -1,0 +1,48 @@
+{
+  "fdcId": 171967,
+  "slug": "crab",
+  "name": "Crab",
+  "category": "Seafood",
+  "categorySlug": "seafood",
+  "calories": 97,
+  "protein": 19.4,
+  "totalFat": 1.5,
+  "saturatedFat": 0.2,
+  "carbs": 0,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 332,
+  "cholesterol": 78,
+  "nutrients": [
+    {
+      "name": "Zinc",
+      "amount": 6.5,
+      "unit": "mg"
+    },
+    {
+      "name": "Copper",
+      "amount": 0.7,
+      "unit": "mg"
+    },
+    {
+      "name": "Selenium",
+      "amount": 37.4,
+      "unit": "mcg"
+    },
+    {
+      "name": "Vitamin B12",
+      "amount": 9,
+      "unit": "mcg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "3 oz",
+      "grams": 85
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}
