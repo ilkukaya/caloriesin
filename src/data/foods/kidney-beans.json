@@ -1,0 +1,43 @@
+{
+  "fdcId": 175198,
+  "slug": "kidney-beans",
+  "name": "Kidney Beans",
+  "category": "Legumes",
+  "categorySlug": "legumes",
+  "calories": 127,
+  "protein": 8.7,
+  "totalFat": 0.5,
+  "saturatedFat": 0.1,
+  "carbs": 22.8,
+  "fiber": 6.4,
+  "sugar": 2.3,
+  "sodium": 2,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Folate",
+      "amount": 130,
+      "unit": "mcg"
+    },
+    {
+      "name": "Iron",
+      "amount": 2.9,
+      "unit": "mg"
+    },
+    {
+      "name": "Potassium",
+      "amount": 403,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 cup cooked",
+      "grams": 177
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

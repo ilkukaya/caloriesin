@@ -1,0 +1,43 @@
+{
+  "fdcId": 172687,
+  "slug": "white-bread",
+  "name": "White Bread",
+  "category": "Grains",
+  "categorySlug": "grains",
+  "calories": 265,
+  "protein": 9,
+  "totalFat": 3.2,
+  "saturatedFat": 0.7,
+  "carbs": 49.2,
+  "fiber": 2.7,
+  "sugar": 5,
+  "sodium": 491,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Folate",
+      "amount": 111,
+      "unit": "mcg"
+    },
+    {
+      "name": "Iron",
+      "amount": 3.6,
+      "unit": "mg"
+    },
+    {
+      "name": "Thiamin",
+      "amount": 0.5,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 slice",
+      "grams": 25
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "fdcId": 173414,
+  "slug": "cream-cheese",
+  "name": "Cream Cheese",
+  "category": "Dairy",
+  "categorySlug": "dairy",
+  "calories": 342,
+  "protein": 5.9,
+  "totalFat": 34.2,
+  "saturatedFat": 19.3,
+  "carbs": 4.1,
+  "fiber": 0,
+  "sugar": 3.8,
+  "sodium": 321,
+  "cholesterol": 110,
+  "nutrients": [
+    {
+      "name": "Vitamin A",
+      "amount": 308,
+      "unit": "mcg"
+    },
+    {
+      "name": "Calcium",
+      "amount": 98,
+      "unit": "mg"
+    },
+    {
+      "name": "Phosphorus",
+      "amount": 104,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 tbsp",
+      "grams": 14.5
+    },
+    {
+      "label": "1 oz",
+      "grams": 28
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

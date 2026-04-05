@@ -1,0 +1,21 @@
+---
+interface Props {
+  name: string;
+  slug: string;
+  count: number;
+  emoji: string;
+}
+
+const { name, slug, count, emoji } = Astro.props;
+---
+
+<a
+  href={`/category/${slug}`}
+  class="group block rounded-xl border border-border-main bg-white p-6 transition-all hover:border-primary hover:shadow-md"
+>
+  <div class="text-4xl mb-3">{emoji}</div>
+  <h3 class="text-lg font-semibold text-text-main group-hover:text-primary transition-colors">
+    {name}
+  </h3>
+  <p class="mt-1 text-sm text-text-muted">{count} foods</p>
+</a>

@@ -1,0 +1,48 @@
+{
+  "fdcId": 172421,
+  "slug": "lentils",
+  "name": "Lentils",
+  "category": "Legumes",
+  "categorySlug": "legumes",
+  "calories": 116,
+  "protein": 9,
+  "totalFat": 0.4,
+  "saturatedFat": 0.1,
+  "carbs": 20.1,
+  "fiber": 7.9,
+  "sugar": 1.8,
+  "sodium": 2,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Folate",
+      "amount": 181,
+      "unit": "mcg"
+    },
+    {
+      "name": "Iron",
+      "amount": 3.3,
+      "unit": "mg"
+    },
+    {
+      "name": "Manganese",
+      "amount": 0.5,
+      "unit": "mg"
+    },
+    {
+      "name": "Potassium",
+      "amount": 369,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 cup cooked",
+      "grams": 198
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

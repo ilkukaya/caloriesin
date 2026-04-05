@@ -1,0 +1,43 @@
+{
+  "fdcId": 169738,
+  "slug": "brown-rice",
+  "name": "Brown Rice",
+  "category": "Grains",
+  "categorySlug": "grains",
+  "calories": 111,
+  "protein": 2.6,
+  "totalFat": 0.9,
+  "saturatedFat": 0.2,
+  "carbs": 23,
+  "fiber": 1.8,
+  "sugar": 0.4,
+  "sodium": 5,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Manganese",
+      "amount": 0.9,
+      "unit": "mg"
+    },
+    {
+      "name": "Magnesium",
+      "amount": 43,
+      "unit": "mg"
+    },
+    {
+      "name": "Selenium",
+      "amount": 9.8,
+      "unit": "mcg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 cup cooked",
+      "grams": 195
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

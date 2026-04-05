@@ -1,0 +1,48 @@
+{
+  "fdcId": 171287,
+  "slug": "egg",
+  "name": "Egg",
+  "category": "Dairy",
+  "categorySlug": "dairy",
+  "calories": 155,
+  "protein": 13,
+  "totalFat": 11,
+  "saturatedFat": 3.3,
+  "carbs": 1.1,
+  "fiber": 0,
+  "sugar": 1.1,
+  "sodium": 124,
+  "cholesterol": 373,
+  "nutrients": [
+    {
+      "name": "Vitamin D",
+      "amount": 2,
+      "unit": "mcg"
+    },
+    {
+      "name": "Vitamin B12",
+      "amount": 0.9,
+      "unit": "mcg"
+    },
+    {
+      "name": "Selenium",
+      "amount": 30.7,
+      "unit": "mcg"
+    },
+    {
+      "name": "Choline",
+      "amount": 294,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 large",
+      "grams": 50
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

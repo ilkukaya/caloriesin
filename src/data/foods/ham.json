@@ -1,0 +1,43 @@
+{
+  "fdcId": 168594,
+  "slug": "ham",
+  "name": "Ham",
+  "category": "Meats",
+  "categorySlug": "meats",
+  "calories": 145,
+  "protein": 20.9,
+  "totalFat": 5.5,
+  "saturatedFat": 1.8,
+  "carbs": 1.5,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 1203,
+  "cholesterol": 53,
+  "nutrients": [
+    {
+      "name": "Selenium",
+      "amount": 24,
+      "unit": "mcg"
+    },
+    {
+      "name": "Zinc",
+      "amount": 2.1,
+      "unit": "mg"
+    },
+    {
+      "name": "Vitamin B6",
+      "amount": 0.4,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 slice",
+      "grams": 28
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "fdcId": 170420,
+  "slug": "green-peas",
+  "name": "Green Peas",
+  "category": "Legumes",
+  "categorySlug": "legumes",
+  "calories": 81,
+  "protein": 5.4,
+  "totalFat": 0.4,
+  "saturatedFat": 0.1,
+  "carbs": 14.5,
+  "fiber": 5.7,
+  "sugar": 5.7,
+  "sodium": 5,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Vitamin C",
+      "amount": 40,
+      "unit": "mg"
+    },
+    {
+      "name": "Vitamin K",
+      "amount": 24.8,
+      "unit": "mcg"
+    },
+    {
+      "name": "Thiamin",
+      "amount": 0.3,
+      "unit": "mg"
+    },
+    {
+      "name": "Folate",
+      "amount": 65,
+      "unit": "mcg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 cup",
+      "grams": 160
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "fdcId": 170554,
+  "slug": "chia-seeds",
+  "name": "Chia Seeds",
+  "category": "Nuts & Seeds",
+  "categorySlug": "nuts-and-seeds",
+  "calories": 486,
+  "protein": 16.5,
+  "totalFat": 30.7,
+  "saturatedFat": 3.3,
+  "carbs": 42.1,
+  "fiber": 34.4,
+  "sugar": 0,
+  "sodium": 16,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Calcium",
+      "amount": 631,
+      "unit": "mg"
+    },
+    {
+      "name": "Manganese",
+      "amount": 2.7,
+      "unit": "mg"
+    },
+    {
+      "name": "Phosphorus",
+      "amount": 860,
+      "unit": "mg"
+    },
+    {
+      "name": "Magnesium",
+      "amount": 335,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 tbsp",
+      "grams": 12
+    },
+    {
+      "label": "1 oz",
+      "grams": 28
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

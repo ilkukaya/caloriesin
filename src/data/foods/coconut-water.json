@@ -1,0 +1,43 @@
+{
+  "fdcId": 170689,
+  "slug": "coconut-water",
+  "name": "Coconut Water",
+  "category": "Beverages",
+  "categorySlug": "beverages",
+  "calories": 19,
+  "protein": 0.7,
+  "totalFat": 0.2,
+  "saturatedFat": 0.2,
+  "carbs": 3.7,
+  "fiber": 1.1,
+  "sugar": 2.6,
+  "sodium": 105,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Potassium",
+      "amount": 250,
+      "unit": "mg"
+    },
+    {
+      "name": "Manganese",
+      "amount": 0.1,
+      "unit": "mg"
+    },
+    {
+      "name": "Magnesium",
+      "amount": 25,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 cup",
+      "grams": 240
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

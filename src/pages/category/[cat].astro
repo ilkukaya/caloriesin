@@ -1,0 +1,190 @@
+---
+import Layout from '../../components/layout/Layout.astro';
+import Breadcrumb from '../../components/layout/Breadcrumb.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+
+async function loadCategories() {
+  try {
+    return (await import('../../data/categories.json')).default ?? [];
+  } catch {
+    return [];
+  }
+}
+
+async function loadFoods() {
+  try {
+    return (await import('../../data/foods.json')).default ?? [];
+  } catch {
+    return [];
+  }
+}
+
+export async function getStaticPaths() {
+  const categories = await loadCategories();
+
+  return categories.map((cat: any) => ({
+    params: { cat: cat.slug },
+    props: { category: cat },
+  }));
+}
+
+const { category } = Astro.props;
+
+const [allCategories, allFoods] = await Promise.all([
+  loadCategories(),
+  loadFoods(),
+]);
+
+const categoryFoods = allFoods
+  .filter((f: any) => f.categorySlug === category.slug)
+  .sort((a: any, b: any) => a.name.localeCompare(b.name));
+
+const otherCategories = allCategories.filter((c: any) => c.slug !== category.slug);
+
+const siteUrl = 'https://caloriesin.netlify.app';
+const title = `Calories in ${category.name} — Complete List | CaloriesIn`;
+const description = `Browse ${categoryFoods.length} ${category.name.toLowerCase()} foods with calorie counts, protein, carbs, and fat per 100g.`;
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonical={`${siteUrl}/category/${category.slug}`}
+>
+  <BreadcrumbSchema
+    siteUrl={siteUrl}
+    items={[
+      { label: 'Home', href: '/' },
+      { label: category.name },
+    ]}
+  />
+
+  <div class="mx-auto max-w-5xl px-4 py-6">
+    <Breadcrumb items={[{ label: category.name }]} />
+
+    <h1 class="mb-2 text-3xl font-bold text-text-main md:text-4xl">
+      Calories in {category.name}
+    </h1>
+    <p class="mb-8 text-text-muted">
+      {categoryFoods.length} foods in this category
+    </p>
+
+    {categoryFoods.length > 0 ? (
+      <div class="overflow-x-auto rounded-lg border border-border-main">
+        <table id="food-table" class="w-full text-left text-sm">
+          <thead class="bg-gray-50 text-xs uppercase tracking-wider text-text-muted">
+            <tr>
+              <th class="cursor-pointer select-none px-4 py-3" data-col="0" data-type="string">
+                Food Name <span class="sort-arrow ml-1 text-text-muted/50">↕</span>
+              </th>
+              <th class="cursor-pointer select-none px-4 py-3 text-right" data-col="1" data-type="number">
+                Calories <span class="sort-arrow ml-1 text-text-muted/50">↕</span>
+              </th>
+              <th class="cursor-pointer select-none px-4 py-3 text-right" data-col="2" data-type="number">
+                Protein (g) <span class="sort-arrow ml-1 text-text-muted/50">↕</span>
+              </th>
+              <th class="cursor-pointer select-none px-4 py-3 text-right" data-col="3" data-type="number">
+                Carbs (g) <span class="sort-arrow ml-1 text-text-muted/50">↕</span>
+              </th>
+              <th class="cursor-pointer select-none px-4 py-3 text-right" data-col="4" data-type="number">
+                Fat (g) <span class="sort-arrow ml-1 text-text-muted/50">↕</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-border-main">
+            {categoryFoods.map((food) => (
+              <tr class="transition-colors hover:bg-gray-50">
+                <td class="px-4 py-3">
+                  <a
+                    href={`/${food.slug}`}
+                    class="font-medium text-primary hover:underline"
+                  >
+                    {food.name}
+                  </a>
+                </td>
+                <td class="px-4 py-3 text-right font-semibold">{food.calories}</td>
+                <td class="px-4 py-3 text-right">{food.protein}</td>
+                <td class="px-4 py-3 text-right">{food.carbs}</td>
+                <td class="px-4 py-3 text-right">{food.totalFat}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    ) : (
+      <p class="text-text-muted">No foods found in this category.</p>
+    )}
+
+    {otherCategories.length > 0 && (
+      <div class="mt-12">
+        <h2 class="mb-4 text-xl font-bold text-text-main">
+          Other Categories
+        </h2>
+        <div class="flex flex-wrap gap-2">
+          {otherCategories.map((cat) => (
+            <a
+              href={`/category/${cat.slug}`}
+              class="rounded-full border border-border-main bg-white px-4 py-2 text-sm font-medium text-text-main transition-colors hover:border-primary hover:text-primary"
+            >
+              {cat.name}
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</Layout>
+
+<script>
+  const table = document.getElementById('food-table');
+  if (table) {
+    const thead = table.querySelector('thead');
+    const tbody = table.querySelector('tbody');
+    if (thead && tbody) {
+      let currentCol = -1;
+      let ascending = true;
+
+      thead.addEventListener('click', (e) => {
+        const th = (e.target as HTMLElement).closest('th');
+        if (!th) return;
+
+        const col = parseInt(th.getAttribute('data-col') || '0', 10);
+        const type = th.getAttribute('data-type') || 'string';
+
+        if (col === currentCol) {
+          ascending = !ascending;
+        } else {
+          currentCol = col;
+          ascending = true;
+        }
+
+        // Update arrow indicators
+        thead.querySelectorAll('.sort-arrow').forEach((arrow) => {
+          arrow.textContent = '↕';
+        });
+        const arrow = th.querySelector('.sort-arrow');
+        if (arrow) {
+          arrow.textContent = ascending ? '↑' : '↓';
+        }
+
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+
+        rows.sort((a, b) => {
+          const cellA = a.children[col]?.textContent?.trim() ?? '';
+          const cellB = b.children[col]?.textContent?.trim() ?? '';
+
+          let cmp: number;
+          if (type === 'number') {
+            cmp = (parseFloat(cellA) || 0) - (parseFloat(cellB) || 0);
+          } else {
+            cmp = cellA.localeCompare(cellB);
+          }
+
+          return ascending ? cmp : -cmp;
+        });
+
+        rows.forEach((row) => tbody.appendChild(row));
+      });
+    }
+  }
+</script>

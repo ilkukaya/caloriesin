@@ -1,0 +1,12 @@
+---
+interface Props {
+  label: string;
+  color: string;
+}
+
+const { label, color } = Astro.props;
+---
+
+<span class:list={['inline-block rounded-full px-2.5 py-0.5 text-xs font-medium', color]}>
+  {label}
+</span>

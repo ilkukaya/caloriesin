@@ -1,0 +1,43 @@
+{
+  "fdcId": 170000,
+  "slug": "onion",
+  "name": "Onion",
+  "category": "Vegetables",
+  "categorySlug": "vegetables",
+  "calories": 40,
+  "protein": 1.1,
+  "totalFat": 0.1,
+  "saturatedFat": 0,
+  "carbs": 9.3,
+  "fiber": 1.7,
+  "sugar": 4.2,
+  "sodium": 4,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Vitamin C",
+      "amount": 7.4,
+      "unit": "mg"
+    },
+    {
+      "name": "Vitamin B6",
+      "amount": 0.1,
+      "unit": "mg"
+    },
+    {
+      "name": "Folate",
+      "amount": 19,
+      "unit": "mcg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 medium",
+      "grams": 110
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

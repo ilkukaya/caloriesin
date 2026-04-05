@@ -1,0 +1,53 @@
+{
+  "fdcId": 168621,
+  "slug": "beef-liver",
+  "name": "Beef Liver",
+  "category": "Meats",
+  "categorySlug": "meats",
+  "calories": 135,
+  "protein": 20.4,
+  "totalFat": 3.6,
+  "saturatedFat": 1.2,
+  "carbs": 3.9,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 69,
+  "cholesterol": 275,
+  "nutrients": [
+    {
+      "name": "Vitamin A",
+      "amount": 9442,
+      "unit": "mcg"
+    },
+    {
+      "name": "Vitamin B12",
+      "amount": 59.3,
+      "unit": "mcg"
+    },
+    {
+      "name": "Iron",
+      "amount": 6.5,
+      "unit": "mg"
+    },
+    {
+      "name": "Folate",
+      "amount": 290,
+      "unit": "mcg"
+    },
+    {
+      "name": "Copper",
+      "amount": 9.8,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "3 oz cooked",
+      "grams": 85
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "fdcId": 170720,
+  "slug": "big-mac",
+  "name": "Big Mac",
+  "category": "Fast Food",
+  "categorySlug": "fast-food",
+  "calories": 257,
+  "protein": 13,
+  "totalFat": 13,
+  "saturatedFat": 5,
+  "carbs": 22,
+  "fiber": 1.2,
+  "sugar": 7,
+  "sodium": 480,
+  "cholesterol": 42,
+  "nutrients": [
+    {
+      "name": "Calcium",
+      "amount": 130,
+      "unit": "mg"
+    },
+    {
+      "name": "Iron",
+      "amount": 2.7,
+      "unit": "mg"
+    },
+    {
+      "name": "Vitamin A",
+      "amount": 30,
+      "unit": "mcg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 sandwich",
+      "grams": 200
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

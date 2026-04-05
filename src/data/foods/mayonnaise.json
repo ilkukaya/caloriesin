@@ -1,0 +1,38 @@
+{
+  "fdcId": 175033,
+  "slug": "mayonnaise",
+  "name": "Mayonnaise",
+  "category": "Condiments",
+  "categorySlug": "condiments",
+  "calories": 680,
+  "protein": 1,
+  "totalFat": 75,
+  "saturatedFat": 11.8,
+  "carbs": 0.6,
+  "fiber": 0,
+  "sugar": 0.6,
+  "sodium": 635,
+  "cholesterol": 42,
+  "nutrients": [
+    {
+      "name": "Vitamin E",
+      "amount": 3.3,
+      "unit": "mg"
+    },
+    {
+      "name": "Vitamin K",
+      "amount": 24,
+      "unit": "mcg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 tbsp",
+      "grams": 14
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

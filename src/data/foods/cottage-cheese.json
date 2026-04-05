@@ -1,0 +1,48 @@
+{
+  "fdcId": 172179,
+  "slug": "cottage-cheese",
+  "name": "Cottage Cheese",
+  "category": "Dairy",
+  "categorySlug": "dairy",
+  "calories": 98,
+  "protein": 11.1,
+  "totalFat": 4.3,
+  "saturatedFat": 1.7,
+  "carbs": 3.4,
+  "fiber": 0,
+  "sugar": 2.7,
+  "sodium": 364,
+  "cholesterol": 17,
+  "nutrients": [
+    {
+      "name": "Selenium",
+      "amount": 9.7,
+      "unit": "mcg"
+    },
+    {
+      "name": "Phosphorus",
+      "amount": 159,
+      "unit": "mg"
+    },
+    {
+      "name": "Calcium",
+      "amount": 83,
+      "unit": "mg"
+    },
+    {
+      "name": "Vitamin B12",
+      "amount": 0.4,
+      "unit": "mcg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 cup",
+      "grams": 226
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

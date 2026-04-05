@@ -1,0 +1,43 @@
+{
+  "fdcId": 168195,
+  "slug": "apple",
+  "name": "Apple",
+  "category": "Fruits",
+  "categorySlug": "fruits",
+  "calories": 52,
+  "protein": 0.3,
+  "totalFat": 0.2,
+  "saturatedFat": 0,
+  "carbs": 13.8,
+  "fiber": 2.4,
+  "sugar": 10.4,
+  "sodium": 1,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Vitamin C",
+      "amount": 4.6,
+      "unit": "mg"
+    },
+    {
+      "name": "Potassium",
+      "amount": 107,
+      "unit": "mg"
+    },
+    {
+      "name": "Calcium",
+      "amount": 6,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 medium",
+      "grams": 182
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

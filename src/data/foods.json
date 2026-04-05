@@ -1,0 +1,5046 @@
+[
+  {
+    "fdcId": 170567,
+    "slug": "banana",
+    "name": "Banana",
+    "category": "Fruits",
+    "categorySlug": "fruits",
+    "calories": 89,
+    "protein": 1.1,
+    "totalFat": 0.3,
+    "saturatedFat": 0.1,
+    "carbs": 22.8,
+    "fiber": 2.6,
+    "sugar": 12.2,
+    "sodium": 1,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 8.7,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 358,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin B6",
+        "amount": 0.4,
+        "unit": "mg"
+      },
+      {
+        "name": "Magnesium",
+        "amount": 27,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 medium",
+        "grams": 118
+      },
+      {
+        "label": "1 large",
+        "grams": 136
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 168195,
+    "slug": "apple",
+    "name": "Apple",
+    "category": "Fruits",
+    "categorySlug": "fruits",
+    "calories": 52,
+    "protein": 0.3,
+    "totalFat": 0.2,
+    "saturatedFat": 0,
+    "carbs": 13.8,
+    "fiber": 2.4,
+    "sugar": 10.4,
+    "sodium": 1,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 4.6,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 107,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium",
+        "amount": 6,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 medium",
+        "grams": 182
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 169097,
+    "slug": "orange",
+    "name": "Orange",
+    "category": "Fruits",
+    "categorySlug": "fruits",
+    "calories": 47,
+    "protein": 0.9,
+    "totalFat": 0.1,
+    "saturatedFat": 0,
+    "carbs": 11.8,
+    "fiber": 2.4,
+    "sugar": 9.4,
+    "sodium": 0,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 53.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 181,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium",
+        "amount": 40,
+        "unit": "mg"
+      },
+      {
+        "name": "Folate",
+        "amount": 30,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 medium",
+        "grams": 131
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 169910,
+    "slug": "mango",
+    "name": "Mango",
+    "category": "Fruits",
+    "categorySlug": "fruits",
+    "calories": 60,
+    "protein": 0.8,
+    "totalFat": 0.4,
+    "saturatedFat": 0.1,
+    "carbs": 15,
+    "fiber": 1.6,
+    "sugar": 13.7,
+    "sodium": 1,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 36.4,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin A",
+        "amount": 54,
+        "unit": "mcg"
+      },
+      {
+        "name": "Folate",
+        "amount": 43,
+        "unit": "mcg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 168,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup sliced",
+        "grams": 165
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 167762,
+    "slug": "strawberry",
+    "name": "Strawberry",
+    "category": "Fruits",
+    "categorySlug": "fruits",
+    "calories": 32,
+    "protein": 0.7,
+    "totalFat": 0.3,
+    "saturatedFat": 0,
+    "carbs": 7.7,
+    "fiber": 2,
+    "sugar": 4.9,
+    "sodium": 1,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 58.8,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 153,
+        "unit": "mg"
+      },
+      {
+        "name": "Manganese",
+        "amount": 0.4,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup",
+        "grams": 152
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 171711,
+    "slug": "blueberry",
+    "name": "Blueberry",
+    "category": "Fruits",
+    "categorySlug": "fruits",
+    "calories": 57,
+    "protein": 0.7,
+    "totalFat": 0.3,
+    "saturatedFat": 0,
+    "carbs": 14.5,
+    "fiber": 2.4,
+    "sugar": 10,
+    "sodium": 1,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 9.7,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin K",
+        "amount": 19.3,
+        "unit": "mcg"
+      },
+      {
+        "name": "Manganese",
+        "amount": 0.3,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup",
+        "grams": 148
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 174683,
+    "slug": "grape",
+    "name": "Grape",
+    "category": "Fruits",
+    "categorySlug": "fruits",
+    "calories": 69,
+    "protein": 0.7,
+    "totalFat": 0.2,
+    "saturatedFat": 0.1,
+    "carbs": 18.1,
+    "fiber": 0.9,
+    "sugar": 15.5,
+    "sodium": 2,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 3.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin K",
+        "amount": 14.6,
+        "unit": "mcg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 191,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup",
+        "grams": 151
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 167765,
+    "slug": "watermelon",
+    "name": "Watermelon",
+    "category": "Fruits",
+    "categorySlug": "fruits",
+    "calories": 30,
+    "protein": 0.6,
+    "totalFat": 0.2,
+    "saturatedFat": 0,
+    "carbs": 7.6,
+    "fiber": 0.4,
+    "sugar": 6.2,
+    "sodium": 1,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 8.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin A",
+        "amount": 28,
+        "unit": "mcg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 112,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup diced",
+        "grams": 152
+      },
+      {
+        "label": "1 wedge",
+        "grams": 286
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 169124,
+    "slug": "pineapple",
+    "name": "Pineapple",
+    "category": "Fruits",
+    "categorySlug": "fruits",
+    "calories": 50,
+    "protein": 0.5,
+    "totalFat": 0.1,
+    "saturatedFat": 0,
+    "carbs": 13.1,
+    "fiber": 1.4,
+    "sugar": 9.9,
+    "sodium": 1,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 47.8,
+        "unit": "mg"
+      },
+      {
+        "name": "Manganese",
+        "amount": 0.9,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin B6",
+        "amount": 0.1,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup chunks",
+        "grams": 165
+      },
+      {
+        "label": "1 slice",
+        "grams": 84
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 171705,
+    "slug": "avocado",
+    "name": "Avocado",
+    "category": "Fruits",
+    "categorySlug": "fruits",
+    "calories": 160,
+    "protein": 2,
+    "totalFat": 14.7,
+    "saturatedFat": 2.1,
+    "carbs": 8.5,
+    "fiber": 6.7,
+    "sugar": 0.7,
+    "sodium": 7,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Potassium",
+        "amount": 485,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin K",
+        "amount": 21,
+        "unit": "mcg"
+      },
+      {
+        "name": "Folate",
+        "amount": 81,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin E",
+        "amount": 2.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C",
+        "amount": 10,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 medium",
+        "grams": 150
+      },
+      {
+        "label": "1/2 avocado",
+        "grams": 75
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 169928,
+    "slug": "peach",
+    "name": "Peach",
+    "category": "Fruits",
+    "categorySlug": "fruits",
+    "calories": 39,
+    "protein": 0.9,
+    "totalFat": 0.3,
+    "saturatedFat": 0,
+    "carbs": 9.5,
+    "fiber": 1.5,
+    "sugar": 8.4,
+    "sodium": 0,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 6.6,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin A",
+        "amount": 16,
+        "unit": "mcg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 190,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 medium",
+        "grams": 150
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 169118,
+    "slug": "pear",
+    "name": "Pear",
+    "category": "Fruits",
+    "categorySlug": "fruits",
+    "calories": 57,
+    "protein": 0.4,
+    "totalFat": 0.1,
+    "saturatedFat": 0,
+    "carbs": 15.2,
+    "fiber": 3.1,
+    "sugar": 9.8,
+    "sodium": 1,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 4.3,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 116,
+        "unit": "mg"
+      },
+      {
+        "name": "Copper",
+        "amount": 0.1,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 medium",
+        "grams": 178
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 171719,
+    "slug": "cherry",
+    "name": "Cherry",
+    "category": "Fruits",
+    "categorySlug": "fruits",
+    "calories": 63,
+    "protein": 1.1,
+    "totalFat": 0.2,
+    "saturatedFat": 0,
+    "carbs": 16,
+    "fiber": 2.1,
+    "sugar": 12.8,
+    "sodium": 0,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 7,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 222,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin A",
+        "amount": 3,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup",
+        "grams": 138
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 168153,
+    "slug": "kiwi",
+    "name": "Kiwi",
+    "category": "Fruits",
+    "categorySlug": "fruits",
+    "calories": 61,
+    "protein": 1.1,
+    "totalFat": 0.5,
+    "saturatedFat": 0,
+    "carbs": 14.7,
+    "fiber": 3,
+    "sugar": 9,
+    "sodium": 3,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 92.7,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin K",
+        "amount": 40.3,
+        "unit": "mcg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 312,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 medium",
+        "grams": 69
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 167746,
+    "slug": "lemon",
+    "name": "Lemon",
+    "category": "Fruits",
+    "categorySlug": "fruits",
+    "calories": 29,
+    "protein": 1.1,
+    "totalFat": 0.3,
+    "saturatedFat": 0,
+    "carbs": 9.3,
+    "fiber": 2.8,
+    "sugar": 2.5,
+    "sodium": 2,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 53,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 138,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium",
+        "amount": 26,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 medium",
+        "grams": 58
+      },
+      {
+        "label": "1 tbsp juice",
+        "grams": 15
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170379,
+    "slug": "broccoli",
+    "name": "Broccoli",
+    "category": "Vegetables",
+    "categorySlug": "vegetables",
+    "calories": 34,
+    "protein": 2.8,
+    "totalFat": 0.4,
+    "saturatedFat": 0.1,
+    "carbs": 6.6,
+    "fiber": 2.6,
+    "sugar": 1.7,
+    "sodium": 33,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 89.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin K",
+        "amount": 101.6,
+        "unit": "mcg"
+      },
+      {
+        "name": "Folate",
+        "amount": 63,
+        "unit": "mcg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 316,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup chopped",
+        "grams": 91
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 168462,
+    "slug": "spinach",
+    "name": "Spinach",
+    "category": "Vegetables",
+    "categorySlug": "vegetables",
+    "calories": 23,
+    "protein": 2.9,
+    "totalFat": 0.4,
+    "saturatedFat": 0.1,
+    "carbs": 3.6,
+    "fiber": 2.2,
+    "sugar": 0.4,
+    "sodium": 79,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin K",
+        "amount": 482.9,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin A",
+        "amount": 469,
+        "unit": "mcg"
+      },
+      {
+        "name": "Folate",
+        "amount": 194,
+        "unit": "mcg"
+      },
+      {
+        "name": "Iron",
+        "amount": 2.7,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium",
+        "amount": 99,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup raw",
+        "grams": 30
+      },
+      {
+        "label": "1 cup cooked",
+        "grams": 180
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170393,
+    "slug": "carrot",
+    "name": "Carrot",
+    "category": "Vegetables",
+    "categorySlug": "vegetables",
+    "calories": 41,
+    "protein": 0.9,
+    "totalFat": 0.2,
+    "saturatedFat": 0,
+    "carbs": 9.6,
+    "fiber": 2.8,
+    "sugar": 4.7,
+    "sodium": 69,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin A",
+        "amount": 835,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin K",
+        "amount": 13.2,
+        "unit": "mcg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 320,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 medium",
+        "grams": 61
+      },
+      {
+        "label": "1 cup chopped",
+        "grams": 128
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170457,
+    "slug": "tomato",
+    "name": "Tomato",
+    "category": "Vegetables",
+    "categorySlug": "vegetables",
+    "calories": 18,
+    "protein": 0.9,
+    "totalFat": 0.2,
+    "saturatedFat": 0,
+    "carbs": 3.9,
+    "fiber": 1.2,
+    "sugar": 2.6,
+    "sodium": 5,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 13.7,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 237,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin A",
+        "amount": 42,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 medium",
+        "grams": 123
+      },
+      {
+        "label": "1 cup chopped",
+        "grams": 180
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170026,
+    "slug": "potato",
+    "name": "Potato",
+    "category": "Vegetables",
+    "categorySlug": "vegetables",
+    "calories": 77,
+    "protein": 2,
+    "totalFat": 0.1,
+    "saturatedFat": 0,
+    "carbs": 17.5,
+    "fiber": 2.1,
+    "sugar": 0.8,
+    "sodium": 6,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 19.7,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 425,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin B6",
+        "amount": 0.3,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 medium",
+        "grams": 213
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 168482,
+    "slug": "sweet-potato",
+    "name": "Sweet Potato",
+    "category": "Vegetables",
+    "categorySlug": "vegetables",
+    "calories": 86,
+    "protein": 1.6,
+    "totalFat": 0.1,
+    "saturatedFat": 0,
+    "carbs": 20.1,
+    "fiber": 3,
+    "sugar": 4.2,
+    "sodium": 55,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin A",
+        "amount": 709,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin C",
+        "amount": 2.4,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 337,
+        "unit": "mg"
+      },
+      {
+        "name": "Manganese",
+        "amount": 0.3,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 medium",
+        "grams": 114
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170000,
+    "slug": "onion",
+    "name": "Onion",
+    "category": "Vegetables",
+    "categorySlug": "vegetables",
+    "calories": 40,
+    "protein": 1.1,
+    "totalFat": 0.1,
+    "saturatedFat": 0,
+    "carbs": 9.3,
+    "fiber": 1.7,
+    "sugar": 4.2,
+    "sodium": 4,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 7.4,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin B6",
+        "amount": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Folate",
+        "amount": 19,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 medium",
+        "grams": 110
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170427,
+    "slug": "bell-pepper",
+    "name": "Bell Pepper",
+    "category": "Vegetables",
+    "categorySlug": "vegetables",
+    "calories": 31,
+    "protein": 1,
+    "totalFat": 0.3,
+    "saturatedFat": 0,
+    "carbs": 6,
+    "fiber": 2.1,
+    "sugar": 4.2,
+    "sodium": 4,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 127.7,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin A",
+        "amount": 157,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin B6",
+        "amount": 0.3,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 medium",
+        "grams": 119
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 168409,
+    "slug": "cucumber",
+    "name": "Cucumber",
+    "category": "Vegetables",
+    "categorySlug": "vegetables",
+    "calories": 15,
+    "protein": 0.7,
+    "totalFat": 0.1,
+    "saturatedFat": 0,
+    "carbs": 3.6,
+    "fiber": 0.5,
+    "sugar": 1.7,
+    "sodium": 2,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin K",
+        "amount": 16.4,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin C",
+        "amount": 2.8,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 147,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 medium",
+        "grams": 201
+      },
+      {
+        "label": "1 cup sliced",
+        "grams": 119
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 169247,
+    "slug": "lettuce",
+    "name": "Lettuce",
+    "category": "Vegetables",
+    "categorySlug": "vegetables",
+    "calories": 15,
+    "protein": 1.4,
+    "totalFat": 0.2,
+    "saturatedFat": 0,
+    "carbs": 2.9,
+    "fiber": 1.3,
+    "sugar": 0.8,
+    "sodium": 28,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin A",
+        "amount": 370,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin K",
+        "amount": 126.3,
+        "unit": "mcg"
+      },
+      {
+        "name": "Folate",
+        "amount": 38,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup shredded",
+        "grams": 36
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 168421,
+    "slug": "kale",
+    "name": "Kale",
+    "category": "Vegetables",
+    "categorySlug": "vegetables",
+    "calories": 49,
+    "protein": 4.3,
+    "totalFat": 0.9,
+    "saturatedFat": 0.1,
+    "carbs": 8.8,
+    "fiber": 3.6,
+    "sugar": 2.3,
+    "sodium": 38,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin K",
+        "amount": 704.8,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin A",
+        "amount": 500,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin C",
+        "amount": 120,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium",
+        "amount": 150,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup chopped",
+        "grams": 67
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 169986,
+    "slug": "cauliflower",
+    "name": "Cauliflower",
+    "category": "Vegetables",
+    "categorySlug": "vegetables",
+    "calories": 25,
+    "protein": 1.9,
+    "totalFat": 0.3,
+    "saturatedFat": 0.1,
+    "carbs": 5,
+    "fiber": 2,
+    "sugar": 1.9,
+    "sodium": 30,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 48.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin K",
+        "amount": 15.5,
+        "unit": "mcg"
+      },
+      {
+        "name": "Folate",
+        "amount": 57,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup",
+        "grams": 107
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170288,
+    "slug": "corn",
+    "name": "Corn",
+    "category": "Vegetables",
+    "categorySlug": "vegetables",
+    "calories": 86,
+    "protein": 3.3,
+    "totalFat": 1.4,
+    "saturatedFat": 0.2,
+    "carbs": 18.7,
+    "fiber": 2,
+    "sugar": 6.3,
+    "sodium": 15,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 6.8,
+        "unit": "mg"
+      },
+      {
+        "name": "Folate",
+        "amount": 42,
+        "unit": "mcg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 270,
+        "unit": "mg"
+      },
+      {
+        "name": "Magnesium",
+        "amount": 37,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 ear medium",
+        "grams": 90
+      },
+      {
+        "label": "1 cup",
+        "grams": 154
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 169213,
+    "slug": "green-beans",
+    "name": "Green Beans",
+    "category": "Vegetables",
+    "categorySlug": "vegetables",
+    "calories": 31,
+    "protein": 1.8,
+    "totalFat": 0.1,
+    "saturatedFat": 0,
+    "carbs": 7,
+    "fiber": 3.4,
+    "sugar": 3.3,
+    "sodium": 6,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 12.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin K",
+        "amount": 14.4,
+        "unit": "mcg"
+      },
+      {
+        "name": "Folate",
+        "amount": 33,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup",
+        "grams": 125
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 169251,
+    "slug": "mushroom",
+    "name": "Mushroom",
+    "category": "Vegetables",
+    "categorySlug": "vegetables",
+    "calories": 22,
+    "protein": 3.1,
+    "totalFat": 0.3,
+    "saturatedFat": 0.1,
+    "carbs": 3.3,
+    "fiber": 1,
+    "sugar": 2,
+    "sodium": 5,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Selenium",
+        "amount": 9.3,
+        "unit": "mcg"
+      },
+      {
+        "name": "Copper",
+        "amount": 0.3,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin D",
+        "amount": 0.2,
+        "unit": "mcg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 318,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup sliced",
+        "grams": 70
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 171077,
+    "slug": "chicken-breast",
+    "name": "Chicken Breast",
+    "category": "Meats",
+    "categorySlug": "meats",
+    "calories": 165,
+    "protein": 31,
+    "totalFat": 3.6,
+    "saturatedFat": 1,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 74,
+    "cholesterol": 85,
+    "nutrients": [
+      {
+        "name": "Vitamin B6",
+        "amount": 0.6,
+        "unit": "mg"
+      },
+      {
+        "name": "Niacin",
+        "amount": 13.7,
+        "unit": "mg"
+      },
+      {
+        "name": "Selenium",
+        "amount": 27.6,
+        "unit": "mcg"
+      },
+      {
+        "name": "Phosphorus",
+        "amount": 228,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 breast",
+        "grams": 172
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 174032,
+    "slug": "beef-steak",
+    "name": "Beef Steak",
+    "category": "Meats",
+    "categorySlug": "meats",
+    "calories": 271,
+    "protein": 26,
+    "totalFat": 18,
+    "saturatedFat": 7.3,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 57,
+    "cholesterol": 90,
+    "nutrients": [
+      {
+        "name": "Iron",
+        "amount": 2.6,
+        "unit": "mg"
+      },
+      {
+        "name": "Zinc",
+        "amount": 5.5,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin B12",
+        "amount": 2.1,
+        "unit": "mcg"
+      },
+      {
+        "name": "Selenium",
+        "amount": 28.5,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 steak (6 oz)",
+        "grams": 170
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 174036,
+    "slug": "ground-beef",
+    "name": "Ground Beef",
+    "category": "Meats",
+    "categorySlug": "meats",
+    "calories": 254,
+    "protein": 17.2,
+    "totalFat": 20,
+    "saturatedFat": 7.7,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 66,
+    "cholesterol": 78,
+    "nutrients": [
+      {
+        "name": "Iron",
+        "amount": 2.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Zinc",
+        "amount": 4.8,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin B12",
+        "amount": 2.3,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 patty",
+        "grams": 113
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 167820,
+    "slug": "pork-chop",
+    "name": "Pork Chop",
+    "category": "Meats",
+    "categorySlug": "meats",
+    "calories": 231,
+    "protein": 25.7,
+    "totalFat": 13.9,
+    "saturatedFat": 5,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 62,
+    "cholesterol": 82,
+    "nutrients": [
+      {
+        "name": "Thiamin",
+        "amount": 0.9,
+        "unit": "mg"
+      },
+      {
+        "name": "Selenium",
+        "amount": 33.5,
+        "unit": "mcg"
+      },
+      {
+        "name": "Zinc",
+        "amount": 2.4,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 chop",
+        "grams": 137
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 172615,
+    "slug": "lamb",
+    "name": "Lamb",
+    "category": "Meats",
+    "categorySlug": "meats",
+    "calories": 294,
+    "protein": 24.5,
+    "totalFat": 21.3,
+    "saturatedFat": 9,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 65,
+    "cholesterol": 97,
+    "nutrients": [
+      {
+        "name": "Zinc",
+        "amount": 4.5,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin B12",
+        "amount": 2.6,
+        "unit": "mcg"
+      },
+      {
+        "name": "Iron",
+        "amount": 1.9,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "3 oz cooked",
+        "grams": 85
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 171082,
+    "slug": "turkey-breast",
+    "name": "Turkey Breast",
+    "category": "Meats",
+    "categorySlug": "meats",
+    "calories": 135,
+    "protein": 30,
+    "totalFat": 1,
+    "saturatedFat": 0.3,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 46,
+    "cholesterol": 83,
+    "nutrients": [
+      {
+        "name": "Selenium",
+        "amount": 30.2,
+        "unit": "mcg"
+      },
+      {
+        "name": "Niacin",
+        "amount": 11.8,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin B6",
+        "amount": 0.8,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "3 oz",
+        "grams": 85
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 168322,
+    "slug": "bacon",
+    "name": "Bacon",
+    "category": "Meats",
+    "categorySlug": "meats",
+    "calories": 541,
+    "protein": 37,
+    "totalFat": 42,
+    "saturatedFat": 14,
+    "carbs": 1.4,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 1717,
+    "cholesterol": 110,
+    "nutrients": [
+      {
+        "name": "Selenium",
+        "amount": 35.2,
+        "unit": "mcg"
+      },
+      {
+        "name": "Phosphorus",
+        "amount": 490,
+        "unit": "mg"
+      },
+      {
+        "name": "Niacin",
+        "amount": 11.6,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "3 slices",
+        "grams": 34
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 168594,
+    "slug": "ham",
+    "name": "Ham",
+    "category": "Meats",
+    "categorySlug": "meats",
+    "calories": 145,
+    "protein": 20.9,
+    "totalFat": 5.5,
+    "saturatedFat": 1.8,
+    "carbs": 1.5,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 1203,
+    "cholesterol": 53,
+    "nutrients": [
+      {
+        "name": "Selenium",
+        "amount": 24,
+        "unit": "mcg"
+      },
+      {
+        "name": "Zinc",
+        "amount": 2.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin B6",
+        "amount": 0.4,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 slice",
+        "grams": 28
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 168621,
+    "slug": "beef-liver",
+    "name": "Beef Liver",
+    "category": "Meats",
+    "categorySlug": "meats",
+    "calories": 135,
+    "protein": 20.4,
+    "totalFat": 3.6,
+    "saturatedFat": 1.2,
+    "carbs": 3.9,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 69,
+    "cholesterol": 275,
+    "nutrients": [
+      {
+        "name": "Vitamin A",
+        "amount": 9442,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin B12",
+        "amount": 59.3,
+        "unit": "mcg"
+      },
+      {
+        "name": "Iron",
+        "amount": 6.5,
+        "unit": "mg"
+      },
+      {
+        "name": "Folate",
+        "amount": 290,
+        "unit": "mcg"
+      },
+      {
+        "name": "Copper",
+        "amount": 9.8,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "3 oz cooked",
+        "grams": 85
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 175167,
+    "slug": "salmon",
+    "name": "Salmon",
+    "category": "Seafood",
+    "categorySlug": "seafood",
+    "calories": 208,
+    "protein": 20.4,
+    "totalFat": 13.4,
+    "saturatedFat": 3.1,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 59,
+    "cholesterol": 55,
+    "nutrients": [
+      {
+        "name": "Vitamin D",
+        "amount": 11,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin B12",
+        "amount": 3.2,
+        "unit": "mcg"
+      },
+      {
+        "name": "Selenium",
+        "amount": 36.5,
+        "unit": "mcg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 363,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 fillet",
+        "grams": 178
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 171986,
+    "slug": "tuna",
+    "name": "Tuna",
+    "category": "Seafood",
+    "categorySlug": "seafood",
+    "calories": 144,
+    "protein": 23.3,
+    "totalFat": 4.9,
+    "saturatedFat": 1.4,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 39,
+    "cholesterol": 38,
+    "nutrients": [
+      {
+        "name": "Selenium",
+        "amount": 90.6,
+        "unit": "mcg"
+      },
+      {
+        "name": "Niacin",
+        "amount": 18.5,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin B12",
+        "amount": 9.4,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin D",
+        "amount": 7.2,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "3 oz",
+        "grams": 85
+      },
+      {
+        "label": "1 can drained",
+        "grams": 165
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 175177,
+    "slug": "shrimp",
+    "name": "Shrimp",
+    "category": "Seafood",
+    "categorySlug": "seafood",
+    "calories": 99,
+    "protein": 24,
+    "totalFat": 0.3,
+    "saturatedFat": 0.1,
+    "carbs": 0.2,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 111,
+    "cholesterol": 189,
+    "nutrients": [
+      {
+        "name": "Selenium",
+        "amount": 38,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin B12",
+        "amount": 1.1,
+        "unit": "mcg"
+      },
+      {
+        "name": "Phosphorus",
+        "amount": 201,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "3 oz",
+        "grams": 85
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 174200,
+    "slug": "cod",
+    "name": "Cod",
+    "category": "Seafood",
+    "categorySlug": "seafood",
+    "calories": 82,
+    "protein": 17.8,
+    "totalFat": 0.7,
+    "saturatedFat": 0.1,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 54,
+    "cholesterol": 43,
+    "nutrients": [
+      {
+        "name": "Selenium",
+        "amount": 33.1,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin B12",
+        "amount": 0.9,
+        "unit": "mcg"
+      },
+      {
+        "name": "Phosphorus",
+        "amount": 203,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 fillet",
+        "grams": 180
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 175161,
+    "slug": "tilapia",
+    "name": "Tilapia",
+    "category": "Seafood",
+    "categorySlug": "seafood",
+    "calories": 128,
+    "protein": 26,
+    "totalFat": 2.7,
+    "saturatedFat": 0.9,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 52,
+    "cholesterol": 57,
+    "nutrients": [
+      {
+        "name": "Selenium",
+        "amount": 54.4,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin B12",
+        "amount": 1.6,
+        "unit": "mcg"
+      },
+      {
+        "name": "Niacin",
+        "amount": 3.9,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 fillet",
+        "grams": 87
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 171967,
+    "slug": "crab",
+    "name": "Crab",
+    "category": "Seafood",
+    "categorySlug": "seafood",
+    "calories": 97,
+    "protein": 19.4,
+    "totalFat": 1.5,
+    "saturatedFat": 0.2,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 332,
+    "cholesterol": 78,
+    "nutrients": [
+      {
+        "name": "Zinc",
+        "amount": 6.5,
+        "unit": "mg"
+      },
+      {
+        "name": "Copper",
+        "amount": 0.7,
+        "unit": "mg"
+      },
+      {
+        "name": "Selenium",
+        "amount": 37.4,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin B12",
+        "amount": 9,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "3 oz",
+        "grams": 85
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 171970,
+    "slug": "lobster",
+    "name": "Lobster",
+    "category": "Seafood",
+    "categorySlug": "seafood",
+    "calories": 89,
+    "protein": 19,
+    "totalFat": 0.9,
+    "saturatedFat": 0.2,
+    "carbs": 0.5,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 486,
+    "cholesterol": 146,
+    "nutrients": [
+      {
+        "name": "Selenium",
+        "amount": 41.4,
+        "unit": "mcg"
+      },
+      {
+        "name": "Zinc",
+        "amount": 3.5,
+        "unit": "mg"
+      },
+      {
+        "name": "Copper",
+        "amount": 1.9,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "3 oz",
+        "grams": 85
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 175139,
+    "slug": "sardine",
+    "name": "Sardine",
+    "category": "Seafood",
+    "categorySlug": "seafood",
+    "calories": 208,
+    "protein": 24.6,
+    "totalFat": 11.5,
+    "saturatedFat": 1.5,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 505,
+    "cholesterol": 142,
+    "nutrients": [
+      {
+        "name": "Calcium",
+        "amount": 382,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin D",
+        "amount": 4.8,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin B12",
+        "amount": 8.9,
+        "unit": "mcg"
+      },
+      {
+        "name": "Selenium",
+        "amount": 52.7,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 can",
+        "grams": 92
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 171265,
+    "slug": "whole-milk",
+    "name": "Whole Milk",
+    "category": "Dairy",
+    "categorySlug": "dairy",
+    "calories": 61,
+    "protein": 3.2,
+    "totalFat": 3.3,
+    "saturatedFat": 1.9,
+    "carbs": 4.8,
+    "fiber": 0,
+    "sugar": 5.1,
+    "sodium": 43,
+    "cholesterol": 10,
+    "nutrients": [
+      {
+        "name": "Calcium",
+        "amount": 113,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin D",
+        "amount": 1.3,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin B12",
+        "amount": 0.4,
+        "unit": "mcg"
+      },
+      {
+        "name": "Phosphorus",
+        "amount": 84,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup",
+        "grams": 244
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 171274,
+    "slug": "skim-milk",
+    "name": "Skim Milk",
+    "category": "Dairy",
+    "categorySlug": "dairy",
+    "calories": 34,
+    "protein": 3.4,
+    "totalFat": 0.1,
+    "saturatedFat": 0.1,
+    "carbs": 5,
+    "fiber": 0,
+    "sugar": 5.1,
+    "sodium": 42,
+    "cholesterol": 2,
+    "nutrients": [
+      {
+        "name": "Calcium",
+        "amount": 122,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin D",
+        "amount": 2.1,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin B12",
+        "amount": 0.5,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup",
+        "grams": 245
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 171241,
+    "slug": "cheddar-cheese",
+    "name": "Cheddar Cheese",
+    "category": "Dairy",
+    "categorySlug": "dairy",
+    "calories": 403,
+    "protein": 24.9,
+    "totalFat": 33.1,
+    "saturatedFat": 21.1,
+    "carbs": 1.3,
+    "fiber": 0,
+    "sugar": 0.5,
+    "sodium": 621,
+    "cholesterol": 105,
+    "nutrients": [
+      {
+        "name": "Calcium",
+        "amount": 721,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin A",
+        "amount": 265,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin B12",
+        "amount": 0.8,
+        "unit": "mcg"
+      },
+      {
+        "name": "Phosphorus",
+        "amount": 512,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 slice",
+        "grams": 28
+      },
+      {
+        "label": "1 oz",
+        "grams": 28
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 171243,
+    "slug": "mozzarella",
+    "name": "Mozzarella",
+    "category": "Dairy",
+    "categorySlug": "dairy",
+    "calories": 280,
+    "protein": 27.5,
+    "totalFat": 17.1,
+    "saturatedFat": 10.9,
+    "carbs": 3.1,
+    "fiber": 0,
+    "sugar": 1.1,
+    "sodium": 627,
+    "cholesterol": 54,
+    "nutrients": [
+      {
+        "name": "Calcium",
+        "amount": 505,
+        "unit": "mg"
+      },
+      {
+        "name": "Phosphorus",
+        "amount": 354,
+        "unit": "mg"
+      },
+      {
+        "name": "Selenium",
+        "amount": 17,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 oz",
+        "grams": 28
+      },
+      {
+        "label": "1 cup shredded",
+        "grams": 112
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170886,
+    "slug": "greek-yogurt",
+    "name": "Greek Yogurt",
+    "category": "Dairy",
+    "categorySlug": "dairy",
+    "calories": 59,
+    "protein": 10,
+    "totalFat": 0.4,
+    "saturatedFat": 0.1,
+    "carbs": 3.6,
+    "fiber": 0,
+    "sugar": 3.2,
+    "sodium": 36,
+    "cholesterol": 5,
+    "nutrients": [
+      {
+        "name": "Calcium",
+        "amount": 110,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin B12",
+        "amount": 0.8,
+        "unit": "mcg"
+      },
+      {
+        "name": "Phosphorus",
+        "amount": 135,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup",
+        "grams": 245
+      },
+      {
+        "label": "1 container",
+        "grams": 170
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170885,
+    "slug": "yogurt",
+    "name": "Yogurt",
+    "category": "Dairy",
+    "categorySlug": "dairy",
+    "calories": 63,
+    "protein": 5.3,
+    "totalFat": 1.6,
+    "saturatedFat": 1,
+    "carbs": 7.7,
+    "fiber": 0,
+    "sugar": 7.7,
+    "sodium": 70,
+    "cholesterol": 6,
+    "nutrients": [
+      {
+        "name": "Calcium",
+        "amount": 183,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin B12",
+        "amount": 0.6,
+        "unit": "mcg"
+      },
+      {
+        "name": "Riboflavin",
+        "amount": 0.2,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup",
+        "grams": 245
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 173410,
+    "slug": "butter",
+    "name": "Butter",
+    "category": "Dairy",
+    "categorySlug": "dairy",
+    "calories": 717,
+    "protein": 0.9,
+    "totalFat": 81.1,
+    "saturatedFat": 51.4,
+    "carbs": 0.1,
+    "fiber": 0,
+    "sugar": 0.1,
+    "sodium": 11,
+    "cholesterol": 215,
+    "nutrients": [
+      {
+        "name": "Vitamin A",
+        "amount": 684,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin D",
+        "amount": 0.5,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin E",
+        "amount": 2.3,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 tbsp",
+        "grams": 14
+      },
+      {
+        "label": "1 pat",
+        "grams": 5
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 173414,
+    "slug": "cream-cheese",
+    "name": "Cream Cheese",
+    "category": "Dairy",
+    "categorySlug": "dairy",
+    "calories": 342,
+    "protein": 5.9,
+    "totalFat": 34.2,
+    "saturatedFat": 19.3,
+    "carbs": 4.1,
+    "fiber": 0,
+    "sugar": 3.8,
+    "sodium": 321,
+    "cholesterol": 110,
+    "nutrients": [
+      {
+        "name": "Vitamin A",
+        "amount": 308,
+        "unit": "mcg"
+      },
+      {
+        "name": "Calcium",
+        "amount": 98,
+        "unit": "mg"
+      },
+      {
+        "name": "Phosphorus",
+        "amount": 104,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 tbsp",
+        "grams": 14.5
+      },
+      {
+        "label": "1 oz",
+        "grams": 28
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 172179,
+    "slug": "cottage-cheese",
+    "name": "Cottage Cheese",
+    "category": "Dairy",
+    "categorySlug": "dairy",
+    "calories": 98,
+    "protein": 11.1,
+    "totalFat": 4.3,
+    "saturatedFat": 1.7,
+    "carbs": 3.4,
+    "fiber": 0,
+    "sugar": 2.7,
+    "sodium": 364,
+    "cholesterol": 17,
+    "nutrients": [
+      {
+        "name": "Selenium",
+        "amount": 9.7,
+        "unit": "mcg"
+      },
+      {
+        "name": "Phosphorus",
+        "amount": 159,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium",
+        "amount": 83,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin B12",
+        "amount": 0.4,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup",
+        "grams": 226
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 171287,
+    "slug": "egg",
+    "name": "Egg",
+    "category": "Dairy",
+    "categorySlug": "dairy",
+    "calories": 155,
+    "protein": 13,
+    "totalFat": 11,
+    "saturatedFat": 3.3,
+    "carbs": 1.1,
+    "fiber": 0,
+    "sugar": 1.1,
+    "sodium": 124,
+    "cholesterol": 373,
+    "nutrients": [
+      {
+        "name": "Vitamin D",
+        "amount": 2,
+        "unit": "mcg"
+      },
+      {
+        "name": "Vitamin B12",
+        "amount": 0.9,
+        "unit": "mcg"
+      },
+      {
+        "name": "Selenium",
+        "amount": 30.7,
+        "unit": "mcg"
+      },
+      {
+        "name": "Choline",
+        "amount": 294,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 large",
+        "grams": 50
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 169756,
+    "slug": "white-rice",
+    "name": "White Rice",
+    "category": "Grains",
+    "categorySlug": "grains",
+    "calories": 130,
+    "protein": 2.7,
+    "totalFat": 0.3,
+    "saturatedFat": 0.1,
+    "carbs": 28.2,
+    "fiber": 0.4,
+    "sugar": 0,
+    "sodium": 1,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Iron",
+        "amount": 0.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Folate",
+        "amount": 58,
+        "unit": "mcg"
+      },
+      {
+        "name": "Manganese",
+        "amount": 0.5,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup cooked",
+        "grams": 158
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 169738,
+    "slug": "brown-rice",
+    "name": "Brown Rice",
+    "category": "Grains",
+    "categorySlug": "grains",
+    "calories": 111,
+    "protein": 2.6,
+    "totalFat": 0.9,
+    "saturatedFat": 0.2,
+    "carbs": 23,
+    "fiber": 1.8,
+    "sugar": 0.4,
+    "sodium": 5,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Manganese",
+        "amount": 0.9,
+        "unit": "mg"
+      },
+      {
+        "name": "Magnesium",
+        "amount": 43,
+        "unit": "mg"
+      },
+      {
+        "name": "Selenium",
+        "amount": 9.8,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup cooked",
+        "grams": 195
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 168917,
+    "slug": "quinoa",
+    "name": "Quinoa",
+    "category": "Grains",
+    "categorySlug": "grains",
+    "calories": 120,
+    "protein": 4.4,
+    "totalFat": 1.9,
+    "saturatedFat": 0.2,
+    "carbs": 21.3,
+    "fiber": 2.8,
+    "sugar": 0.9,
+    "sodium": 7,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Manganese",
+        "amount": 0.6,
+        "unit": "mg"
+      },
+      {
+        "name": "Magnesium",
+        "amount": 64,
+        "unit": "mg"
+      },
+      {
+        "name": "Phosphorus",
+        "amount": 152,
+        "unit": "mg"
+      },
+      {
+        "name": "Folate",
+        "amount": 42,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup cooked",
+        "grams": 185
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 173904,
+    "slug": "oatmeal",
+    "name": "Oatmeal",
+    "category": "Grains",
+    "categorySlug": "grains",
+    "calories": 68,
+    "protein": 2.4,
+    "totalFat": 1.4,
+    "saturatedFat": 0.2,
+    "carbs": 12,
+    "fiber": 1.7,
+    "sugar": 0.3,
+    "sodium": 49,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Manganese",
+        "amount": 0.6,
+        "unit": "mg"
+      },
+      {
+        "name": "Phosphorus",
+        "amount": 77,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron",
+        "amount": 0.7,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup cooked",
+        "grams": 234
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 172687,
+    "slug": "white-bread",
+    "name": "White Bread",
+    "category": "Grains",
+    "categorySlug": "grains",
+    "calories": 265,
+    "protein": 9,
+    "totalFat": 3.2,
+    "saturatedFat": 0.7,
+    "carbs": 49.2,
+    "fiber": 2.7,
+    "sugar": 5,
+    "sodium": 491,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Folate",
+        "amount": 111,
+        "unit": "mcg"
+      },
+      {
+        "name": "Iron",
+        "amount": 3.6,
+        "unit": "mg"
+      },
+      {
+        "name": "Thiamin",
+        "amount": 0.5,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 slice",
+        "grams": 25
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 172686,
+    "slug": "whole-wheat-bread",
+    "name": "Whole Wheat Bread",
+    "category": "Grains",
+    "categorySlug": "grains",
+    "calories": 247,
+    "protein": 13,
+    "totalFat": 3.4,
+    "saturatedFat": 0.6,
+    "carbs": 41.3,
+    "fiber": 7,
+    "sugar": 6,
+    "sodium": 400,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Manganese",
+        "amount": 2.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Selenium",
+        "amount": 42,
+        "unit": "mcg"
+      },
+      {
+        "name": "Folate",
+        "amount": 42,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 slice",
+        "grams": 28
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 169738,
+    "slug": "pasta",
+    "name": "Pasta",
+    "category": "Grains",
+    "categorySlug": "grains",
+    "calories": 131,
+    "protein": 5,
+    "totalFat": 1.1,
+    "saturatedFat": 0.2,
+    "carbs": 25.4,
+    "fiber": 1.8,
+    "sugar": 0.6,
+    "sodium": 1,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Folate",
+        "amount": 7,
+        "unit": "mcg"
+      },
+      {
+        "name": "Iron",
+        "amount": 0.5,
+        "unit": "mg"
+      },
+      {
+        "name": "Manganese",
+        "amount": 0.3,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup cooked",
+        "grams": 140
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 169699,
+    "slug": "couscous",
+    "name": "Couscous",
+    "category": "Grains",
+    "categorySlug": "grains",
+    "calories": 112,
+    "protein": 3.8,
+    "totalFat": 0.2,
+    "saturatedFat": 0,
+    "carbs": 23.2,
+    "fiber": 1.4,
+    "sugar": 0.1,
+    "sodium": 5,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Selenium",
+        "amount": 27.5,
+        "unit": "mcg"
+      },
+      {
+        "name": "Folate",
+        "amount": 15,
+        "unit": "mcg"
+      },
+      {
+        "name": "Iron",
+        "amount": 0.4,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup cooked",
+        "grams": 157
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 173735,
+    "slug": "black-beans",
+    "name": "Black Beans",
+    "category": "Legumes",
+    "categorySlug": "legumes",
+    "calories": 132,
+    "protein": 8.9,
+    "totalFat": 0.5,
+    "saturatedFat": 0.1,
+    "carbs": 23.7,
+    "fiber": 8.7,
+    "sugar": 0.3,
+    "sodium": 1,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Folate",
+        "amount": 149,
+        "unit": "mcg"
+      },
+      {
+        "name": "Iron",
+        "amount": 2.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Magnesium",
+        "amount": 70,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 355,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup cooked",
+        "grams": 172
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 172421,
+    "slug": "lentils",
+    "name": "Lentils",
+    "category": "Legumes",
+    "categorySlug": "legumes",
+    "calories": 116,
+    "protein": 9,
+    "totalFat": 0.4,
+    "saturatedFat": 0.1,
+    "carbs": 20.1,
+    "fiber": 7.9,
+    "sugar": 1.8,
+    "sodium": 2,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Folate",
+        "amount": 181,
+        "unit": "mcg"
+      },
+      {
+        "name": "Iron",
+        "amount": 3.3,
+        "unit": "mg"
+      },
+      {
+        "name": "Manganese",
+        "amount": 0.5,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 369,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup cooked",
+        "grams": 198
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 173757,
+    "slug": "chickpeas",
+    "name": "Chickpeas",
+    "category": "Legumes",
+    "categorySlug": "legumes",
+    "calories": 164,
+    "protein": 8.9,
+    "totalFat": 2.6,
+    "saturatedFat": 0.3,
+    "carbs": 27.4,
+    "fiber": 7.6,
+    "sugar": 4.8,
+    "sodium": 7,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Folate",
+        "amount": 172,
+        "unit": "mcg"
+      },
+      {
+        "name": "Iron",
+        "amount": 2.9,
+        "unit": "mg"
+      },
+      {
+        "name": "Manganese",
+        "amount": 1,
+        "unit": "mg"
+      },
+      {
+        "name": "Phosphorus",
+        "amount": 168,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup cooked",
+        "grams": 164
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 175198,
+    "slug": "kidney-beans",
+    "name": "Kidney Beans",
+    "category": "Legumes",
+    "categorySlug": "legumes",
+    "calories": 127,
+    "protein": 8.7,
+    "totalFat": 0.5,
+    "saturatedFat": 0.1,
+    "carbs": 22.8,
+    "fiber": 6.4,
+    "sugar": 2.3,
+    "sodium": 2,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Folate",
+        "amount": 130,
+        "unit": "mcg"
+      },
+      {
+        "name": "Iron",
+        "amount": 2.9,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 403,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup cooked",
+        "grams": 177
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 172430,
+    "slug": "peanuts",
+    "name": "Peanuts",
+    "category": "Legumes",
+    "categorySlug": "legumes",
+    "calories": 567,
+    "protein": 25.8,
+    "totalFat": 49.2,
+    "saturatedFat": 6.3,
+    "carbs": 16.1,
+    "fiber": 8.5,
+    "sugar": 4,
+    "sodium": 18,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Niacin",
+        "amount": 12.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin E",
+        "amount": 8.3,
+        "unit": "mg"
+      },
+      {
+        "name": "Magnesium",
+        "amount": 168,
+        "unit": "mg"
+      },
+      {
+        "name": "Manganese",
+        "amount": 1.9,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 oz",
+        "grams": 28
+      },
+      {
+        "label": "1 cup",
+        "grams": 146
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 174270,
+    "slug": "soybeans",
+    "name": "Soybeans",
+    "category": "Legumes",
+    "categorySlug": "legumes",
+    "calories": 173,
+    "protein": 16.6,
+    "totalFat": 9,
+    "saturatedFat": 1.3,
+    "carbs": 9.9,
+    "fiber": 6,
+    "sugar": 3,
+    "sodium": 1,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Iron",
+        "amount": 5.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium",
+        "amount": 102,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 515,
+        "unit": "mg"
+      },
+      {
+        "name": "Folate",
+        "amount": 54,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup cooked",
+        "grams": 172
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170420,
+    "slug": "green-peas",
+    "name": "Green Peas",
+    "category": "Legumes",
+    "categorySlug": "legumes",
+    "calories": 81,
+    "protein": 5.4,
+    "totalFat": 0.4,
+    "saturatedFat": 0.1,
+    "carbs": 14.5,
+    "fiber": 5.7,
+    "sugar": 5.7,
+    "sodium": 5,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 40,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin K",
+        "amount": 24.8,
+        "unit": "mcg"
+      },
+      {
+        "name": "Thiamin",
+        "amount": 0.3,
+        "unit": "mg"
+      },
+      {
+        "name": "Folate",
+        "amount": 65,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup",
+        "grams": 160
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 174272,
+    "slug": "tofu",
+    "name": "Tofu",
+    "category": "Legumes",
+    "categorySlug": "legumes",
+    "calories": 76,
+    "protein": 8,
+    "totalFat": 4.8,
+    "saturatedFat": 0.7,
+    "carbs": 1.9,
+    "fiber": 0.3,
+    "sugar": 0.6,
+    "sodium": 7,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Calcium",
+        "amount": 350,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron",
+        "amount": 5.4,
+        "unit": "mg"
+      },
+      {
+        "name": "Manganese",
+        "amount": 0.6,
+        "unit": "mg"
+      },
+      {
+        "name": "Selenium",
+        "amount": 17.4,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1/2 cup",
+        "grams": 126
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170567,
+    "slug": "almonds",
+    "name": "Almonds",
+    "category": "Nuts & Seeds",
+    "categorySlug": "nuts-and-seeds",
+    "calories": 579,
+    "protein": 21.2,
+    "totalFat": 49.9,
+    "saturatedFat": 3.8,
+    "carbs": 21.6,
+    "fiber": 12.5,
+    "sugar": 4.4,
+    "sodium": 1,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin E",
+        "amount": 25.6,
+        "unit": "mg"
+      },
+      {
+        "name": "Magnesium",
+        "amount": 270,
+        "unit": "mg"
+      },
+      {
+        "name": "Manganese",
+        "amount": 2.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium",
+        "amount": 269,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 oz (23 almonds)",
+        "grams": 28
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170187,
+    "slug": "walnuts",
+    "name": "Walnuts",
+    "category": "Nuts & Seeds",
+    "categorySlug": "nuts-and-seeds",
+    "calories": 654,
+    "protein": 15.2,
+    "totalFat": 65.2,
+    "saturatedFat": 6.1,
+    "carbs": 13.7,
+    "fiber": 6.7,
+    "sugar": 2.6,
+    "sodium": 2,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Manganese",
+        "amount": 3.4,
+        "unit": "mg"
+      },
+      {
+        "name": "Copper",
+        "amount": 1.6,
+        "unit": "mg"
+      },
+      {
+        "name": "Magnesium",
+        "amount": 158,
+        "unit": "mg"
+      },
+      {
+        "name": "Phosphorus",
+        "amount": 346,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 oz",
+        "grams": 28
+      },
+      {
+        "label": "1 cup",
+        "grams": 117
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170162,
+    "slug": "cashews",
+    "name": "Cashews",
+    "category": "Nuts & Seeds",
+    "categorySlug": "nuts-and-seeds",
+    "calories": 553,
+    "protein": 18.2,
+    "totalFat": 43.9,
+    "saturatedFat": 7.8,
+    "carbs": 30.2,
+    "fiber": 3.3,
+    "sugar": 5.9,
+    "sodium": 12,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Copper",
+        "amount": 2.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Magnesium",
+        "amount": 292,
+        "unit": "mg"
+      },
+      {
+        "name": "Manganese",
+        "amount": 1.7,
+        "unit": "mg"
+      },
+      {
+        "name": "Zinc",
+        "amount": 5.8,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 oz",
+        "grams": 28
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170184,
+    "slug": "pistachios",
+    "name": "Pistachios",
+    "category": "Nuts & Seeds",
+    "categorySlug": "nuts-and-seeds",
+    "calories": 560,
+    "protein": 20.2,
+    "totalFat": 45.3,
+    "saturatedFat": 5.6,
+    "carbs": 27.2,
+    "fiber": 10.6,
+    "sugar": 7.7,
+    "sodium": 1,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin B6",
+        "amount": 1.7,
+        "unit": "mg"
+      },
+      {
+        "name": "Copper",
+        "amount": 1.3,
+        "unit": "mg"
+      },
+      {
+        "name": "Manganese",
+        "amount": 1.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Phosphorus",
+        "amount": 490,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 oz (49 kernels)",
+        "grams": 28
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170562,
+    "slug": "sunflower-seeds",
+    "name": "Sunflower Seeds",
+    "category": "Nuts & Seeds",
+    "categorySlug": "nuts-and-seeds",
+    "calories": 584,
+    "protein": 20.8,
+    "totalFat": 51.5,
+    "saturatedFat": 4.5,
+    "carbs": 20,
+    "fiber": 8.6,
+    "sugar": 2.6,
+    "sodium": 9,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin E",
+        "amount": 35.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Selenium",
+        "amount": 53,
+        "unit": "mcg"
+      },
+      {
+        "name": "Copper",
+        "amount": 1.8,
+        "unit": "mg"
+      },
+      {
+        "name": "Manganese",
+        "amount": 1.9,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 oz",
+        "grams": 28
+      },
+      {
+        "label": "1/4 cup",
+        "grams": 35
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170554,
+    "slug": "chia-seeds",
+    "name": "Chia Seeds",
+    "category": "Nuts & Seeds",
+    "categorySlug": "nuts-and-seeds",
+    "calories": 486,
+    "protein": 16.5,
+    "totalFat": 30.7,
+    "saturatedFat": 3.3,
+    "carbs": 42.1,
+    "fiber": 34.4,
+    "sugar": 0,
+    "sodium": 16,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Calcium",
+        "amount": 631,
+        "unit": "mg"
+      },
+      {
+        "name": "Manganese",
+        "amount": 2.7,
+        "unit": "mg"
+      },
+      {
+        "name": "Phosphorus",
+        "amount": 860,
+        "unit": "mg"
+      },
+      {
+        "name": "Magnesium",
+        "amount": 335,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 tbsp",
+        "grams": 12
+      },
+      {
+        "label": "1 oz",
+        "grams": 28
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 169414,
+    "slug": "flaxseed",
+    "name": "Flaxseed",
+    "category": "Nuts & Seeds",
+    "categorySlug": "nuts-and-seeds",
+    "calories": 534,
+    "protein": 18.3,
+    "totalFat": 42.2,
+    "saturatedFat": 3.7,
+    "carbs": 28.9,
+    "fiber": 27.3,
+    "sugar": 1.6,
+    "sodium": 30,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Manganese",
+        "amount": 2.5,
+        "unit": "mg"
+      },
+      {
+        "name": "Thiamin",
+        "amount": 1.6,
+        "unit": "mg"
+      },
+      {
+        "name": "Magnesium",
+        "amount": 392,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 tbsp",
+        "grams": 10
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170182,
+    "slug": "pecans",
+    "name": "Pecans",
+    "category": "Nuts & Seeds",
+    "categorySlug": "nuts-and-seeds",
+    "calories": 691,
+    "protein": 9.2,
+    "totalFat": 72,
+    "saturatedFat": 6.2,
+    "carbs": 13.9,
+    "fiber": 9.6,
+    "sugar": 4,
+    "sodium": 0,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Manganese",
+        "amount": 4.5,
+        "unit": "mg"
+      },
+      {
+        "name": "Copper",
+        "amount": 1.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Zinc",
+        "amount": 4.5,
+        "unit": "mg"
+      },
+      {
+        "name": "Thiamin",
+        "amount": 0.7,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 oz",
+        "grams": 28
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 169098,
+    "slug": "orange-juice",
+    "name": "Orange Juice",
+    "category": "Beverages",
+    "categorySlug": "beverages",
+    "calories": 45,
+    "protein": 0.7,
+    "totalFat": 0.2,
+    "saturatedFat": 0,
+    "carbs": 10.4,
+    "fiber": 0.2,
+    "sugar": 8.4,
+    "sodium": 1,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 50,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 200,
+        "unit": "mg"
+      },
+      {
+        "name": "Folate",
+        "amount": 30,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup",
+        "grams": 248
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 168196,
+    "slug": "apple-juice",
+    "name": "Apple Juice",
+    "category": "Beverages",
+    "categorySlug": "beverages",
+    "calories": 46,
+    "protein": 0.1,
+    "totalFat": 0.1,
+    "saturatedFat": 0,
+    "carbs": 11.3,
+    "fiber": 0.1,
+    "sugar": 9.6,
+    "sodium": 4,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 0.9,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 101,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup",
+        "grams": 248
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 174851,
+    "slug": "coca-cola",
+    "name": "Coca-Cola",
+    "category": "Beverages",
+    "categorySlug": "beverages",
+    "calories": 42,
+    "protein": 0,
+    "totalFat": 0,
+    "saturatedFat": 0,
+    "carbs": 10.6,
+    "fiber": 0,
+    "sugar": 10.6,
+    "sodium": 4,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Sodium",
+        "amount": 4,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 can (12 oz)",
+        "grams": 355
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 171890,
+    "slug": "coffee-black",
+    "name": "Coffee (Black)",
+    "category": "Beverages",
+    "categorySlug": "beverages",
+    "calories": 1,
+    "protein": 0.1,
+    "totalFat": 0,
+    "saturatedFat": 0,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 2,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Potassium",
+        "amount": 49,
+        "unit": "mg"
+      },
+      {
+        "name": "Niacin",
+        "amount": 0.2,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup (8 oz)",
+        "grams": 237
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 171917,
+    "slug": "green-tea",
+    "name": "Green Tea",
+    "category": "Beverages",
+    "categorySlug": "beverages",
+    "calories": 1,
+    "protein": 0,
+    "totalFat": 0,
+    "saturatedFat": 0,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 1,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Potassium",
+        "amount": 8,
+        "unit": "mg"
+      },
+      {
+        "name": "Manganese",
+        "amount": 0.2,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup",
+        "grams": 245
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 168746,
+    "slug": "beer",
+    "name": "Beer",
+    "category": "Beverages",
+    "categorySlug": "beverages",
+    "calories": 43,
+    "protein": 0.5,
+    "totalFat": 0,
+    "saturatedFat": 0,
+    "carbs": 3.6,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 4,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Folate",
+        "amount": 6,
+        "unit": "mcg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 27,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 can (12 oz)",
+        "grams": 355
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 174837,
+    "slug": "red-wine",
+    "name": "Red Wine",
+    "category": "Beverages",
+    "categorySlug": "beverages",
+    "calories": 85,
+    "protein": 0.1,
+    "totalFat": 0,
+    "saturatedFat": 0,
+    "carbs": 2.6,
+    "fiber": 0,
+    "sugar": 0.6,
+    "sodium": 4,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Potassium",
+        "amount": 127,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron",
+        "amount": 0.5,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 glass (5 oz)",
+        "grams": 148
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170689,
+    "slug": "coconut-water",
+    "name": "Coconut Water",
+    "category": "Beverages",
+    "categorySlug": "beverages",
+    "calories": 19,
+    "protein": 0.7,
+    "totalFat": 0.2,
+    "saturatedFat": 0.2,
+    "carbs": 3.7,
+    "fiber": 1.1,
+    "sugar": 2.6,
+    "sodium": 105,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Potassium",
+        "amount": 250,
+        "unit": "mg"
+      },
+      {
+        "name": "Manganese",
+        "amount": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Magnesium",
+        "amount": 25,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup",
+        "grams": 240
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170273,
+    "slug": "chocolate-dark",
+    "name": "Dark Chocolate",
+    "category": "Snacks",
+    "categorySlug": "snacks",
+    "calories": 546,
+    "protein": 4.9,
+    "totalFat": 31.3,
+    "saturatedFat": 18.5,
+    "carbs": 59.4,
+    "fiber": 7,
+    "sugar": 48,
+    "sodium": 24,
+    "cholesterol": 5,
+    "nutrients": [
+      {
+        "name": "Iron",
+        "amount": 8,
+        "unit": "mg"
+      },
+      {
+        "name": "Magnesium",
+        "amount": 146,
+        "unit": "mg"
+      },
+      {
+        "name": "Copper",
+        "amount": 1.4,
+        "unit": "mg"
+      },
+      {
+        "name": "Manganese",
+        "amount": 1.4,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 oz",
+        "grams": 28
+      },
+      {
+        "label": "1 bar",
+        "grams": 101
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 167587,
+    "slug": "chocolate-milk",
+    "name": "Milk Chocolate",
+    "category": "Snacks",
+    "categorySlug": "snacks",
+    "calories": 535,
+    "protein": 7.6,
+    "totalFat": 29.7,
+    "saturatedFat": 18.5,
+    "carbs": 59.4,
+    "fiber": 3.4,
+    "sugar": 52,
+    "sodium": 79,
+    "cholesterol": 23,
+    "nutrients": [
+      {
+        "name": "Calcium",
+        "amount": 189,
+        "unit": "mg"
+      },
+      {
+        "name": "Phosphorus",
+        "amount": 208,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron",
+        "amount": 2.4,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 oz",
+        "grams": 28
+      },
+      {
+        "label": "1 bar",
+        "grams": 44
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 167600,
+    "slug": "ice-cream",
+    "name": "Ice Cream",
+    "category": "Snacks",
+    "categorySlug": "snacks",
+    "calories": 207,
+    "protein": 3.5,
+    "totalFat": 11,
+    "saturatedFat": 6.8,
+    "carbs": 24,
+    "fiber": 0.7,
+    "sugar": 21,
+    "sodium": 80,
+    "cholesterol": 44,
+    "nutrients": [
+      {
+        "name": "Calcium",
+        "amount": 128,
+        "unit": "mg"
+      },
+      {
+        "name": "Phosphorus",
+        "amount": 105,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin A",
+        "amount": 92,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1/2 cup",
+        "grams": 66
+      },
+      {
+        "label": "1 cup",
+        "grams": 132
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170546,
+    "slug": "potato-chips",
+    "name": "Potato Chips",
+    "category": "Snacks",
+    "categorySlug": "snacks",
+    "calories": 536,
+    "protein": 7,
+    "totalFat": 35,
+    "saturatedFat": 3.1,
+    "carbs": 53,
+    "fiber": 4.4,
+    "sugar": 0.3,
+    "sodium": 525,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Potassium",
+        "amount": 1196,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C",
+        "amount": 24,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin B6",
+        "amount": 0.5,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 oz (15 chips)",
+        "grams": 28
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 167958,
+    "slug": "popcorn",
+    "name": "Popcorn",
+    "category": "Snacks",
+    "categorySlug": "snacks",
+    "calories": 387,
+    "protein": 13,
+    "totalFat": 4.5,
+    "saturatedFat": 0.6,
+    "carbs": 78,
+    "fiber": 15,
+    "sugar": 0.9,
+    "sodium": 8,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Manganese",
+        "amount": 1.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Magnesium",
+        "amount": 144,
+        "unit": "mg"
+      },
+      {
+        "name": "Phosphorus",
+        "amount": 300,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cup air-popped",
+        "grams": 8
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 167534,
+    "slug": "cookies",
+    "name": "Cookies",
+    "category": "Snacks",
+    "categorySlug": "snacks",
+    "calories": 488,
+    "protein": 5.4,
+    "totalFat": 23.5,
+    "saturatedFat": 7.6,
+    "carbs": 65,
+    "fiber": 2.4,
+    "sugar": 32,
+    "sodium": 348,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Iron",
+        "amount": 3.9,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium",
+        "amount": 23,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 cookie",
+        "grams": 30
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 167541,
+    "slug": "brownie",
+    "name": "Brownie",
+    "category": "Snacks",
+    "categorySlug": "snacks",
+    "calories": 466,
+    "protein": 5.5,
+    "totalFat": 25.2,
+    "saturatedFat": 6.2,
+    "carbs": 55,
+    "fiber": 2.6,
+    "sugar": 36,
+    "sodium": 254,
+    "cholesterol": 35,
+    "nutrients": [
+      {
+        "name": "Iron",
+        "amount": 3.3,
+        "unit": "mg"
+      },
+      {
+        "name": "Phosphorus",
+        "amount": 88,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 brownie",
+        "grams": 56
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 167624,
+    "slug": "granola-bar",
+    "name": "Granola Bar",
+    "category": "Snacks",
+    "categorySlug": "snacks",
+    "calories": 471,
+    "protein": 7.6,
+    "totalFat": 19.6,
+    "saturatedFat": 4.6,
+    "carbs": 66.4,
+    "fiber": 4.3,
+    "sugar": 29,
+    "sodium": 300,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Iron",
+        "amount": 2.6,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium",
+        "amount": 60,
+        "unit": "mg"
+      },
+      {
+        "name": "Magnesium",
+        "amount": 56,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 bar",
+        "grams": 42
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 169870,
+    "slug": "ketchup",
+    "name": "Ketchup",
+    "category": "Condiments",
+    "categorySlug": "condiments",
+    "calories": 112,
+    "protein": 1.7,
+    "totalFat": 0.1,
+    "saturatedFat": 0,
+    "carbs": 27.4,
+    "fiber": 0.3,
+    "sugar": 22,
+    "sodium": 907,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin A",
+        "amount": 26,
+        "unit": "mcg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 315,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 tbsp",
+        "grams": 17
+      },
+      {
+        "label": "1 packet",
+        "grams": 6
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 172929,
+    "slug": "mustard",
+    "name": "Mustard",
+    "category": "Condiments",
+    "categorySlug": "condiments",
+    "calories": 66,
+    "protein": 4.4,
+    "totalFat": 4,
+    "saturatedFat": 0.2,
+    "carbs": 5.3,
+    "fiber": 3.3,
+    "sugar": 2.2,
+    "sodium": 1135,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Selenium",
+        "amount": 33,
+        "unit": "mcg"
+      },
+      {
+        "name": "Iron",
+        "amount": 1.5,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 tsp",
+        "grams": 5
+      },
+      {
+        "label": "1 tbsp",
+        "grams": 15
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 175033,
+    "slug": "mayonnaise",
+    "name": "Mayonnaise",
+    "category": "Condiments",
+    "categorySlug": "condiments",
+    "calories": 680,
+    "protein": 1,
+    "totalFat": 75,
+    "saturatedFat": 11.8,
+    "carbs": 0.6,
+    "fiber": 0,
+    "sugar": 0.6,
+    "sodium": 635,
+    "cholesterol": 42,
+    "nutrients": [
+      {
+        "name": "Vitamin E",
+        "amount": 3.3,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin K",
+        "amount": 24,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 tbsp",
+        "grams": 14
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 173748,
+    "slug": "soy-sauce",
+    "name": "Soy Sauce",
+    "category": "Condiments",
+    "categorySlug": "condiments",
+    "calories": 53,
+    "protein": 8.1,
+    "totalFat": 0.6,
+    "saturatedFat": 0.1,
+    "carbs": 4.9,
+    "fiber": 0.8,
+    "sugar": 0.4,
+    "sodium": 5493,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Iron",
+        "amount": 1.3,
+        "unit": "mg"
+      },
+      {
+        "name": "Manganese",
+        "amount": 0.2,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 tbsp",
+        "grams": 16
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 171413,
+    "slug": "olive-oil",
+    "name": "Olive Oil",
+    "category": "Condiments",
+    "categorySlug": "condiments",
+    "calories": 884,
+    "protein": 0,
+    "totalFat": 100,
+    "saturatedFat": 13.8,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 2,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin E",
+        "amount": 14.4,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin K",
+        "amount": 60.2,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 tbsp",
+        "grams": 14
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 169640,
+    "slug": "honey",
+    "name": "Honey",
+    "category": "Condiments",
+    "categorySlug": "condiments",
+    "calories": 304,
+    "protein": 0.3,
+    "totalFat": 0,
+    "saturatedFat": 0,
+    "carbs": 82.4,
+    "fiber": 0.2,
+    "sugar": 82.1,
+    "sodium": 4,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Iron",
+        "amount": 0.4,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "amount": 52,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 tbsp",
+        "grams": 21
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 168737,
+    "slug": "maple-syrup",
+    "name": "Maple Syrup",
+    "category": "Condiments",
+    "categorySlug": "condiments",
+    "calories": 260,
+    "protein": 0,
+    "totalFat": 0.1,
+    "saturatedFat": 0,
+    "carbs": 67,
+    "fiber": 0,
+    "sugar": 60.4,
+    "sodium": 12,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Manganese",
+        "amount": 2.9,
+        "unit": "mg"
+      },
+      {
+        "name": "Zinc",
+        "amount": 1.5,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium",
+        "amount": 102,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 tbsp",
+        "grams": 20
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 172379,
+    "slug": "hot-sauce",
+    "name": "Hot Sauce",
+    "category": "Condiments",
+    "categorySlug": "condiments",
+    "calories": 11,
+    "protein": 0.5,
+    "totalFat": 0.4,
+    "saturatedFat": 0.1,
+    "carbs": 1.8,
+    "fiber": 0.5,
+    "sugar": 1,
+    "sodium": 2643,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Vitamin C",
+        "amount": 4,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin A",
+        "amount": 20,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 tsp",
+        "grams": 5
+      },
+      {
+        "label": "1 tbsp",
+        "grams": 15
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170720,
+    "slug": "big-mac",
+    "name": "Big Mac",
+    "category": "Fast Food",
+    "categorySlug": "fast-food",
+    "calories": 257,
+    "protein": 13,
+    "totalFat": 13,
+    "saturatedFat": 5,
+    "carbs": 22,
+    "fiber": 1.2,
+    "sugar": 7,
+    "sodium": 480,
+    "cholesterol": 42,
+    "nutrients": [
+      {
+        "name": "Calcium",
+        "amount": 130,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron",
+        "amount": 2.7,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin A",
+        "amount": 30,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 sandwich",
+        "grams": 200
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170721,
+    "slug": "french-fries",
+    "name": "French Fries",
+    "category": "Fast Food",
+    "categorySlug": "fast-food",
+    "calories": 312,
+    "protein": 3.4,
+    "totalFat": 15,
+    "saturatedFat": 2.3,
+    "carbs": 41,
+    "fiber": 3.8,
+    "sugar": 0.3,
+    "sodium": 210,
+    "cholesterol": 0,
+    "nutrients": [
+      {
+        "name": "Potassium",
+        "amount": 579,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C",
+        "amount": 4.7,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin B6",
+        "amount": 0.3,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "medium (117g)",
+        "grams": 117
+      },
+      {
+        "label": "large (154g)",
+        "grams": 154
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170722,
+    "slug": "pizza-pepperoni",
+    "name": "Pepperoni Pizza",
+    "category": "Fast Food",
+    "categorySlug": "fast-food",
+    "calories": 266,
+    "protein": 11.4,
+    "totalFat": 10.1,
+    "saturatedFat": 4.4,
+    "carbs": 33.6,
+    "fiber": 2.3,
+    "sugar": 3.6,
+    "sodium": 640,
+    "cholesterol": 22,
+    "nutrients": [
+      {
+        "name": "Calcium",
+        "amount": 155,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron",
+        "amount": 2.3,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin A",
+        "amount": 52,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 slice",
+        "grams": 107
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170723,
+    "slug": "hot-dog",
+    "name": "Hot Dog",
+    "category": "Fast Food",
+    "categorySlug": "fast-food",
+    "calories": 290,
+    "protein": 10.3,
+    "totalFat": 17.4,
+    "saturatedFat": 6.2,
+    "carbs": 22.9,
+    "fiber": 0.8,
+    "sugar": 4.4,
+    "sodium": 810,
+    "cholesterol": 37,
+    "nutrients": [
+      {
+        "name": "Sodium",
+        "amount": 810,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron",
+        "amount": 2.8,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium",
+        "amount": 65,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 hot dog",
+        "grams": 98
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170724,
+    "slug": "chicken-nuggets",
+    "name": "Chicken Nuggets",
+    "category": "Fast Food",
+    "categorySlug": "fast-food",
+    "calories": 296,
+    "protein": 15.5,
+    "totalFat": 18.5,
+    "saturatedFat": 3.1,
+    "carbs": 16,
+    "fiber": 0.7,
+    "sugar": 0.3,
+    "sodium": 497,
+    "cholesterol": 44,
+    "nutrients": [
+      {
+        "name": "Selenium",
+        "amount": 15.4,
+        "unit": "mcg"
+      },
+      {
+        "name": "Phosphorus",
+        "amount": 177,
+        "unit": "mg"
+      },
+      {
+        "name": "Niacin",
+        "amount": 5.6,
+        "unit": "mg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "6 pieces",
+        "grams": 96
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170725,
+    "slug": "burrito",
+    "name": "Burrito",
+    "category": "Fast Food",
+    "categorySlug": "fast-food",
+    "calories": 206,
+    "protein": 8.7,
+    "totalFat": 8.5,
+    "saturatedFat": 3.6,
+    "carbs": 24.5,
+    "fiber": 1.5,
+    "sugar": 1.3,
+    "sodium": 550,
+    "cholesterol": 18,
+    "nutrients": [
+      {
+        "name": "Calcium",
+        "amount": 100,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron",
+        "amount": 2.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin A",
+        "amount": 35,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 burrito",
+        "grams": 200
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "fdcId": 170726,
+    "slug": "taco",
+    "name": "Taco",
+    "category": "Fast Food",
+    "categorySlug": "fast-food",
+    "calories": 226,
+    "protein": 9.4,
+    "totalFat": 11.8,
+    "saturatedFat": 4.5,
+    "carbs": 20.2,
+    "fiber": 1.6,
+    "sugar": 1.7,
+    "sodium": 430,
+    "cholesterol": 27,
+    "nutrients": [
+      {
+        "name": "Calcium",
+        "amount": 89,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron",
+        "amount": 1.6,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin A",
+        "amount": 42,
+        "unit": "mcg"
+      }
+    ],
+    "servings": [
+      {
+        "label": "1 taco",
+        "grams": 85
+      },
+      {
+        "label": "100g",
+        "grams": 100
+      }
+    ]
+  }
+]

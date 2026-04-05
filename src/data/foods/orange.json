@@ -1,0 +1,48 @@
+{
+  "fdcId": 169097,
+  "slug": "orange",
+  "name": "Orange",
+  "category": "Fruits",
+  "categorySlug": "fruits",
+  "calories": 47,
+  "protein": 0.9,
+  "totalFat": 0.1,
+  "saturatedFat": 0,
+  "carbs": 11.8,
+  "fiber": 2.4,
+  "sugar": 9.4,
+  "sodium": 0,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Vitamin C",
+      "amount": 53.2,
+      "unit": "mg"
+    },
+    {
+      "name": "Potassium",
+      "amount": 181,
+      "unit": "mg"
+    },
+    {
+      "name": "Calcium",
+      "amount": 40,
+      "unit": "mg"
+    },
+    {
+      "name": "Folate",
+      "amount": 30,
+      "unit": "mcg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 medium",
+      "grams": 131
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

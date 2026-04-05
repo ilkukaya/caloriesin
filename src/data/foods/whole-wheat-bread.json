@@ -1,0 +1,43 @@
+{
+  "fdcId": 172686,
+  "slug": "whole-wheat-bread",
+  "name": "Whole Wheat Bread",
+  "category": "Grains",
+  "categorySlug": "grains",
+  "calories": 247,
+  "protein": 13,
+  "totalFat": 3.4,
+  "saturatedFat": 0.6,
+  "carbs": 41.3,
+  "fiber": 7,
+  "sugar": 6,
+  "sodium": 400,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Manganese",
+      "amount": 2.2,
+      "unit": "mg"
+    },
+    {
+      "name": "Selenium",
+      "amount": 42,
+      "unit": "mcg"
+    },
+    {
+      "name": "Folate",
+      "amount": 42,
+      "unit": "mcg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 slice",
+      "grams": 28
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

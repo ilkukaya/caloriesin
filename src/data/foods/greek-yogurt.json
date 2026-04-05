@@ -1,0 +1,47 @@
+{
+  "fdcId": 170886,
+  "slug": "greek-yogurt",
+  "name": "Greek Yogurt",
+  "category": "Dairy",
+  "categorySlug": "dairy",
+  "calories": 59,
+  "protein": 10,
+  "totalFat": 0.4,
+  "saturatedFat": 0.1,
+  "carbs": 3.6,
+  "fiber": 0,
+  "sugar": 3.2,
+  "sodium": 36,
+  "cholesterol": 5,
+  "nutrients": [
+    {
+      "name": "Calcium",
+      "amount": 110,
+      "unit": "mg"
+    },
+    {
+      "name": "Vitamin B12",
+      "amount": 0.8,
+      "unit": "mcg"
+    },
+    {
+      "name": "Phosphorus",
+      "amount": 135,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 cup",
+      "grams": 245
+    },
+    {
+      "label": "1 container",
+      "grams": 170
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

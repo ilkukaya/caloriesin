@@ -1,0 +1,52 @@
+{
+  "fdcId": 170288,
+  "slug": "corn",
+  "name": "Corn",
+  "category": "Vegetables",
+  "categorySlug": "vegetables",
+  "calories": 86,
+  "protein": 3.3,
+  "totalFat": 1.4,
+  "saturatedFat": 0.2,
+  "carbs": 18.7,
+  "fiber": 2,
+  "sugar": 6.3,
+  "sodium": 15,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Vitamin C",
+      "amount": 6.8,
+      "unit": "mg"
+    },
+    {
+      "name": "Folate",
+      "amount": 42,
+      "unit": "mcg"
+    },
+    {
+      "name": "Potassium",
+      "amount": 270,
+      "unit": "mg"
+    },
+    {
+      "name": "Magnesium",
+      "amount": 37,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 ear medium",
+      "grams": 90
+    },
+    {
+      "label": "1 cup",
+      "grams": 154
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}

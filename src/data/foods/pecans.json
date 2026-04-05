@@ -1,0 +1,48 @@
+{
+  "fdcId": 170182,
+  "slug": "pecans",
+  "name": "Pecans",
+  "category": "Nuts & Seeds",
+  "categorySlug": "nuts-and-seeds",
+  "calories": 691,
+  "protein": 9.2,
+  "totalFat": 72,
+  "saturatedFat": 6.2,
+  "carbs": 13.9,
+  "fiber": 9.6,
+  "sugar": 4,
+  "sodium": 0,
+  "cholesterol": 0,
+  "nutrients": [
+    {
+      "name": "Manganese",
+      "amount": 4.5,
+      "unit": "mg"
+    },
+    {
+      "name": "Copper",
+      "amount": 1.2,
+      "unit": "mg"
+    },
+    {
+      "name": "Zinc",
+      "amount": 4.5,
+      "unit": "mg"
+    },
+    {
+      "name": "Thiamin",
+      "amount": 0.7,
+      "unit": "mg"
+    }
+  ],
+  "servings": [
+    {
+      "label": "1 oz",
+      "grams": 28
+    },
+    {
+      "label": "100g",
+      "grams": 100
+    }
+  ]
+}
