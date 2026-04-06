@@ -9,38 +9,36 @@ import ComparisonVerdict from '../../components/compare/ComparisonVerdict.astro'
 import AdSlot from '../../components/monetization/AdSlot.astro';
 import foodsData from '../../data/foods.json';
 
-const popularComparisons: [string, string][] = [
-  ["banana", "apple"], ["banana", "orange"], ["apple", "orange"],
-  ["mango", "pineapple"], ["strawberry", "blueberry"],
-  ["chicken-breast", "salmon"], ["chicken-breast", "turkey-breast"],
-  ["beef-steak", "chicken-breast"], ["salmon", "tuna"], ["egg", "tofu"],
-  ["white-rice", "brown-rice"], ["white-rice", "quinoa"],
-  ["white-bread", "whole-wheat-bread"], ["pasta", "white-rice"],
-  ["potato", "sweet-potato"], ["oatmeal", "granola-bar"],
-  ["whole-milk", "skim-milk"], ["butter", "olive-oil"],
-  ["cheddar-cheese", "mozzarella"], ["greek-yogurt", "yogurt"],
-  ["avocado", "butter"], ["honey", "maple-syrup"],
-  ["almonds", "walnuts"], ["almonds", "cashews"],
-  ["black-beans", "lentils"], ["chickpeas", "black-beans"],
-  ["coca-cola", "orange-juice"], ["coffee-black", "green-tea"],
-  ["big-mac", "pizza-pepperoni"], ["french-fries", "potato-chips"],
-  ["chocolate-dark", "chocolate-milk"], ["ice-cream", "greek-yogurt"],
-  ["peanuts", "almonds"], ["shrimp", "salmon"],
-  ["bacon", "ham"], ["ground-beef", "turkey-breast"],
-  ["broccoli", "spinach"], ["carrot", "sweet-potato"],
-  ["kale", "spinach"], ["corn", "green-peas"],
-  ["lobster", "shrimp"], ["cod", "tilapia"],
-  ["pistachios", "cashews"], ["chia-seeds", "flaxseed"],
-  ["beer", "red-wine"], ["popcorn", "potato-chips"],
-  ["ketchup", "mustard"], ["mayonnaise", "mustard"],
-  ["lentils", "quinoa"], ["tofu", "chicken-breast"],
-  ["cottage-cheese", "greek-yogurt"], ["cream-cheese", "butter"],
-];
-
-const allFoodsTyped = foodsData as unknown as Food[];
-
 export function getStaticPaths() {
-  const foodMap = new Map(allFoodsTyped.map((f) => [f.slug, f]));
+  const popularComparisons: [string, string][] = [
+    ["banana", "apple"], ["banana", "orange"], ["apple", "orange"],
+    ["mango", "pineapple"], ["strawberry", "blueberry"],
+    ["chicken-breast", "salmon"], ["chicken-breast", "turkey-breast"],
+    ["beef-steak", "chicken-breast"], ["salmon", "tuna"], ["egg", "tofu"],
+    ["white-rice", "brown-rice"], ["white-rice", "quinoa"],
+    ["white-bread", "whole-wheat-bread"], ["pasta", "white-rice"],
+    ["potato", "sweet-potato"], ["oatmeal", "granola-bar"],
+    ["whole-milk", "skim-milk"], ["butter", "olive-oil"],
+    ["cheddar-cheese", "mozzarella"], ["greek-yogurt", "yogurt"],
+    ["avocado", "butter"], ["honey", "maple-syrup"],
+    ["almonds", "walnuts"], ["almonds", "cashews"],
+    ["black-beans", "lentils"], ["chickpeas", "black-beans"],
+    ["coca-cola", "orange-juice"], ["coffee-black", "green-tea"],
+    ["big-mac", "pizza-pepperoni"], ["french-fries", "potato-chips"],
+    ["chocolate-dark", "chocolate-milk"], ["ice-cream", "greek-yogurt"],
+    ["peanuts", "almonds"], ["shrimp", "salmon"],
+    ["bacon", "ham"], ["ground-beef", "turkey-breast"],
+    ["broccoli", "spinach"], ["carrot", "sweet-potato"],
+    ["kale", "spinach"], ["corn", "green-peas"],
+    ["lobster", "shrimp"], ["cod", "tilapia"],
+    ["pistachios", "cashews"], ["chia-seeds", "flaxseed"],
+    ["beer", "red-wine"], ["popcorn", "potato-chips"],
+    ["ketchup", "mustard"], ["mayonnaise", "mustard"],
+    ["lentils", "quinoa"], ["tofu", "chicken-breast"],
+    ["cottage-cheese", "greek-yogurt"], ["cream-cheese", "butter"],
+  ];
+  const allFoods = foodsData as unknown as Food[];
+  const foodMap = new Map(allFoods.map((f) => [f.slug, f]));
   const paths: { params: { foods: string }; props: { food1: Food; food2: Food; isReverse: boolean } }[] = [];
   const seen = new Set<string>();
 
@@ -114,6 +112,34 @@ const faqs = [
 ];
 
 // Build other comparisons list (exclude current pair)
+const popularComparisons: [string, string][] = [
+  ["banana", "apple"], ["banana", "orange"], ["apple", "orange"],
+  ["mango", "pineapple"], ["strawberry", "blueberry"],
+  ["chicken-breast", "salmon"], ["chicken-breast", "turkey-breast"],
+  ["beef-steak", "chicken-breast"], ["salmon", "tuna"], ["egg", "tofu"],
+  ["white-rice", "brown-rice"], ["white-rice", "quinoa"],
+  ["white-bread", "whole-wheat-bread"], ["pasta", "white-rice"],
+  ["potato", "sweet-potato"], ["oatmeal", "granola-bar"],
+  ["whole-milk", "skim-milk"], ["butter", "olive-oil"],
+  ["cheddar-cheese", "mozzarella"], ["greek-yogurt", "yogurt"],
+  ["avocado", "butter"], ["honey", "maple-syrup"],
+  ["almonds", "walnuts"], ["almonds", "cashews"],
+  ["black-beans", "lentils"], ["chickpeas", "black-beans"],
+  ["coca-cola", "orange-juice"], ["coffee-black", "green-tea"],
+  ["big-mac", "pizza-pepperoni"], ["french-fries", "potato-chips"],
+  ["chocolate-dark", "chocolate-milk"], ["ice-cream", "greek-yogurt"],
+  ["peanuts", "almonds"], ["shrimp", "salmon"],
+  ["bacon", "ham"], ["ground-beef", "turkey-breast"],
+  ["broccoli", "spinach"], ["carrot", "sweet-potato"],
+  ["kale", "spinach"], ["corn", "green-peas"],
+  ["lobster", "shrimp"], ["cod", "tilapia"],
+  ["pistachios", "cashews"], ["chia-seeds", "flaxseed"],
+  ["beer", "red-wine"], ["popcorn", "potato-chips"],
+  ["ketchup", "mustard"], ["mayonnaise", "mustard"],
+  ["lentils", "quinoa"], ["tofu", "chicken-breast"],
+  ["cottage-cheese", "greek-yogurt"], ["cream-cheese", "butter"],
+];
+const allFoodsTyped = foodsData as unknown as Food[];
 const foodMap = new Map(allFoodsTyped.map((f) => [f.slug, f]));
 const otherComparisons = popularComparisons
   .filter(([a, b]) => {
