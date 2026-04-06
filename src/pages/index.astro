@@ -4,6 +4,7 @@ import PopularSearches from '../components/shared/PopularSearches.astro';
 import FoodCard from '../components/shared/FoodCard.astro';
 import CategoryCard from '../components/category/CategoryCard.astro';
 import WebSiteSchema from '../components/schema/WebSiteSchema.astro';
+import FAQSchema from '../components/schema/FAQSchema.astro';
 
 let foods: any[] = [];
 let categories: any[] = [];
@@ -37,10 +38,23 @@ const emojiMap: Record<string, string> = {
   snacks: '🍰',
   condiments: '🧂',
   'fast-food': '🍕',
+  'desserts': '🍰',
+  'pasta-noodles': '🍝',
+  'soups': '🍲',
+  'breakfast': '🥞',
 };
 
 const description =
   'Find calorie counts, macros, and nutritional info for thousands of foods. Search our database of fruits, vegetables, meats, and more.';
+
+const homeFaqs = [
+  { question: 'How many calories should I eat per day?', answer: 'The average adult needs about 2,000 calories per day, but your needs depend on age, sex, weight, height, and activity level. For weight loss, a deficit of 500 calories per day results in about 1 pound of weight loss per week.' },
+  { question: 'How many calories are in a banana?', answer: 'A medium banana (118g) has approximately 105 calories. Per 100g, bananas contain 89 calories, 1.1g protein, 22.8g carbs, and 0.3g fat.' },
+  { question: 'What are the best high-protein foods?', answer: 'The best high-protein foods include chicken breast (31g per 100g), tuna (29g), Greek yogurt (10g), eggs (13g), salmon (20g), and tofu (8g).' },
+  { question: 'What is a calorie deficit?', answer: 'A calorie deficit means consuming fewer calories than your body burns. This is the fundamental requirement for weight loss. A 500-calorie daily deficit results in approximately 1 pound of fat loss per week.' },
+  { question: 'How many calories are in rice?', answer: 'Cooked white rice has about 130 calories per 100g, while brown rice has about 112 calories per 100g. A typical serving (1 cup, 158g) of white rice has about 206 calories.' },
+  { question: 'What are macros (macronutrients)?', answer: 'Macros are the three main nutrients your body needs in large amounts: protein (4 cal/g), carbohydrates (4 cal/g), and fat (9 cal/g). Tracking macros helps optimize your diet for specific goals.' },
+];
 ---
 
 <Layout
@@ -49,6 +63,7 @@ const description =
   canonical={siteUrl}
 >
   <WebSiteSchema siteUrl={siteUrl} />
+  <FAQSchema faqs={homeFaqs} />
 
   <!-- Hero / Search -->
   <section class="bg-primary-light py-16 md:py-24">
@@ -122,6 +137,37 @@ const description =
     </section>
   )}
 
+  <!-- Compare Section -->
+  <section class="mx-auto max-w-5xl px-4 py-12">
+    <h2 class="mb-6 text-2xl font-bold text-text-main">Compare Foods</h2>
+    <p class="mb-6 text-text-muted">See how your favorite foods stack up against each other. Compare calories, protein, carbs, and fat side by side.</p>
+    <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <a href="/compare/banana-vs-apple" class="group flex items-center justify-between rounded-lg border border-border-main bg-white px-4 py-3 transition-all hover:border-primary hover:shadow-md">
+        <span class="text-sm font-medium text-text-main group-hover:text-primary">Banana vs Apple</span>
+        <span class="text-xs text-text-muted">Compare &rarr;</span>
+      </a>
+      <a href="/compare/chicken-breast-vs-salmon" class="group flex items-center justify-between rounded-lg border border-border-main bg-white px-4 py-3 transition-all hover:border-primary hover:shadow-md">
+        <span class="text-sm font-medium text-text-main group-hover:text-primary">Chicken vs Salmon</span>
+        <span class="text-xs text-text-muted">Compare &rarr;</span>
+      </a>
+      <a href="/compare/white-rice-vs-brown-rice" class="group flex items-center justify-between rounded-lg border border-border-main bg-white px-4 py-3 transition-all hover:border-primary hover:shadow-md">
+        <span class="text-sm font-medium text-text-main group-hover:text-primary">White Rice vs Brown Rice</span>
+        <span class="text-xs text-text-muted">Compare &rarr;</span>
+      </a>
+      <a href="/compare/whole-milk-vs-skim-milk" class="group flex items-center justify-between rounded-lg border border-border-main bg-white px-4 py-3 transition-all hover:border-primary hover:shadow-md">
+        <span class="text-sm font-medium text-text-main group-hover:text-primary">Whole Milk vs Skim Milk</span>
+        <span class="text-xs text-text-muted">Compare &rarr;</span>
+      </a>
+      <a href="/compare/avocado-vs-butter" class="group flex items-center justify-between rounded-lg border border-border-main bg-white px-4 py-3 transition-all hover:border-primary hover:shadow-md">
+        <span class="text-sm font-medium text-text-main group-hover:text-primary">Avocado vs Butter</span>
+        <span class="text-xs text-text-muted">Compare &rarr;</span>
+      </a>
+      <a href="/compare" class="group flex items-center justify-center rounded-lg border-2 border-dashed border-primary/30 bg-primary-light px-4 py-3 transition-all hover:border-primary hover:shadow-md">
+        <span class="text-sm font-semibold text-primary">View All Comparisons &rarr;</span>
+      </a>
+    </div>
+  </section>
+
   <!-- Tools Section -->
   <section class="bg-bg-alt py-12">
     <div class="mx-auto max-w-5xl px-4">
@@ -169,6 +215,106 @@ const description =
           </p>
         </a>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (Conversational Queries / SEO) -->
+  <section class="mx-auto max-w-5xl px-4 py-12">
+    <h2 class="mb-6 text-2xl font-bold text-text-main">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <details class="group rounded-lg border border-border-main bg-white">
+        <summary class="cursor-pointer px-5 py-4 font-medium text-text-main transition-colors hover:text-primary">
+          How many calories should I eat per day?
+        </summary>
+        <div class="border-t border-border-main px-5 py-4 text-sm text-text-muted leading-relaxed">
+          The average adult needs about 2,000 calories per day, but your needs depend on age, sex, weight, height, and activity level. Use our <a href="/tools/calorie-calculator" class="text-primary hover:underline">Calorie Calculator</a> to find your personalized daily calorie target. For weight loss, a deficit of 500 calories per day is generally recommended, which equals about 1 pound of weight loss per week. Read our <a href="/blog/how-many-calories-should-i-eat-per-day" class="text-primary hover:underline">complete guide</a> for more details.
+        </div>
+      </details>
+      <details class="group rounded-lg border border-border-main bg-white">
+        <summary class="cursor-pointer px-5 py-4 font-medium text-text-main transition-colors hover:text-primary">
+          How many calories are in a banana?
+        </summary>
+        <div class="border-t border-border-main px-5 py-4 text-sm text-text-muted leading-relaxed">
+          A medium <a href="/banana" class="text-primary hover:underline">banana</a> (118g) has approximately 105 calories. Per 100g, bananas contain 89 calories, 1.1g protein, 22.8g carbs, and 0.3g fat. Bananas are an excellent source of potassium, vitamin B6, and dietary fiber. See the <a href="/banana" class="text-primary hover:underline">full nutrition facts for banana</a>.
+        </div>
+      </details>
+      <details class="group rounded-lg border border-border-main bg-white">
+        <summary class="cursor-pointer px-5 py-4 font-medium text-text-main transition-colors hover:text-primary">
+          What are the best high-protein foods?
+        </summary>
+        <div class="border-t border-border-main px-5 py-4 text-sm text-text-muted leading-relaxed">
+          The best high-protein foods include <a href="/chicken-breast" class="text-primary hover:underline">chicken breast</a> (31g per 100g), <a href="/tuna" class="text-primary hover:underline">tuna</a> (29g), <a href="/greek-yogurt" class="text-primary hover:underline">Greek yogurt</a> (10g), <a href="/egg" class="text-primary hover:underline">eggs</a> (13g), <a href="/salmon" class="text-primary hover:underline">salmon</a> (20g), and <a href="/tofu" class="text-primary hover:underline">tofu</a> (8g). For a complete list, check our <a href="/blog/high-protein-foods" class="text-primary hover:underline">50 High Protein Foods guide</a>.
+        </div>
+      </details>
+      <details class="group rounded-lg border border-border-main bg-white">
+        <summary class="cursor-pointer px-5 py-4 font-medium text-text-main transition-colors hover:text-primary">
+          What is a calorie deficit?
+        </summary>
+        <div class="border-t border-border-main px-5 py-4 text-sm text-text-muted leading-relaxed">
+          A calorie deficit means consuming fewer calories than your body burns. This is the fundamental requirement for weight loss. To calculate your deficit, first determine your TDEE (Total Daily Energy Expenditure) using our <a href="/tools/calorie-calculator" class="text-primary hover:underline">Calorie Calculator</a>, then subtract 250-500 calories. A 500-calorie daily deficit results in approximately 1 pound of fat loss per week. Read our <a href="/blog/calorie-deficit-explained" class="text-primary hover:underline">complete calorie deficit guide</a>.
+        </div>
+      </details>
+      <details class="group rounded-lg border border-border-main bg-white">
+        <summary class="cursor-pointer px-5 py-4 font-medium text-text-main transition-colors hover:text-primary">
+          How many calories are in rice?
+        </summary>
+        <div class="border-t border-border-main px-5 py-4 text-sm text-text-muted leading-relaxed">
+          Cooked <a href="/white-rice" class="text-primary hover:underline">white rice</a> has about 130 calories per 100g, while <a href="/brown-rice" class="text-primary hover:underline">brown rice</a> has about 112 calories per 100g. A typical serving (1 cup, 158g) of white rice has about 206 calories. See our detailed <a href="/compare/white-rice-vs-brown-rice" class="text-primary hover:underline">white rice vs brown rice comparison</a> and <a href="/blog/calories-in-rice" class="text-primary hover:underline">complete rice calorie guide</a>.
+        </div>
+      </details>
+      <details class="group rounded-lg border border-border-main bg-white">
+        <summary class="cursor-pointer px-5 py-4 font-medium text-text-main transition-colors hover:text-primary">
+          What are macros (macronutrients)?
+        </summary>
+        <div class="border-t border-border-main px-5 py-4 text-sm text-text-muted leading-relaxed">
+          Macros are the three main nutrients your body needs in large amounts: <strong>protein</strong> (4 cal/g), <strong>carbohydrates</strong> (4 cal/g), and <strong>fat</strong> (9 cal/g). Tracking macros helps you optimize your diet for weight loss, muscle building, or general health. Use our <a href="/tools/macro-calculator" class="text-primary hover:underline">Macro Calculator</a> to get personalized targets, or read our <a href="/blog/what-are-macros" class="text-primary hover:underline">complete guide to macronutrients</a>.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="bg-bg-alt py-12">
+    <div class="mx-auto max-w-5xl px-4">
+      <h2 class="mb-6 text-2xl font-bold text-text-main">Latest from Our Blog</h2>
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <a href="/blog/how-many-calories-should-i-eat-per-day" class="group rounded-xl border border-border-main bg-white p-5 transition-all hover:border-primary hover:shadow-md">
+          <span class="mb-2 inline-block rounded-full bg-primary-light px-3 py-1 text-xs font-medium text-primary">Guide</span>
+          <h3 class="text-base font-semibold text-text-main group-hover:text-primary transition-colors">How Many Calories Should I Eat Per Day?</h3>
+          <p class="mt-2 text-sm text-text-muted line-clamp-2">Learn how to calculate your daily calorie needs based on your goals.</p>
+        </a>
+        <a href="/blog/high-protein-foods" class="group rounded-xl border border-border-main bg-white p-5 transition-all hover:border-primary hover:shadow-md">
+          <span class="mb-2 inline-block rounded-full bg-primary-light px-3 py-1 text-xs font-medium text-primary">Nutrition</span>
+          <h3 class="text-base font-semibold text-text-main group-hover:text-primary transition-colors">50 High Protein Foods for Muscle Building</h3>
+          <p class="mt-2 text-sm text-text-muted line-clamp-2">The ultimate list of protein-rich foods to support your fitness goals.</p>
+        </a>
+        <a href="/blog/calorie-deficit-explained" class="group rounded-xl border border-border-main bg-white p-5 transition-all hover:border-primary hover:shadow-md">
+          <span class="mb-2 inline-block rounded-full bg-accent-light px-3 py-1 text-xs font-medium text-accent">Weight Loss</span>
+          <h3 class="text-base font-semibold text-text-main group-hover:text-primary transition-colors">What Is a Calorie Deficit? How to Calculate Yours</h3>
+          <p class="mt-2 text-sm text-text-muted line-clamp-2">The science behind calorie deficits and how to use them for weight loss.</p>
+        </a>
+      </div>
+      <div class="mt-6 text-center">
+        <a href="/blog" class="inline-flex items-center text-sm font-semibold text-primary hover:underline">
+          View All Articles &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Text Block -->
+  <section class="mx-auto max-w-5xl px-4 py-12">
+    <div class="prose prose-sm max-w-none text-text-muted">
+      <h2 class="text-xl font-bold text-text-main">Your Free Calorie & Nutrition Database</h2>
+      <p>
+        CaloriesIn is your go-to resource for accurate calorie counts and comprehensive nutrition information. Whether you're counting calories for weight loss, tracking macros for muscle building, or simply trying to eat healthier, our database of hundreds of foods has the data you need.
+      </p>
+      <p>
+        All nutritional data is sourced directly from the <a href="https://fdc.nal.usda.gov/" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">USDA FoodData Central</a> database, ensuring accuracy and reliability. Every food page includes calories, protein, carbohydrates, fat, fiber, vitamins, and minerals per 100 grams and per common serving sizes.
+      </p>
+      <p>
+        Use our free <a href="/tools/calorie-calculator" class="text-primary hover:underline">Calorie Calculator</a> to determine your daily energy needs, our <a href="/tools/bmi-calculator" class="text-primary hover:underline">BMI Calculator</a> to check your body mass index, and our <a href="/tools/macro-calculator" class="text-primary hover:underline">Macro Calculator</a> to get personalized macronutrient targets. Browse foods by <a href="/category/fruits" class="text-primary hover:underline">category</a> or <a href="/compare" class="text-primary hover:underline">compare two foods</a> side by side.
+      </p>
     </div>
   </section>
 </Layout>

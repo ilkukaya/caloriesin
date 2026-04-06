@@ -1,10 +1,13 @@
 ---
 const popularFoods = [
-  { label: 'Banana', href: '/food/banana' },
-  { label: 'Chicken Breast', href: '/food/chicken-breast' },
-  { label: 'Rice', href: '/food/rice' },
-  { label: 'Egg', href: '/food/egg' },
-  { label: 'Apple', href: '/food/apple' },
+  { label: 'Banana', href: '/banana' },
+  { label: 'Chicken Breast', href: '/chicken-breast' },
+  { label: 'White Rice', href: '/white-rice' },
+  { label: 'Egg', href: '/egg' },
+  { label: 'Apple', href: '/apple' },
+  { label: 'Salmon', href: '/salmon' },
+  { label: 'Avocado', href: '/avocado' },
+  { label: 'Oatmeal', href: '/oatmeal' },
 ];
 
 const categoryLinks = [
@@ -21,6 +24,13 @@ const toolLinks = [
   { label: 'Macro Calculator', href: '/tools/macro-calculator' },
 ];
 
+const compareLinks = [
+  { label: 'Banana vs Apple', href: '/compare/banana-vs-apple' },
+  { label: 'Chicken vs Salmon', href: '/compare/chicken-breast-vs-salmon' },
+  { label: 'Rice vs Quinoa', href: '/compare/white-rice-vs-quinoa' },
+  { label: 'All Comparisons', href: '/compare' },
+];
+
 const bottomLinks = [
   { label: 'Blog', href: '/blog' },
   { label: 'About', href: '/about' },
@@ -33,7 +43,7 @@ const bottomLinks = [
 <footer class="bg-gray-900 text-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <!-- Top: Logo + Columns -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-10">
       <!-- Logo & Tagline -->
       <div>
         <a href="/" class="flex items-center gap-1.5 mb-3">
@@ -86,6 +96,20 @@ const bottomLinks = [
             <li>
               <a href={tool.href} class="text-sm text-gray-400 hover:text-white transition-colors">
                 {tool.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Compare -->
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">Compare</h3>
+        <ul class="space-y-2.5">
+          {compareLinks.map((link) => (
+            <li>
+              <a href={link.href} class="text-sm text-gray-400 hover:text-white transition-colors">
+                {link.label}
               </a>
             </li>
           ))}

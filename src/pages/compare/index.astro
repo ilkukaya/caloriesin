@@ -1,0 +1,461 @@
+---
+import type { Food } from '../../utils/nutrition';
+import Layout from '../../components/layout/Layout.astro';
+import Breadcrumb from '../../components/layout/Breadcrumb.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import foodsData from '../../data/foods.json';
+
+const allFoods = foodsData as unknown as Food[];
+const siteUrl = 'https://caloriesin.netlify.app';
+
+const title = 'Compare Foods Side by Side — Calorie & Nutrition Comparison | CaloriesIn';
+const description = 'Compare any two foods side by side. See calories, protein, carbs, fat, and full nutrition facts per 100g. Choose from over 100 foods.';
+
+const popularComparisons: [string, string][] = [
+  ["banana", "apple"], ["chicken-breast", "salmon"], ["white-rice", "quinoa"],
+  ["beef-steak", "chicken-breast"], ["potato", "sweet-potato"], ["almonds", "walnuts"],
+  ["whole-milk", "skim-milk"], ["butter", "olive-oil"], ["egg", "tofu"],
+  ["avocado", "butter"], ["pasta", "white-rice"], ["broccoli", "spinach"],
+  ["greek-yogurt", "yogurt"], ["strawberry", "blueberry"], ["mango", "pineapple"],
+  ["salmon", "tuna"], ["white-bread", "whole-wheat-bread"], ["lentils", "quinoa"],
+  ["big-mac", "pizza-pepperoni"], ["french-fries", "potato-chips"],
+  ["beer", "red-wine"], ["chocolate-dark", "chocolate-milk"],
+  ["honey", "maple-syrup"], ["ketchup", "mustard"],
+];
+
+const foodMap = new Map(allFoods.map((f) => [f.slug, f]));
+
+// Prepare compact foods data for inline script (only the fields needed for comparison)
+const foodsForClient = allFoods.map(f => ({
+  slug: f.slug,
+  name: f.name,
+  calories: f.calories,
+  protein: f.protein,
+  totalFat: f.totalFat,
+  saturatedFat: f.saturatedFat,
+  carbs: f.carbs,
+  fiber: f.fiber,
+  sugar: f.sugar,
+  sodium: f.sodium,
+  cholesterol: f.cholesterol,
+  category: f.category,
+}));
+
+const structuredData = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Compare Foods Side by Side",
+  "description": description,
+  "url": `${siteUrl}/compare`,
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "CaloriesIn",
+    "url": siteUrl,
+  },
+});
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonical={`${siteUrl}/compare`}
+  schema={structuredData}
+>
+  <BreadcrumbSchema
+    siteUrl={siteUrl}
+    items={[
+      { label: 'Home', href: '/' },
+      { label: 'Compare Foods' },
+    ]}
+  />
+
+  <!-- Hero Section -->
+  <section class="bg-primary-light py-16 md:py-20">
+    <div class="mx-auto max-w-3xl px-4 text-center">
+      <h1 class="mb-4 text-4xl font-bold text-text-main md:text-5xl">
+        Compare Foods Side by Side
+      </h1>
+      <p class="mb-8 text-lg text-text-muted">
+        Select any two foods to compare their calories, macros, and nutritional values per 100g.
+      </p>
+
+      <!-- Search Inputs -->
+      <div class="mx-auto max-w-2xl">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:gap-4">
+          <!-- Food 1 -->
+          <div class="relative flex-1" id="search1-wrapper">
+            <label for="food1-input" class="mb-1 block text-left text-sm font-semibold text-text-main">
+              Food 1
+            </label>
+            <input
+              type="text"
+              id="food1-input"
+              placeholder="e.g., Banana"
+              autocomplete="off"
+              class="w-full rounded-lg border border-border-main bg-white px-4 py-3 text-base text-text-main shadow-sm placeholder:text-text-muted/60 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+            />
+            <input type="hidden" id="food1-slug" />
+            <div id="food1-dropdown" class="absolute left-0 right-0 top-full z-20 mt-1 hidden max-h-60 overflow-y-auto rounded-lg border border-border-main bg-white shadow-lg"></div>
+          </div>
+
+          <div class="flex items-end justify-center pb-3 text-xl font-bold text-text-muted sm:pb-1">
+            vs
+          </div>
+
+          <!-- Food 2 -->
+          <div class="relative flex-1" id="search2-wrapper">
+            <label for="food2-input" class="mb-1 block text-left text-sm font-semibold text-text-main">
+              Food 2
+            </label>
+            <input
+              type="text"
+              id="food2-input"
+              placeholder="e.g., Apple"
+              autocomplete="off"
+              class="w-full rounded-lg border border-border-main bg-white px-4 py-3 text-base text-text-main shadow-sm placeholder:text-text-muted/60 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+            />
+            <input type="hidden" id="food2-slug" />
+            <div id="food2-dropdown" class="absolute left-0 right-0 top-full z-20 mt-1 hidden max-h-60 overflow-y-auto rounded-lg border border-border-main bg-white shadow-lg"></div>
+          </div>
+        </div>
+
+        <button
+          id="compare-btn"
+          disabled
+          class="mt-4 w-full rounded-lg bg-primary px-8 py-3 text-lg font-semibold text-white shadow-sm transition-colors hover:bg-primary-dark disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
+        >
+          Compare
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div class="mx-auto max-w-5xl px-4 py-6">
+    <Breadcrumb items={[{ label: 'Compare Foods' }]} />
+
+    <!-- Client-Side Comparison Result -->
+    <div id="comparison-result" class="mb-12 hidden">
+      <div class="mb-6 flex items-center justify-between">
+        <h2 class="text-2xl font-bold text-text-main" id="result-title">Comparison</h2>
+        <a id="result-link" href="#" class="text-sm font-medium text-primary hover:underline hidden">
+          View full comparison page &rarr;
+        </a>
+      </div>
+
+      <!-- Summary Cards -->
+      <div class="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div class="rounded-xl border-2 border-primary bg-primary-light p-6 text-center" id="card1">
+          <h3 class="mb-1 text-xl font-bold text-text-main" id="card1-name"></h3>
+          <p class="mb-3 text-sm text-text-muted" id="card1-category"></p>
+          <div class="mb-4">
+            <span class="text-4xl font-extrabold text-primary" id="card1-calories"></span>
+            <span class="ml-1 text-sm text-text-muted">kcal / 100g</span>
+          </div>
+          <div class="flex justify-center gap-4 text-sm">
+            <div><span class="block font-bold text-text-main" id="card1-protein"></span><span class="text-text-muted">Protein</span></div>
+            <div><span class="block font-bold text-text-main" id="card1-carbs"></span><span class="text-text-muted">Carbs</span></div>
+            <div><span class="block font-bold text-text-main" id="card1-fat"></span><span class="text-text-muted">Fat</span></div>
+          </div>
+        </div>
+        <div class="rounded-xl border-2 border-accent bg-accent-light p-6 text-center" id="card2">
+          <h3 class="mb-1 text-xl font-bold text-text-main" id="card2-name"></h3>
+          <p class="mb-3 text-sm text-text-muted" id="card2-category"></p>
+          <div class="mb-4">
+            <span class="text-4xl font-extrabold text-accent" id="card2-calories"></span>
+            <span class="ml-1 text-sm text-text-muted">kcal / 100g</span>
+          </div>
+          <div class="flex justify-center gap-4 text-sm">
+            <div><span class="block font-bold text-text-main" id="card2-protein"></span><span class="text-text-muted">Protein</span></div>
+            <div><span class="block font-bold text-text-main" id="card2-carbs"></span><span class="text-text-muted">Carbs</span></div>
+            <div><span class="block font-bold text-text-main" id="card2-fat"></span><span class="text-text-muted">Fat</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calorie Difference -->
+      <div id="calorie-diff" class="mb-6 hidden rounded-lg bg-bg-alt p-4 text-center text-sm text-text-main"></div>
+
+      <!-- Comparison Table -->
+      <div class="overflow-hidden rounded-lg border border-border-main bg-white">
+        <div class="border-b border-border-main bg-bg-alt px-4 py-3">
+          <h3 class="text-lg font-bold text-text-main">Side-by-Side Nutrition Comparison</h3>
+          <p class="text-sm text-text-muted">Per 100g serving &mdash; green highlights the better value</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm" id="comparison-table">
+            <thead>
+              <tr class="border-b-2 border-border-main bg-bg-alt">
+                <th class="px-4 py-3 text-left font-semibold text-text-main">Nutrient</th>
+                <th class="px-4 py-3 text-right font-semibold text-text-main" id="th-food1">Food 1</th>
+                <th class="px-4 py-3 text-right font-semibold text-text-main" id="th-food2">Food 2</th>
+              </tr>
+            </thead>
+            <tbody id="comparison-tbody"></tbody>
+          </table>
+        </div>
+        <div class="border-t border-border-main px-4 py-2 text-xs text-text-muted">
+          All values are per 100 grams. Green-highlighted cells indicate the nutritionally favorable value.
+        </div>
+      </div>
+    </div>
+
+    <!-- Popular Comparisons -->
+    <div class="mt-8">
+      <h2 class="mb-6 text-2xl font-bold text-text-main">Popular Food Comparisons</h2>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {popularComparisons.map(([slug1, slug2]) => {
+          const f1 = foodMap.get(slug1);
+          const f2 = foodMap.get(slug2);
+          if (!f1 || !f2) return null;
+          return (
+            <a
+              href={`/compare/${slug1}-vs-${slug2}`}
+              class="group flex items-center justify-between rounded-lg border border-border-main bg-white px-4 py-3 transition-all hover:border-primary hover:shadow-md"
+            >
+              <span class="text-sm font-medium text-text-main group-hover:text-primary">
+                {f1.name} vs {f2.name}
+              </span>
+              <svg
+                class="h-4 w-4 flex-shrink-0 text-text-muted group-hover:text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+
+    <!-- SEO Text -->
+    <div class="mt-12 rounded-lg bg-bg-alt p-6">
+      <h2 class="mb-3 text-lg font-bold text-text-main">About Food Comparisons</h2>
+      <p class="text-sm leading-relaxed text-text-muted">
+        Our food comparison tool lets you compare the nutritional content of any two foods side by side.
+        Whether you are choosing between chicken breast and salmon for protein, or deciding between white rice
+        and quinoa for your next meal, our tool shows you the exact differences in calories, protein,
+        carbohydrates, fat, fiber, and other key nutrients per 100 grams. All nutrition data is sourced
+        from the USDA FoodData Central database.
+      </p>
+    </div>
+  </div>
+
+  <script is:inline define:vars={{ foodsForClient, popularComparisons }}>
+    document.addEventListener('DOMContentLoaded', () => {
+      const foods = foodsForClient;
+      const foodBySlug = {};
+      foods.forEach(f => { foodBySlug[f.slug] = f; });
+
+      // Build set of pre-generated comparison slugs
+      const preGenerated = new Set();
+      popularComparisons.forEach(([a, b]) => {
+        preGenerated.add(a + '-vs-' + b);
+        preGenerated.add(b + '-vs-' + a);
+      });
+
+      const input1 = document.getElementById('food1-input');
+      const input2 = document.getElementById('food2-input');
+      const slug1 = document.getElementById('food1-slug');
+      const slug2 = document.getElementById('food2-slug');
+      const dropdown1 = document.getElementById('food1-dropdown');
+      const dropdown2 = document.getElementById('food2-dropdown');
+      const compareBtn = document.getElementById('compare-btn');
+
+      function setupSearch(input, hiddenInput, dropdown, num) {
+        let selectedIndex = -1;
+
+        input.addEventListener('input', () => {
+          const query = input.value.trim().toLowerCase();
+          hiddenInput.value = '';
+          updateButton();
+          if (query.length < 1) {
+            dropdown.classList.add('hidden');
+            return;
+          }
+
+          const matches = foods
+            .filter(f => f.name.toLowerCase().includes(query))
+            .slice(0, 10);
+
+          if (matches.length === 0) {
+            dropdown.classList.add('hidden');
+            return;
+          }
+
+          selectedIndex = -1;
+          dropdown.innerHTML = matches.map((f, i) =>
+            `<button type="button" class="dropdown-item w-full px-4 py-2.5 text-left text-sm hover:bg-primary-light transition-colors ${i === 0 ? '' : 'border-t border-border-main/50'}" data-slug="${f.slug}" data-name="${f.name}">
+              <span class="font-medium text-text-main">${f.name}</span>
+              <span class="ml-2 text-xs text-text-muted">${f.calories} cal &middot; ${f.category}</span>
+            </button>`
+          ).join('');
+
+          dropdown.classList.remove('hidden');
+
+          dropdown.querySelectorAll('.dropdown-item').forEach(btn => {
+            btn.addEventListener('click', () => {
+              input.value = btn.dataset.name;
+              hiddenInput.value = btn.dataset.slug;
+              dropdown.classList.add('hidden');
+              updateButton();
+            });
+          });
+        });
+
+        input.addEventListener('keydown', (e) => {
+          const items = dropdown.querySelectorAll('.dropdown-item');
+          if (items.length === 0) return;
+
+          if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            selectedIndex = Math.min(selectedIndex + 1, items.length - 1);
+            highlightItem(items, selectedIndex);
+          } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            selectedIndex = Math.max(selectedIndex - 1, 0);
+            highlightItem(items, selectedIndex);
+          } else if (e.key === 'Enter') {
+            e.preventDefault();
+            if (selectedIndex >= 0 && items[selectedIndex]) {
+              items[selectedIndex].click();
+            }
+          } else if (e.key === 'Escape') {
+            dropdown.classList.add('hidden');
+          }
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!input.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.add('hidden');
+          }
+        });
+      }
+
+      function highlightItem(items, index) {
+        items.forEach((item, i) => {
+          if (i === index) {
+            item.classList.add('bg-primary-light');
+          } else {
+            item.classList.remove('bg-primary-light');
+          }
+        });
+      }
+
+      function updateButton() {
+        const bothSelected = slug1.value && slug2.value && slug1.value !== slug2.value;
+        compareBtn.disabled = !bothSelected;
+      }
+
+      setupSearch(input1, slug1, dropdown1, 1);
+      setupSearch(input2, slug2, dropdown2, 2);
+
+      compareBtn.addEventListener('click', () => {
+        const s1 = slug1.value;
+        const s2 = slug2.value;
+        if (!s1 || !s2 || s1 === s2) return;
+
+        const comparisonSlug = s1 + '-vs-' + s2;
+
+        // Check if pre-generated page exists
+        if (preGenerated.has(comparisonSlug)) {
+          window.location.href = '/compare/' + comparisonSlug;
+          return;
+        }
+
+        // Otherwise render client-side comparison
+        renderComparison(foodBySlug[s1], foodBySlug[s2], comparisonSlug);
+      });
+
+      function renderComparison(f1, f2, compSlug) {
+        const result = document.getElementById('comparison-result');
+        result.classList.remove('hidden');
+        result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        // Title
+        document.getElementById('result-title').textContent = f1.name + ' vs ' + f2.name;
+
+        // Link to pre-generated page if it exists
+        const resultLink = document.getElementById('result-link');
+        if (preGenerated.has(compSlug)) {
+          resultLink.href = '/compare/' + compSlug;
+          resultLink.classList.remove('hidden');
+        } else {
+          resultLink.classList.add('hidden');
+        }
+
+        // Summary cards
+        document.getElementById('card1-name').textContent = f1.name;
+        document.getElementById('card1-category').textContent = f1.category;
+        document.getElementById('card1-calories').textContent = f1.calories;
+        document.getElementById('card1-protein').textContent = f1.protein + 'g';
+        document.getElementById('card1-carbs').textContent = f1.carbs + 'g';
+        document.getElementById('card1-fat').textContent = f1.totalFat + 'g';
+
+        document.getElementById('card2-name').textContent = f2.name;
+        document.getElementById('card2-category').textContent = f2.category;
+        document.getElementById('card2-calories').textContent = f2.calories;
+        document.getElementById('card2-protein').textContent = f2.protein + 'g';
+        document.getElementById('card2-carbs').textContent = f2.carbs + 'g';
+        document.getElementById('card2-fat').textContent = f2.totalFat + 'g';
+
+        // Calorie difference
+        const calDiff = document.getElementById('calorie-diff');
+        if (f1.calories !== f2.calories) {
+          const lower = f1.calories < f2.calories ? f1 : f2;
+          const higher = f1.calories < f2.calories ? f2 : f1;
+          const pct = Math.round(Math.abs(f1.calories - f2.calories) / Math.max(f1.calories, f2.calories) * 100);
+          calDiff.innerHTML = '<strong>' + lower.name + '</strong> has <strong class="text-primary">' + pct + '% fewer calories</strong> than <strong>' + higher.name + '</strong> (' + lower.calories + ' vs ' + higher.calories + ' kcal per 100g)';
+          calDiff.classList.remove('hidden');
+        } else {
+          calDiff.classList.add('hidden');
+        }
+
+        // Table headers
+        document.getElementById('th-food1').textContent = f1.name;
+        document.getElementById('th-food2').textContent = f2.name;
+
+        // Table rows
+        const nutrients = [
+          { label: 'Calories', unit: 'kcal', key1: 'calories', higherIsBetter: false },
+          { label: 'Protein', unit: 'g', key1: 'protein', higherIsBetter: true },
+          { label: 'Total Fat', unit: 'g', key1: 'totalFat', higherIsBetter: false },
+          { label: 'Saturated Fat', unit: 'g', key1: 'saturatedFat', higherIsBetter: false },
+          { label: 'Carbohydrates', unit: 'g', key1: 'carbs', higherIsBetter: false },
+          { label: 'Fiber', unit: 'g', key1: 'fiber', higherIsBetter: true },
+          { label: 'Sugar', unit: 'g', key1: 'sugar', higherIsBetter: false },
+          { label: 'Sodium', unit: 'mg', key1: 'sodium', higherIsBetter: false },
+          { label: 'Cholesterol', unit: 'mg', key1: 'cholesterol', higherIsBetter: false },
+        ];
+
+        const tbody = document.getElementById('comparison-tbody');
+        tbody.innerHTML = nutrients.map((n, i) => {
+          const v1 = f1[n.key1];
+          const v2 = f2[n.key1];
+          let winner = 'tie';
+          if (v1 !== v2) {
+            if (n.higherIsBetter) {
+              winner = v1 > v2 ? 'food1' : 'food2';
+            } else {
+              winner = v1 < v2 ? 'food1' : 'food2';
+            }
+          }
+          const isCalories = n.label === 'Calories';
+          const bgClass = i % 2 === 0 ? 'bg-white' : 'bg-bg-alt/50';
+          const boldClass = isCalories ? 'text-base font-bold' : '';
+          const winClass1 = winner === 'food1' ? 'bg-primary-light font-semibold text-primary-dark' : 'text-text-main';
+          const winClass2 = winner === 'food2' ? 'bg-primary-light font-semibold text-primary-dark' : 'text-text-main';
+
+          return `<tr class="border-b border-border-main transition-colors ${bgClass}">
+            <td class="px-4 py-2.5 font-medium text-text-main ${boldClass}">${n.label} <span class="ml-1 text-xs text-text-muted">(${n.unit})</span></td>
+            <td class="px-4 py-2.5 text-right tabular-nums ${boldClass} ${winClass1}">${v1}</td>
+            <td class="px-4 py-2.5 text-right tabular-nums ${boldClass} ${winClass2}">${v2}</td>
+          </tr>`;
+        }).join('');
+      }
+    });
+  </script>
+</Layout>

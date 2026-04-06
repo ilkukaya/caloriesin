@@ -5,6 +5,10 @@ export const GET: APIRoute = async () => {
 Allow: /
 
 Sitemap: https://caloriesin.netlify.app/sitemap.xml
+
+# AI/LLM Information
+# See https://caloriesin.netlify.app/llms.txt for AI-readable site information
+# See https://caloriesin.netlify.app/llms-full.txt for detailed documentation
 `;
 
   return new Response(body, {

@@ -63,6 +63,8 @@ const breadcrumbItems = [
 
     <CalorieHero
       name={food.name}
+      slug={food.slug}
+      category={food.category}
       calories={food.calories}
       servingLabel={serving?.label}
       servingGrams={serving?.grams}
@@ -140,8 +142,33 @@ const breadcrumbItems = [
 
     <AdSlot slot="bottom" />
 
+    <!-- Internal Links Section -->
+    <div class="mt-8 rounded-xl border border-border-main bg-bg-alt p-6">
+      <h2 class="text-lg font-semibold text-text-main mb-4">Nutrition Tools & Guides</h2>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <a href="/tools/calorie-calculator" class="flex items-center gap-2 text-sm text-text-muted hover:text-primary transition-colors">
+          <span>🔥</span> Calculate Your Daily Calorie Needs
+        </a>
+        <a href="/tools/macro-calculator" class="flex items-center gap-2 text-sm text-text-muted hover:text-primary transition-colors">
+          <span>📊</span> Get Your Macro Targets
+        </a>
+        <a href="/tools/bmi-calculator" class="flex items-center gap-2 text-sm text-text-muted hover:text-primary transition-colors">
+          <span>⚖️</span> Check Your BMI
+        </a>
+        <a href="/compare" class="flex items-center gap-2 text-sm text-text-muted hover:text-primary transition-colors">
+          <span>🔄</span> Compare Two Foods
+        </a>
+        <a href="/blog/how-many-calories-should-i-eat-per-day" class="flex items-center gap-2 text-sm text-text-muted hover:text-primary transition-colors">
+          <span>📖</span> How Many Calories Should I Eat?
+        </a>
+        <a href="/blog/high-protein-foods" class="flex items-center gap-2 text-sm text-text-muted hover:text-primary transition-colors">
+          <span>💪</span> High Protein Foods List
+        </a>
+      </div>
+    </div>
+
     <p class="mt-8 text-xs text-text-muted text-center">
-      Nutrition data source: USDA FoodData Central. Values are per 100g unless otherwise noted.
+      Nutrition data source: <a href="https://fdc.nal.usda.gov/" class="underline hover:text-primary" target="_blank" rel="noopener noreferrer">USDA FoodData Central</a>. Values are per 100g unless otherwise noted.
       This information is for general reference only and should not replace professional medical advice.
     </p>
   </div>

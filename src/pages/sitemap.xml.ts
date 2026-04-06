@@ -21,11 +21,13 @@ export const GET: APIRoute = async () => {
 
   const staticPages = [
     { url: '/', priority: '1.0', changefreq: 'daily' },
+    { url: '/search', priority: '0.5', changefreq: 'weekly' },
+    { url: '/compare', priority: '0.7', changefreq: 'weekly' },
+    { url: '/blog', priority: '0.6', changefreq: 'weekly' },
     { url: '/about', priority: '0.3', changefreq: 'monthly' },
     { url: '/privacy', priority: '0.3', changefreq: 'monthly' },
     { url: '/terms', priority: '0.3', changefreq: 'monthly' },
     { url: '/contact', priority: '0.3', changefreq: 'monthly' },
-    { url: '/blog', priority: '0.6', changefreq: 'weekly' },
   ];
 
   const toolPages = [
@@ -91,6 +93,28 @@ export const GET: APIRoute = async () => {
   </url>`);
       }
     }
+  }
+
+  // Blog posts
+  const blogSlugs = [
+    'how-many-calories-should-i-eat-per-day', 'calories-in-alcohol', 'low-calorie-foods-list',
+    'high-calorie-foods-to-avoid', 'how-to-count-calories-beginners',
+    'what-are-macros', '1200-calorie-meal-plan', '1500-calorie-meal-plan', '2000-calorie-meal-plan',
+    'high-protein-foods', 'high-fiber-foods', 'zero-calorie-foods',
+    'calories-in-fruits', 'calories-in-vegetables', 'calories-in-rice', 'calories-in-eggs', 'calories-in-chicken',
+    'how-to-lose-weight', 'calorie-deficit-explained', 'best-foods-for-weight-loss',
+    'intermittent-fasting-guide', 'protein-for-muscle-growth', 'healthy-snacks-under-100-calories',
+    'meal-prep-for-beginners', 'metabolism-boosting-foods', 'keto-diet-food-list',
+    'vegan-protein-sources', 'sugar-in-fruits', 'post-workout-nutrition', 'foods-that-burn-belly-fat',
+  ];
+  for (const slug of blogSlugs) {
+    urlEntries.push(`
+  <url>
+    <loc>${site}/blog/${slug}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`);
   }
 
   // Tool pages

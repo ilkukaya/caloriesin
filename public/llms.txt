@@ -1,0 +1,50 @@
+# CaloriesIn
+
+> CaloriesIn is a free nutrition database providing calorie counts, macronutrient breakdowns, and detailed nutritional information for hundreds of foods.
+
+## About
+
+CaloriesIn helps users find accurate calorie and nutrition data for foods including fruits, vegetables, meats, seafood, dairy, grains, legumes, nuts, beverages, snacks, condiments, and fast food items. All nutritional data is sourced from the USDA FoodData Central database.
+
+## Key Features
+
+- Calorie and macro information per 100g and per serving for 300+ foods
+- Side-by-side food comparison tool
+- Calorie calculator (TDEE based on Mifflin-St Jeor equation)
+- BMI calculator
+- Macro calculator for personalized protein, carb, and fat targets
+- Blog with nutrition guides, meal plans, and weight loss tips
+- FDA-style nutrition facts labels
+- Activity-based calorie burn estimates
+
+## Content Structure
+
+- Food pages: /[food-slug] (e.g., /banana, /chicken-breast, /salmon)
+- Category pages: /category/[category-slug] (e.g., /category/fruits, /category/meats)
+- Comparison pages: /compare/[food1]-vs-[food2] (e.g., /compare/banana-vs-apple)
+- Tools: /tools/calorie-calculator, /tools/bmi-calculator, /tools/macro-calculator
+- Blog: /blog/[article-slug]
+
+## Food Categories
+
+- Fruits (apple, banana, orange, strawberry, blueberry, mango, watermelon, etc.)
+- Vegetables (broccoli, spinach, carrot, potato, tomato, kale, etc.)
+- Meats (chicken breast, beef steak, ground beef, turkey, bacon, etc.)
+- Seafood (salmon, tuna, shrimp, cod, lobster, etc.)
+- Dairy (milk, cheese, yogurt, butter, eggs, etc.)
+- Grains (rice, bread, pasta, oatmeal, quinoa, etc.)
+- Legumes (black beans, lentils, chickpeas, tofu, etc.)
+- Nuts & Seeds (almonds, walnuts, peanuts, chia seeds, etc.)
+- Beverages (coffee, tea, orange juice, beer, wine, etc.)
+- Snacks (chocolate, popcorn, potato chips, granola bar, etc.)
+- Condiments (ketchup, mustard, mayonnaise, olive oil, etc.)
+- Fast Food (Big Mac, pizza, french fries, hot dog, etc.)
+
+## Data Source
+
+All nutritional data is sourced from the USDA FoodData Central (https://fdc.nal.usda.gov/), the U.S. Department of Agriculture's comprehensive food composition database.
+
+## Contact
+
+Website: https://caloriesin.netlify.app
+Contact page: https://caloriesin.netlify.app/contact
