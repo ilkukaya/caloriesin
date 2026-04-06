@@ -2,27 +2,11 @@
 import Layout from '../../components/layout/Layout.astro';
 import Breadcrumb from '../../components/layout/Breadcrumb.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import categoriesData from '../../data/categories.json';
+import foodsData from '../../data/foods.json';
 
-async function loadCategories() {
-  try {
-    return (await import('../../data/categories.json')).default ?? [];
-  } catch {
-    return [];
-  }
-}
-
-async function loadFoods() {
-  try {
-    return (await import('../../data/foods.json')).default ?? [];
-  } catch {
-    return [];
-  }
-}
-
-export async function getStaticPaths() {
-  const categories = await loadCategories();
-
-  return categories.map((cat: any) => ({
+export function getStaticPaths() {
+  return categoriesData.map((cat: any) => ({
     params: { cat: cat.slug },
     props: { category: cat },
   }));
@@ -30,10 +14,8 @@ export async function getStaticPaths() {
 
 const { category } = Astro.props;
 
-const [allCategories, allFoods] = await Promise.all([
-  loadCategories(),
-  loadFoods(),
-]);
+const allCategories = categoriesData;
+const allFoods = foodsData as any[];
 
 const categoryFoods = allFoods
   .filter((f: any) => f.categorySlug === category.slug)
