@@ -1,4 +1,6 @@
 ---
+import FoodImage from '../food/FoodImage.astro';
+
 interface Props {
   name: string;
   slug: string;
@@ -13,8 +15,9 @@ const { name, slug, calories, category } = Astro.props;
   href={`/${slug}`}
   class="group block rounded-lg border border-border-main bg-white p-4 transition-all hover:border-primary hover:shadow-md"
 >
-  <div class="flex items-center justify-between gap-3">
-    <div class="min-w-0">
+  <div class="flex items-center gap-3">
+    <FoodImage slug={slug} name={name} category={category} size="sm" />
+    <div class="min-w-0 flex-1">
       <h3 class="truncate text-base font-semibold text-text-main group-hover:text-primary">
         {name}
       </h3>

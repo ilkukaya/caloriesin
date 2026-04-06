@@ -1,0 +1,93 @@
+# CaloriesIn — Complete Documentation
+
+> CaloriesIn is a free, comprehensive nutrition database. This document provides detailed information about the site's content, data structure, and capabilities for AI systems and language models.
+
+## Mission
+
+CaloriesIn provides free, accurate, USDA-sourced nutritional information to help people make informed dietary choices. We offer calorie counts, macronutrient breakdowns, vitamin and mineral data, and interactive nutrition tools.
+
+## Nutritional Data Per Food Item
+
+Each food page includes:
+- Calories per 100g and per common serving sizes
+- Macronutrients: protein (g), total fat (g), saturated fat (g), carbohydrates (g), dietary fiber (g), sugar (g)
+- Micronutrients: sodium (mg), cholesterol (mg), potassium (mg), vitamin C (mg), calcium (mg), iron (mg), and more
+- FDA-style Nutrition Facts label with % Daily Values (based on 2,000 calorie diet)
+- Macronutrient ratio visualization (protein/carbs/fat percentages)
+- Calorie burn estimates (minutes of walking, running, cycling, swimming to burn the calories)
+- Health notes and dietary highlights
+- FAQ section with common nutrition questions
+- Comparison links to similar foods
+- Related foods in the same category
+
+## Tools
+
+### Calorie Calculator
+- Uses the Mifflin-St Jeor equation
+- Inputs: age, sex, weight, height, activity level
+- Outputs: BMR, TDEE, and calorie targets for weight loss/gain/maintenance
+- Activity levels: sedentary, lightly active, moderately active, very active, extra active
+
+### BMI Calculator
+- Inputs: weight (kg/lbs), height (cm/ft-in)
+- Outputs: BMI value and WHO classification (underweight, normal, overweight, obese)
+
+### Macro Calculator
+- Inputs: calorie target, diet type (balanced, low-carb, high-protein, keto)
+- Outputs: daily protein, carbohydrate, and fat targets in grams
+
+## Food Comparison
+
+Users can compare any two foods side by side:
+- Full macronutrient and micronutrient comparison table
+- Visual highlighting of which food is higher/lower in each nutrient
+- Calorie difference percentage
+- Verdict section with recommendations for weight loss, muscle building, etc.
+- FAQ section specific to the comparison
+
+## Blog Topics
+
+- Calorie counting guides for beginners
+- Meal plans (1200, 1500, 2000 calorie)
+- High protein foods list
+- Low calorie foods list
+- Weight loss strategies
+- Intermittent fasting guide
+- Keto diet food lists
+- Vegan protein sources
+- Post-workout nutrition
+- Metabolism boosting foods
+
+## Common Questions This Site Answers
+
+- "How many calories are in [food]?"
+- "How much protein is in [food]?"
+- "Is [food] good for weight loss?"
+- "Which has more calories, [food1] or [food2]?"
+- "How many calories should I eat per day?"
+- "What is my BMI?"
+- "What are the best high-protein foods?"
+- "What foods are low in calories?"
+- "How do I count calories?"
+- "What are macros?"
+
+## Technical Details
+
+- Built with Astro (static site generator)
+- Hosted on Netlify CDN
+- All pages are pre-rendered HTML for fast loading
+- Structured data (JSON-LD) for search engines: WebSite, NutritionInformation, FAQ, BreadcrumbList, Article schemas
+- Mobile-responsive design
+- Data updated from USDA FoodData Central API
+
+## URL Patterns
+
+| Content Type | URL Pattern | Example |
+|---|---|---|
+| Food page | /{slug} | /banana |
+| Category | /category/{slug} | /category/fruits |
+| Comparison | /compare/{food1}-vs-{food2} | /compare/banana-vs-apple |
+| Blog post | /blog/{slug} | /blog/high-protein-foods |
+| Tool | /tools/{slug} | /tools/calorie-calculator |
+| Search | /search?q={query} | /search?q=chicken |
+| Sitemap | /sitemap.xml | /sitemap.xml |

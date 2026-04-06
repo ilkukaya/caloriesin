@@ -1,0 +1,36 @@
+---
+import { getFoodImageOrDefault } from '../../data/food-images';
+
+interface Props {
+  slug: string;
+  name: string;
+  category?: string;
+  size?: 'sm' | 'md' | 'lg';
+  class?: string;
+}
+
+const { slug, name, category, size = 'md', class: className = '' } = Astro.props;
+
+const imageData = getFoodImageOrDefault(slug, category);
+
+const sizeClasses: Record<string, { container: string; emoji: string }> = {
+  sm: { container: 'w-12 h-12 rounded-lg', emoji: 'text-2xl' },
+  md: { container: 'w-24 h-24 rounded-xl', emoji: 'text-5xl' },
+  lg: { container: 'w-36 h-36 rounded-2xl', emoji: 'text-7xl' },
+};
+
+const sizeConfig = sizeClasses[size];
+---
+
+<div
+  class:list={[
+    'food-image inline-flex items-center justify-center shrink-0',
+    sizeConfig.container,
+    className,
+  ]}
+  style={`background: linear-gradient(135deg, ${imageData.gradient[0]}, ${imageData.gradient[1]});`}
+  role="img"
+  aria-label={`${name} food image`}
+>
+  <span class={`${sizeConfig.emoji} select-none`} aria-hidden="true">{imageData.emoji}</span>
+</div>
