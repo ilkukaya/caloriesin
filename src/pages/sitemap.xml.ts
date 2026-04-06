@@ -53,7 +53,7 @@ export const GET: APIRoute = async () => {
     if (slug) {
       urlEntries.push(`
   <url>
-    <loc>${site}/food/${slug}</loc>
+    <loc>${site}/${slug}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

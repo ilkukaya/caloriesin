@@ -2,7 +2,7 @@
 interface Props {
   title: string;
   description: string;
-  canonical: string;
+  canonical?: string;
   ogImage?: string;
   type?: string;
 }
@@ -21,7 +21,7 @@ const siteName = 'CaloriesIn';
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="description" content={description} />
-<link rel="canonical" href={canonical} />
+{canonical && <link rel="canonical" href={canonical} />}
 
 <!-- Open Graph -->
 <meta property="og:type" content={type} />
