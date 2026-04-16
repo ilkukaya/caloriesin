@@ -151,6 +151,8 @@ const breadcrumbItems = [
     document.addEventListener('DOMContentLoaded', () => {
       const buttons = document.querySelectorAll('.serving-btn');
       const info = document.getElementById('serving-info');
+      const heroCalEl = document.getElementById('hero-calories');
+      const heroLabelEl = document.getElementById('hero-label');
       const baseCal = parseFloat(document.querySelector('[data-base-calories]')?.dataset.baseCalories || '0');
 
       buttons.forEach(btn => {
@@ -165,8 +167,19 @@ const breadcrumbItems = [
 
           const grams = parseFloat(btn.dataset.grams);
           const label = btn.dataset.label;
+
+          // Update serving info text
           if (info) {
-            info.textContent = `Showing values for: ${label} (${grams}g)`;
+            info.textContent = 'Showing values for: ' + label + ' (' + grams + 'g)';
+          }
+
+          // Update hero calorie display
+          if (heroCalEl && baseCal > 0) {
+            var servingCal = Math.round(baseCal * grams / 100);
+            heroCalEl.textContent = servingCal;
+          }
+          if (heroLabelEl) {
+            heroLabelEl.textContent = 'Calories per ' + label + ' (' + grams + 'g)';
           }
         });
       });

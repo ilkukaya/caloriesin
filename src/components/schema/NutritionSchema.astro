@@ -1,8 +1,7 @@
 ---
 interface Serving {
-  size: string;
-  calories?: number;
-  [key: string]: unknown;
+  label: string;
+  grams: number;
 }
 
 interface Food {
@@ -36,7 +35,7 @@ const schema = {
   sugarContent: `${food.sugar} g`,
   sodiumContent: `${food.sodium} mg`,
   cholesterolContent: `${food.cholesterol} mg`,
-  servingSize: food.servings?.[0]?.size ?? undefined,
+  servingSize: food.servings?.[0]?.label ?? undefined,
 };
 ---
 

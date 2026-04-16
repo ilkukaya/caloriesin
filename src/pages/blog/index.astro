@@ -20,10 +20,10 @@ const categoryColors: Record<string, string> = {
   description="Expert articles on calories, nutrition, weight loss, and healthy eating. Learn how to count calories, find low-calorie foods, and reach your health goals."
   canonical="https://caloriesin.netlify.app/blog"
 >
-  <main class="mx-auto max-w-6xl px-4 py-8">
+  <div class="mx-auto max-w-6xl px-4 py-8">
     <Breadcrumb items={[{ label: 'Blog' }]} />
 
-    <h1 class="mb-2 text-3xl font-bold text-text-heading md:text-4xl">
+    <h1 class="mb-2 text-3xl font-bold text-text-main md:text-4xl">
       Nutrition & Calorie Guides
     </h1>
     <p class="mb-8 text-lg text-text-muted">
@@ -47,13 +47,13 @@ const categoryColors: Record<string, string> = {
               </time>
             </div>
 
-            <h2 class="mb-2 text-lg font-semibold text-text-heading">
-              <a href={`/blog/${post.slug}`} class="hover:text-[#2D8C3C] transition-colors">
+            <h2 class="mb-2 text-lg font-semibold text-text-main">
+              <a href={`/blog/${post.slug}`} class="hover:text-primary transition-colors">
                 {post.data.title}
               </a>
             </h2>
 
-            <p class="mb-4 flex-1 text-sm leading-relaxed text-text-body">
+            <p class="mb-4 flex-1 text-sm leading-relaxed text-text-muted">
               {post.data.description}
             </p>
 
@@ -68,5 +68,5 @@ const categoryColors: Record<string, string> = {
         </article>
       ))}
     </div>
-  </main>
+  </div>
 </Layout>

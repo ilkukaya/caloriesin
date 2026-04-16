@@ -7,15 +7,18 @@ interface Props {
   type?: string;
 }
 
+const siteUrl = 'https://caloriesin.netlify.app';
+
 const {
   title,
   description,
   canonical,
-  ogImage = '/images/og-default.png',
+  ogImage,
   type = 'website',
 } = Astro.props;
 
 const siteName = 'CaloriesIn';
+const resolvedOgImage = ogImage ? (ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`) : undefined;
 ---
 
 <!-- Primary Meta Tags -->
@@ -27,12 +30,12 @@ const siteName = 'CaloriesIn';
 <meta property="og:type" content={type} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:url" content={canonical} />
-<meta property="og:image" content={ogImage} />
+{canonical && <meta property="og:url" content={canonical} />}
+{resolvedOgImage && <meta property="og:image" content={resolvedOgImage} />}
 <meta property="og:site_name" content={siteName} />
 
 <!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={ogImage} />
+{resolvedOgImage && <meta name="twitter:image" content={resolvedOgImage} />}

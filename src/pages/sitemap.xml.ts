@@ -1,4 +1,5 @@
 import type { APIRoute } from 'astro';
+import { getCollection } from 'astro:content';
 
 export const GET: APIRoute = async () => {
   const site = 'https://caloriesin.netlify.app';
@@ -19,8 +20,16 @@ export const GET: APIRoute = async () => {
     categories = [];
   }
 
+  let blogPosts: { slug: string }[] = [];
+  try {
+    blogPosts = await getCollection('blog');
+  } catch {
+    blogPosts = [];
+  }
+
   const staticPages = [
     { url: '/', priority: '1.0', changefreq: 'daily' },
+    { url: '/search', priority: '0.5', changefreq: 'weekly' },
     { url: '/about', priority: '0.3', changefreq: 'monthly' },
     { url: '/privacy', priority: '0.3', changefreq: 'monthly' },
     { url: '/terms', priority: '0.3', changefreq: 'monthly' },
@@ -101,6 +110,17 @@ export const GET: APIRoute = async () => {
     <lastmod>${today}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>`);
+  }
+
+  // Blog posts
+  for (const post of blogPosts) {
+    urlEntries.push(`
+  <url>
+    <loc>${site}/blog/${post.slug}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>`);
   }
 
